@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "posts/first-variation/index.html",
+    "href": "posts/first-variation/index.html",
+    "title": "A First Test Post: First Variation of Area",
+    "section": "",
+    "text": "This is a sample mathematical post. It is mainly used to test display math, theorem environments, and proof blocks.\nLet \\(\\Sigma^2 \\subset M^3\\) be a closed two-sided surface with unit normal \\(\\nu\\). If the variation vector field is \\(X=f\\nu\\), then the first variation of area is\n\\[\n\\left.\\frac{d}{dt}\\right|_{t=0} \\operatorname{Area}(\\Sigma_t)\n= -\\int_\\Sigma H f \\, d\\mu .\n\\tag{1}\\]\n\nTheorem 1 (Minimal surfaces as critical points) A closed two-sided surface \\(\\Sigma \\subset M\\) is minimal if and only if it is a critical point of the area functional under all compactly supported normal variations.\n\n\nProof. By Equation 1, the first variation vanishes for every smooth function \\(f\\) if and only if\n\\[\n\\int_\\Sigma H f\\,d\\mu = 0\n\\]\nfor all \\(f\\). This is equivalent to \\(H=0\\) on \\(\\Sigma\\).\n\nThe statement above is Theorem 1. In future posts, this style can be used for lemmas, propositions, definitions, remarks, and equations.\n\nRemark 1 (Writing style). For a research note, I usually want three layers: the formal statement, the geometric meaning, and the proof mechanism."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I am interested in minimal surfaces, geometric analysis, and variational methods. This site is a place for mathematical notes, reading records, expository articles, and selected lecture/project materials."
+  },
+  {
+    "objectID": "index.html#current-interests",
+    "href": "index.html#current-interests",
+    "title": "Home",
+    "section": "Current interests",
+    "text": "Current interests\n\nMinimal hypersurfaces and min-max theory.\nAlmgren–Pitts theory and Simon–Smith type constructions.\nStability, Morse index, and geometric variational problems.\nInteractions between Ricci flow, scalar curvature, and minimal surfaces."
+  },
+  {
+    "objectID": "index.html#recent-writing",
+    "href": "index.html#recent-writing",
+    "title": "Home",
+    "section": "Recent writing",
+    "text": "Recent writing\nSee the Writing page for all posts."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I use this website as a public mathematical notebook. The main purpose is not to make finished survey articles, but to record ideas clearly enough that they remain useful months later.\nThe guiding style is simple: state the result, explain the geometric picture, then write the proof in a form that can be checked."
+  },
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "This page collects short articles and mathematical notes. I prefer each post to be self-contained, with precise statements and enough geometric intuition to remember the proof.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA First Test Post: First Variation of Area\n\n\nA small sample post for testing LaTeX, theorem blocks, and proof blocks.\n\n\n\n\n\nJun 3, 2026\n\n\nSaalo Chen\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory, and related variational problems.\nEducation.\nPh.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences.\nExpected start: September 2026.\nAdvisor. Zhichao Wang."
+  },
+  {
+    "objectID": "cv.html#saalo-chen",
+    "href": "cv.html#saalo-chen",
+    "title": "CV",
+    "section": "",
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory, and related variational problems.\nEducation.\nPh.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences.\nExpected start: September 2026.\nAdvisor. Zhichao Wang."
+  },
+  {
+    "objectID": "cv.html#selected-notes-and-talks",
+    "href": "cv.html#selected-notes-and-talks",
+    "title": "CV",
+    "section": "Selected notes and talks",
+    "text": "Selected notes and talks\n\nNotes on Simon–Smith min-max theory.\nNotes on Almgren–Pitts theory.\nReading notes on least-area minimal hypersurfaces."
+  },
+  {
+    "objectID": "cv.html#contact",
+    "href": "cv.html#contact",
+    "title": "CV",
+    "section": "Contact",
+    "text": "Contact\nEmail: saalo@foxmail.com"
+  },
+  {
+    "objectID": "cv.html#download",
+    "href": "cv.html#download",
+    "title": "CV",
+    "section": "Download",
+    "text": "Download\nA PDF version of my CV will be placed here later."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects & Notes",
+    "section": "",
+    "text": "This page is for downloadable lecture notes, seminar notes, and project materials."
+  },
+  {
+    "objectID": "projects.html#lecture-notes",
+    "href": "projects.html#lecture-notes",
+    "title": "Projects & Notes",
+    "section": "Lecture notes",
+    "text": "Lecture notes\n\nMinimal surfaces: notes in progress.\nGeometric measure theory: notes in progress.\nElliptic PDE for geometric analysis: notes in progress."
+  },
+  {
+    "objectID": "projects.html#files",
+    "href": "projects.html#files",
+    "title": "Projects & Notes",
+    "section": "Files",
+    "text": "Files\nPut PDFs or slides into the files/ folder, then link them here. For example:\n[Download the Simon--Smith notes](files/simon-smith-notes.pdf)"
+  }
+]

@@ -1,7 +1,0 @@
----
-title: "About"
----
-
-I use this website as a public mathematical notebook. The main purpose is not to make finished survey articles, but to record ideas clearly enough that they remain useful months later.
-
-The guiding style is simple: state the result, explain the geometric picture, then write the proof in a form that can be checked.
