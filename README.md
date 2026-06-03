@@ -25,3 +25,4 @@ Replace these placeholders before publishing:
 - `https://example.com` in `_quarto.yml`
 - `https://github.com/your-github-username` in `_quarto.yml`
 - CV text in `cv.qmd`
+Initial setup.
