@@ -1,0 +1,38 @@
+---
+title: "Home"
+page-layout: full
+---
+
+::: {.hero}
+# Saalo Chen
+
+I am interested in minimal surfaces, geometric analysis, and variational methods. This site is a place for mathematical notes, reading records, expository articles, and selected lecture/project materials.
+:::
+
+::: {.card-grid}
+::: {.card}
+### Writing
+Short mathematical articles and reading notes, mostly on minimal surfaces and geometric analysis.
+:::
+
+::: {.card}
+### CV
+A compact academic profile: education, interests, talks, notes, and contact information.
+:::
+
+::: {.card}
+### Projects & Notes
+Lecture notes, seminar notes, problem collections, and downloadable materials.
+:::
+:::
+
+## Current interests
+
+- Minimal hypersurfaces and min-max theory.
+- Almgren--Pitts theory and Simon--Smith type constructions.
+- Stability, Morse index, and geometric variational problems.
+- Interactions between Ricci flow, scalar curvature, and minimal surfaces.
+
+## Recent writing
+
+See the [Writing](writing.qmd) page for all posts.

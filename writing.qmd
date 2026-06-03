@@ -1,0 +1,13 @@
+---
+title: "Writing"
+listing:
+  contents: posts
+  type: default
+  sort: "date desc"
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+---
+
+This page collects short articles and mathematical notes. I prefer each post to be self-contained, with precise statements and enough geometric intuition to remember the proof.

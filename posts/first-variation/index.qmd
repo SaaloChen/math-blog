@@ -1,0 +1,39 @@
+---
+title: "A First Test Post: First Variation of Area"
+description: "A small sample post for testing LaTeX, theorem blocks, and proof blocks."
+date: "2026-06-03"
+author: "Saalo Chen"
+---
+
+This is a sample mathematical post. It is mainly used to test display math, theorem environments, and proof blocks.
+
+Let $\Sigma^2 \subset M^3$ be a closed two-sided surface with unit normal $\nu$. If the variation vector field is $X=f\nu$, then the first variation of area is
+
+$$
+\left.\frac{d}{dt}\right|_{t=0} \operatorname{Area}(\Sigma_t)
+= -\int_\Sigma H f \, d\mu .
+$$ {#eq-first-variation}
+
+::: {#thm-minimal-critical}
+## Minimal surfaces as critical points
+
+A closed two-sided surface $\Sigma \subset M$ is minimal if and only if it is a critical point of the area functional under all compactly supported normal variations.
+:::
+
+::: {.proof}
+By @eq-first-variation, the first variation vanishes for every smooth function $f$ if and only if
+
+$$
+\int_\Sigma H f\,d\mu = 0
+$$
+
+for all $f$. This is equivalent to $H=0$ on $\Sigma$.
+:::
+
+The statement above is @thm-minimal-critical. In future posts, this style can be used for lemmas, propositions, definitions, remarks, and equations.
+
+::: {#rem-writing-style}
+## Writing style
+
+For a research note, I usually want three layers: the formal statement, the geometric meaning, and the proof mechanism.
+:::

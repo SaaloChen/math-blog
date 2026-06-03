@@ -1,0 +1,19 @@
+---
+title: "Projects & Notes"
+---
+
+This page is for downloadable lecture notes, seminar notes, and project materials.
+
+## Lecture notes
+
+- Minimal surfaces: notes in progress.
+- Geometric measure theory: notes in progress.
+- Elliptic PDE for geometric analysis: notes in progress.
+
+## Files
+
+Put PDFs or slides into the `files/` folder, then link them here. For example:
+
+```markdown
+[Download the Simon--Smith notes](files/simon-smith-notes.pdf)
+```
