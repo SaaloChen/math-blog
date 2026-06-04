@@ -4,6 +4,7 @@ project:
     - "files/**"
     - "robots.txt"
     - "sitemap.xml"
+    - "BingSiteAuth.xml"
 
 website:
   title: "Saalo Chen"
