@@ -44,6 +44,54 @@ a {
   color: #444444;
 }
 
+/* Profile area on the home page */
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-photo {
+  width: 155px !important;
+  height: 155px !important;
+  max-width: 155px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-text h1 {
+  font-size: 2.35rem;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.profile-text p {
+  font-size: 1.08rem;
+  color: #444444;
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  .profile-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .profile-photo {
+    width: 130px !important;
+    height: 130px !important;
+    max-width: 130px !important;
+  }
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));

@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -89,7 +54,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -172,19 +136,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This page is for downloadable lecture notes, seminar notes, and project materials.</p>
-<section id="lecture-notes" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-notes">Lecture notes</h2>
+<p>This page collects selected notes, expository writings, and lecture-style materials.</p>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
 <ul>
-<li>Minimal surfaces: notes in progress.</li>
-<li>Geometric measure theory: notes in progress.</li>
-<li>Elliptic PDE for geometric analysis: notes in progress.</li>
+<li><p><a href="files/Allard-regularity-theorem-notes-v1.pdf">Allard Regularity Theorem Notes/ Allard正则性定理笔记</a><br>
+Date: 2026-06-03.<br>
+Notes on Allard’s regularity theorem, including its statement, geometric meaning, main assumptions, and its role in the regularity theory of varifolds. It might be simplified in the future.</p></li>
+<li><p><a href="files/elliptic-PDE-regularity-notes-CNver-v1.pdf">Elliptic PDE Regularity Notes/二阶椭圆PDE的正则性笔记, Chinese Version</a><br>
+Date: 2026-06-03.<br>
+Notes in Chinese on regularity theory for second-order elliptic partial differential equations, including basic estimates and related analytical tools. This is a really long note, and it is better to use it with Han-Lin or Gilbarg-Trudinger.</p></li>
+<li><p><a href="files/Yau-geometry-notes-CNver-v1.pdf">Yau Competition Geometry and Topology Notes/丘赛几何与拓扑复习笔记, Chinese Version</a><br>
+Date: 2026-06-03.<br>
+Notes in Chinese for reviewing geometry and topology topics in the Yau Mathematical Sciences Competition, including selected definitions, theorems, examples, and problem-solving techniques. It should be noted that it does not include “Spectral Sequences”, which requires many diagrams.</p></li>
+<li><p><a href="files/minimal-surface-equation-regularity-notes-v1.pdf">Regularity of Minimal Surface Equations/极小曲面方程的正则性</a><br>
+Date: 2026-06-03.<br>
+A short version for geometric analysts to understand the regularity theory quickly, including 4 steps of improvement of regularity. It can be regarded as a short version of the regularity theory for elliptic PDEs as well.</p></li>
 </ul>
-</section>
-<section id="files" class="level2">
-<h2 class="anchored" data-anchor-id="files">Files</h2>
-<p>Put PDFs or slides into the <code>files/</code> folder, then link them here. For example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download the Simon--Smith notes</span><span class="co">](files/simon-smith-notes.pdf)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -277,11 +245,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -613,5 +576,4 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

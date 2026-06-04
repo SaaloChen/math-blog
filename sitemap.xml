@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://saalochen.github.io/math-blog/posts/first-variation/index.html</loc>
-    <lastmod>2026-06-03T11:44:20.270Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saalochen.github.io/math-blog/index.html</loc>
-    <lastmod>2026-06-03T11:44:20.269Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saalochen.github.io/math-blog/about.html</loc>
-    <lastmod>2026-06-03T11:44:20.269Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saalochen.github.io/math-blog/writing.html</loc>
-    <lastmod>2026-06-03T11:44:20.270Z</lastmod>
+    <loc>https://saalochen.github.io/math-blog/projects.html</loc>
+    <lastmod>2026-06-04T08:56:57.631Z</lastmod>
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/cv.html</loc>
-    <lastmod>2026-06-03T11:44:20.269Z</lastmod>
+    <lastmod>2026-06-04T08:56:57.621Z</lastmod>
   </url>
   <url>
-    <loc>https://saalochen.github.io/math-blog/projects.html</loc>
-    <lastmod>2026-06-03T11:44:20.270Z</lastmod>
+    <loc>https://saalochen.github.io/math-blog/writing.html</loc>
+    <lastmod>2026-06-04T08:56:57.631Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/about.html</loc>
+    <lastmod>2026-06-04T08:56:57.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/index.html</loc>
+    <lastmod>2026-06-04T08:56:57.631Z</lastmod>
   </url>
 </urlset>
