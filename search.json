@@ -11,28 +11,21 @@
     "href": "projects.html#notes",
     "title": "Projects & Notes",
     "section": "Notes",
-    "text": "Notes\n\nAllard Regularity Theorem Notes/ Allard正则性定理笔记\nDate: 2026-06-03.\nNotes on Allard’s regularity theorem, including its statement, geometric meaning, main assumptions, and its role in the regularity theory of varifolds. It might be simplified in the future.\nElliptic PDE Regularity Notes/二阶椭圆PDE的正则性笔记, Chinese Version\nDate: 2026-06-03.\nNotes in Chinese on regularity theory for second-order elliptic partial differential equations, including basic estimates and related analytical tools. This is a really long note, and it is better to use it with Han-Lin or Gilbarg-Trudinger.\nYau Competition Geometry and Topology Notes/丘赛几何与拓扑复习笔记, Chinese Version\nDate: 2026-06-03.\nNotes in Chinese for reviewing geometry and topology topics in the Yau Mathematical Sciences Competition, including selected definitions, theorems, examples, and problem-solving techniques. It should be noted that it does not include “Spectral Sequences”, which requires many diagrams.\nRegularity of Minimal Surface Equations/极小曲面方程的正则性\nDate: 2026-06-03.\nA short version for geometric analysts to understand the regularity theory quickly, including 4 steps of improvement of regularity. It can be regarded as a short version of the regularity theory for elliptic PDEs as well."
+    "text": "Notes\n\nAllard Regularity Theorem Notes/ Allard正则性定理笔记\nDate: 2026-06-03.\nNotes on Allard’s regularity theorem, including its statement, geometric meaning, main assumptions, and its role in the regularity theory of varifolds. It might be simplified in the future.\nElliptic PDE Regularity Notes/二阶椭圆PDE的正则性笔记, Chinese Version\nDate: 2026-06-04.\nNotes in Chinese on regularity theory for second-order elliptic partial differential equations, including basic estimates and related analytical tools. This is a really long note, and it is better to use it with Han-Lin or Gilbarg-Trudinger.\nYau Competition Geometry and Topology Notes/丘赛几何与拓扑复习笔记, Chinese Version\nDate: 2026-06-03.\nNotes in Chinese for reviewing geometry and topology topics in the Yau Mathematical Sciences Competition, including selected definitions, theorems, examples, and problem-solving techniques. It should be noted that it does not include “Spectral Sequences”, which requires many diagrams.\nRegularity of Minimal Surface Equations/极小曲面方程的正则性\nDate: 2026-06-03.\nA short version for geometric analysts to understand the regularity theory quickly, including 4 steps of improvement of regularity. It can be regarded as a short version of the regularity theory for elliptic PDEs as well."
   },
   {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "CV",
     "section": "",
-    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory, and related variational problems.\nEducation.\nPh.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences.\nExpected start: September 2026.\nAdvisor. Zhichao Wang."
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nAdvisor. Zhichao Wang."
   },
   {
-    "objectID": "cv.html#saalo-chen",
-    "href": "cv.html#saalo-chen",
+    "objectID": "cv.html#yiming-chen",
+    "href": "cv.html#yiming-chen",
     "title": "CV",
     "section": "",
-    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory, and related variational problems.\nEducation.\nPh.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences.\nExpected start: September 2026.\nAdvisor. Zhichao Wang."
-  },
-  {
-    "objectID": "cv.html#selected-notes-and-talks",
-    "href": "cv.html#selected-notes-and-talks",
-    "title": "CV",
-    "section": "Selected notes and talks",
-    "text": "Selected notes and talks\n\nNotes on Simon–Smith min-max theory.\nNotes on Almgren–Pitts theory.\nReading notes on least-area minimal hypersurfaces."
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nAdvisor. Zhichao Wang."
   },
   {
     "objectID": "cv.html#contact",
@@ -40,13 +33,6 @@
     "title": "CV",
     "section": "Contact",
     "text": "Contact\nEmail: saalo@foxmail.com"
-  },
-  {
-    "objectID": "cv.html#download",
-    "href": "cv.html#download",
-    "title": "CV",
-    "section": "Download",
-    "text": "Download\nA PDF version of my CV will be placed here later."
   },
   {
     "objectID": "writing.html",
