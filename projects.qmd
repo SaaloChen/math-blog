@@ -11,7 +11,7 @@ This page collects selected notes, expository writings, and lecture-style materi
   Notes on Allard's regularity theorem, including its statement, geometric meaning, main assumptions, and its role in the regularity theory of varifolds. It might be simplified in the future. 
 
 - [Elliptic PDE Regularity Notes/二阶椭圆PDE的正则性笔记, Chinese Version](files/elliptic-PDE-regularity-notes-CNver-v1.pdf)  
-  Date: 2026-06-03.  
+  Date: 2026-06-04.  
   Notes in Chinese on regularity theory for second-order elliptic partial differential equations, including basic estimates and related analytical tools. This is a really long note, and it is better to use it with Han-Lin or Gilbarg-Trudinger.
 
 - [Yau Competition Geometry and Topology Notes/丘赛几何与拓扑复习笔记, Chinese Version](files/Yau-geometry-notes-CNver-v1.pdf)  
