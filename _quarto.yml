@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - "files/**"
 
 website:
   title: "Saalo Chen"
@@ -30,10 +32,6 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    toc: false
-    number-sections: false
-    smooth-scroll: true
-    link-external-newwindow: true
     html-math-method: mathjax
 
 execute:

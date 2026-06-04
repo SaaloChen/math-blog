@@ -2,18 +2,22 @@
 title: "Projects & Notes"
 ---
 
-This page is for downloadable lecture notes, seminar notes, and project materials.
+This page collects selected notes, expository writings, and lecture-style materials.
 
-## Lecture notes
+## Notes
 
-- Minimal surfaces: notes in progress.
-- Geometric measure theory: notes in progress.
-- Elliptic PDE for geometric analysis: notes in progress.
+- [Allard Regularity Theorem Notes/ Allard正则性定理笔记](files/Allard-regularity-theorem-notes-v1.pdf)  
+  Date: 2026-06-03.  
+  Notes on Allard's regularity theorem, including its statement, geometric meaning, main assumptions, and its role in the regularity theory of varifolds. It might be simplified in the future. 
 
-## Files
+- [Elliptic PDE Regularity Notes/二阶椭圆PDE的正则性笔记, Chinese Version](files/elliptic-PDE-regularity-notes-CNver-v1.pdf)  
+  Date: 2026-06-03.  
+  Notes in Chinese on regularity theory for second-order elliptic partial differential equations, including basic estimates and related analytical tools. This is a really long note, and it is better to use it with Han-Lin or Gilbarg-Trudinger.
 
-Put PDFs or slides into the `files/` folder, then link them here. For example:
+- [Yau Competition Geometry and Topology Notes/丘赛几何与拓扑复习笔记, Chinese Version](files/Yau-geometry-notes-CNver-v1.pdf)  
+  Date: 2026-06-03.  
+  Notes in Chinese for reviewing geometry and topology topics in the Yau Mathematical Sciences Competition, including selected definitions, theorems, examples, and problem-solving techniques. It should be noted that it does not include "Spectral Sequences", which requires many diagrams. 
 
-```markdown
-[Download the Simon--Smith notes](files/simon-smith-notes.pdf)
-```
+- [Regularity of Minimal Surface Equations/极小曲面方程的正则性](files/minimal-surface-equation-regularity-notes-v1.pdf)  
+  Date: 2026-06-03.  
+  A short version for geometric analysts to understand the regularity theory quickly, including 4 steps of improvement of regularity. It can be regarded as a short version of the regularity theory for elliptic PDEs as well. 
