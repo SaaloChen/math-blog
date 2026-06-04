@@ -2,6 +2,8 @@ project:
   type: website
   resources:
     - "files/**"
+    - "robots.txt"
+    - "sitemap.xml"
 
 website:
   title: "Saalo Chen"
