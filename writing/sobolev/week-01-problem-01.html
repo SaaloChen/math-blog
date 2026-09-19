@@ -60,6 +60,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -169,32 +198,58 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="problem" class="level2">
 <h2 class="anchored" data-anchor-id="problem">Problem</h2>
-<p>Let (B(0,1)^n) be the unit ball. Determine for which (s),</p>
-<p>[ _{B(0,1)} ,dx &lt; +. ]</p>
+<p>Let <span class="math inline">\(B(0,1)\subset \mathbb{R}^n\)</span> be the unit ball. Determine for which <span class="math inline">\(s\in\mathbb{R}\)</span>,</p>
+<p><span class="math display">\[
+\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx &lt; +\infty.
+\]</span></p>
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
 <p>The only possible singularity of the integrand is at the origin. Using polar coordinates,</p>
-<p>[ x=r,r(0,1),S^{n-1}, ]</p>
+<p><span class="math display">\[
+x=r\omega,\qquad r\in(0,1),\quad \omega\in S^{n-1},
+\]</span></p>
 <p>and</p>
-<p>[ dx=r^{n-1},dr,d. ]</p>
+<p><span class="math display">\[
+dx=r^{n-1}\,dr\,d\omega.
+\]</span></p>
 <p>Therefore,</p>
-<p>[ <em>{B(0,1)} ,dx = </em>{S<sup>{n-1}}_0</sup>1 r<sup>{-s}r</sup>{n-1},dr,d = |S<sup>{n-1}|_0</sup>1 r^{n-1-s},dr. ]</p>
+<p><span class="math display">\[
+\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
+=
+\int_{S^{n-1}}\int_0^1 r^{-s}r^{n-1}\,dr\,d\omega
+=
+\lvert S^{n-1}\rvert\int_0^1 r^{n-1-s}\,dr.
+\]</span></p>
 <p>Recall that</p>
-<p>[ _0^1 r^,dr&lt;+ &gt;-1. ]</p>
+<p><span class="math display">\[
+\int_0^1 r^\alpha\,dr&lt;+\infty
+\quad\Longleftrightarrow\quad
+\alpha&gt;-1.
+\]</span></p>
 <p>Hence the integral is finite if and only if</p>
-<p>[ n-1-s&gt;-1, ]</p>
+<p><span class="math display">\[
+n-1-s&gt;-1,
+\]</span></p>
 <p>that is,</p>
-<p>[ . ]</p>
-<p>More precisely, when (s&lt;n),</p>
-<p>[ _{B(0,1)} ,dx = . ]</p>
-<p>When (s=n), the radial integral becomes</p>
-<p>[ _0^1 , ]</p>
-<p>which diverges logarithmically; when (s&gt;n), it diverges even more strongly.</p>
+<p><span class="math display">\[
+\boxed{s&lt;n}.
+\]</span></p>
+<p>More precisely, when <span class="math inline">\(s&lt;n\)</span>,</p>
+<p><span class="math display">\[
+\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
+=
+\frac{\lvert S^{n-1}\rvert}{n-s}.
+\]</span></p>
+<p>When <span class="math inline">\(s=n\)</span>, the radial integral becomes</p>
+<p><span class="math display">\[
+\int_0^1 \frac{dr}{r},
+\]</span></p>
+<p>which diverges logarithmically; when <span class="math inline">\(s&gt;n\)</span>, it diverges even more strongly.</p>
 </section>
 <section id="remark" class="level2">
 <h2 class="anchored" data-anchor-id="remark">Remark</h2>
-<p>This is a basic example of the general principle that, in (^n), a point singularity of order (|x|^{-s}) is locally integrable near the origin exactly when (s&lt;n).</p>
+<p>This is a basic example of the general principle that, in <span class="math inline">\(\mathbb{R}^n\)</span>, a point singularity of order <span class="math inline">\(\lvert x\rvert^{-s}\)</span> is locally integrable near the origin exactly when <span class="math inline">\(s&lt;n\)</span>.</p>
 
 
 </section>

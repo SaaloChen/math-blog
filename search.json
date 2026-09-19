@@ -46,28 +46,28 @@
     "href": "writing/sobolev/week-01-problem-01.html",
     "title": "Sobolev Spaces — Week 1, Problem 1",
     "section": "",
-    "text": "Let (B(0,1)^n) be the unit ball. Determine for which (s),\n[ _{B(0,1)} ,dx &lt; +. ]"
+    "text": "Let \\(B(0,1)\\subset \\mathbb{R}^n\\) be the unit ball. Determine for which \\(s\\in\\mathbb{R}\\),\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx &lt; +\\infty.\n\\]"
   },
   {
     "objectID": "writing/sobolev/week-01-problem-01.html#problem",
     "href": "writing/sobolev/week-01-problem-01.html#problem",
     "title": "Sobolev Spaces — Week 1, Problem 1",
     "section": "",
-    "text": "Let (B(0,1)^n) be the unit ball. Determine for which (s),\n[ _{B(0,1)} ,dx &lt; +. ]"
+    "text": "Let \\(B(0,1)\\subset \\mathbb{R}^n\\) be the unit ball. Determine for which \\(s\\in\\mathbb{R}\\),\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx &lt; +\\infty.\n\\]"
   },
   {
     "objectID": "writing/sobolev/week-01-problem-01.html#solution",
     "href": "writing/sobolev/week-01-problem-01.html#solution",
     "title": "Sobolev Spaces — Week 1, Problem 1",
     "section": "Solution",
-    "text": "Solution\nThe only possible singularity of the integrand is at the origin. Using polar coordinates,\n[ x=r,r(0,1),S^{n-1}, ]\nand\n[ dx=r^{n-1},dr,d. ]\nTherefore,\n[ {B(0,1)} ,dx = {S{n-1}}_01 r{-s}r{n-1},dr,d = |S{n-1}|_01 r^{n-1-s},dr. ]\nRecall that\n[ _0^1 r^,dr&lt;+ &gt;-1. ]\nHence the integral is finite if and only if\n[ n-1-s&gt;-1, ]\nthat is,\n[ . ]\nMore precisely, when (s&lt;n),\n[ _{B(0,1)} ,dx = . ]\nWhen (s=n), the radial integral becomes\n[ _0^1 , ]\nwhich diverges logarithmically; when (s&gt;n), it diverges even more strongly."
+    "text": "Solution\nThe only possible singularity of the integrand is at the origin. Using polar coordinates,\n\\[\nx=r\\omega,\\qquad r\\in(0,1),\\quad \\omega\\in S^{n-1},\n\\]\nand\n\\[\ndx=r^{n-1}\\,dr\\,d\\omega.\n\\]\nTherefore,\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx\n=\n\\int_{S^{n-1}}\\int_0^1 r^{-s}r^{n-1}\\,dr\\,d\\omega\n=\n\\lvert S^{n-1}\\rvert\\int_0^1 r^{n-1-s}\\,dr.\n\\]\nRecall that\n\\[\n\\int_0^1 r^\\alpha\\,dr&lt;+\\infty\n\\quad\\Longleftrightarrow\\quad\n\\alpha&gt;-1.\n\\]\nHence the integral is finite if and only if\n\\[\nn-1-s&gt;-1,\n\\]\nthat is,\n\\[\n\\boxed{s&lt;n}.\n\\]\nMore precisely, when \\(s&lt;n\\),\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx\n=\n\\frac{\\lvert S^{n-1}\\rvert}{n-s}.\n\\]\nWhen \\(s=n\\), the radial integral becomes\n\\[\n\\int_0^1 \\frac{dr}{r},\n\\]\nwhich diverges logarithmically; when \\(s&gt;n\\), it diverges even more strongly."
   },
   {
     "objectID": "writing/sobolev/week-01-problem-01.html#remark",
     "href": "writing/sobolev/week-01-problem-01.html#remark",
     "title": "Sobolev Spaces — Week 1, Problem 1",
     "section": "Remark",
-    "text": "Remark\nThis is a basic example of the general principle that, in (^n), a point singularity of order (|x|^{-s}) is locally integrable near the origin exactly when (s&lt;n)."
+    "text": "Remark\nThis is a basic example of the general principle that, in \\(\\mathbb{R}^n\\), a point singularity of order \\(\\lvert x\\rvert^{-s}\\) is locally integrable near the origin exactly when \\(s&lt;n\\)."
   },
   {
     "objectID": "writing.html",
