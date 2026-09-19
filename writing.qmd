@@ -1,9 +1,18 @@
 ---
 title: "Writing"
+description: "Mathematical notes, course problems, and expository writings."
+listing:
+  contents: writing
+  type: default
+  sort: "date desc"
+  page-size: 8
+  sort-ui: [date, title]
+  filter-ui: [title, description, categories]
+  categories: true
+  date-format: "yyyy-MM-dd"
+  fields: [date, title, description, categories]
 ---
 
-# Writing
+Mathematical notes, course problems, and expository writings.
 
-This page will collect short mathematical articles, reading notes, and expository writings.
-
-No posts yet.
+The notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.

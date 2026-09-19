@@ -1,0 +1,21 @@
+---
+title: "Sobolev Spaces — Week 1, Problem 1"
+date: 2026-09-19
+description: "A short description of the question or the main point of this note."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 1
+---
+
+## Problem
+
+Write the problem here.
+
+## Solution
+
+Write your solution here.
+
+## Remarks
+
+Optional: add related observations, references, variants, or comments here.
