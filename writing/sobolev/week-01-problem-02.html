@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Mathematical notes, course problems, and expository writings.">
+<meta name="dcterms.date" content="2026-09-19">
+<meta name="description" content="Integrability of the singular function |x|^{-s} on the unit ball.">
 
-<title>Writing – Saalo Chen</title>
+<title>Sobolev Spaces — Week 1, Problem 1 – Saalo Chen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,21 +31,19 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-243015bf6a2ff42d8fda26091fd93dfc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-243015bf6a2ff42d8fda26091fd93dfc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -60,35 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script>
 window.MathJax = {
   options: {
@@ -127,7 +97,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -137,7 +107,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Saalo Chen</span>
     </a>
   </div>
@@ -147,23 +117,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./writing.html" aria-current="page"> 
+    <a class="nav-link" href="../../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects &amp; Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -185,19 +155,31 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SG9tZXdvcms=">Homework <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U29ib2xldiUyMFNwYWNlcw==">Sobolev Spaces <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2VlayUyMDE=">Week 1 <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem" id="toc-problem" class="nav-link active" data-scroll-target="#problem">Problem</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing</h1>
-</div>
+<h1 class="title">Sobolev Spaces — Week 1, Problem 1</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Sobolev Spaces</div>
+    <div class="quarto-category">Homework</div>
+    <div class="quarto-category">Week 1</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Mathematical notes, course problems, and expository writings.
+    Integrability of the singular function |x|^{-s} on the unit ball.
   </div>
 </div>
 
@@ -205,6 +187,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 19, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -214,91 +202,71 @@ window.Quarto = {
 </header>
 
 
-<p>Mathematical notes, course problems, and expository writings.</p>
-<p>The notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.</p>
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Give a Hilbert space which is not separable.</p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>Consider the Hilbert space</p>
+<p><span class="math display">\[
+\ell^2(\mathbb R)
+=
+\left\{
+x=(x_i)_{i\in\mathbb R}:
+\sum_{i\in\mathbb R}|x_i|^2&lt;\infty
+\right\},
+\]</span></p>
+<p>with inner product</p>
+<p><span class="math display">\[
+\langle x,y\rangle
+=
+\sum_{i\in\mathbb R}x_i\overline{y_i}.
+\]</span></p>
+<p>It is a standard fact that <span class="math inline">\(\ell^2(\mathbb R)\)</span> is a Hilbert space.</p>
+<p>For each <span class="math inline">\(i\in\mathbb R\)</span>, define <span class="math inline">\(e_i\)</span> by</p>
+<p><span class="math display">\[
+e_i(j)=\delta_{ij}.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+\{e_i:i\in\mathbb R\}
+\]</span></p>
+<p>is an uncountable orthonormal family. In particular, for <span class="math inline">\(i\neq j\)</span>,</p>
+<p><span class="math display">\[
+\|e_i-e_j\|=\sqrt2.
+\]</span></p>
+<p>Suppose that <span class="math inline">\(\ell^2(\mathbb R)\)</span> were separable. Then there would exist a countable dense subset <span class="math inline">\(D\)</span>.</p>
+<p>For each <span class="math inline">\(i\in\mathbb R\)</span>, by density of <span class="math inline">\(D\)</span>, choose <span class="math inline">\(d_i\in D\)</span> such that</p>
+<p><span class="math display">\[
+\|e_i-d_i\|&lt;\frac12.
+\]</span></p>
+<p>We claim that the points <span class="math inline">\(d_i\)</span> are all distinct. Indeed, if <span class="math inline">\(d_i=d_j=d\)</span> for some <span class="math inline">\(i\neq j\)</span>, then</p>
+<p><span class="math display">\[
+\|e_i-e_j\|
+\le
+\|e_i-d\|+\|d-e_j\|
+&lt;1,
+\]</span></p>
+<p>which contradicts</p>
+<p><span class="math display">\[
+\|e_i-e_j\|=\sqrt2.
+\]</span></p>
+<p>Therefore the map</p>
+<p><span class="math display">\[
+i\mapsto d_i
+\]</span></p>
+<p>is injective from <span class="math inline">\(\mathbb R\)</span> into <span class="math inline">\(D\)</span>. Hence</p>
+<p><span class="math display">\[
+\operatorname{card}(D)\ge \operatorname{card}(\mathbb R),
+\]</span></p>
+<p>so <span class="math inline">\(D\)</span> cannot be countable. This is a contradiction.</p>
+<p>Therefore <span class="math inline">\(\ell^2(\mathbb R)\)</span> is not separable.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1789786417020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">Sobolev Spaces — Week 1, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<p>Integrability of the singular function |x|^{-s} on the unit ball.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<div class="listing-date">
-yyyy-09-Sa
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1789786417020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">Sobolev Spaces — Week 1, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<p>Integrability of the singular function |x|^{-s} on the unit ball.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<div class="listing-date">
-yyyy-09-Sa
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
