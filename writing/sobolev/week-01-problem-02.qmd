@@ -1,7 +1,7 @@
 ---
-title: "Sobolev Spaces — Week 1, Problem 1"
+title: "Sobolev Spaces — Week 1, Problem 2"
 date: 2026-09-19
-description: "Integrability of the singular function |x|^{-s} on the unit ball."
+description: "Not Separable Hilbert Space"
 categories:
   - Sobolev Spaces
   - Homework
