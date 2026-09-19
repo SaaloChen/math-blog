@@ -9,7 +9,7 @@ listing:
   sort-ui: [date, title]
   filter-ui: [title, description, categories]
   categories: true
-  date-format: iso
+  date-format: "YYYY-MM-DD"
   fields: [date, title, categories, description]
 ---
 
