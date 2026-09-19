@@ -36,6 +36,8 @@ format:
     theme: cosmo
     css: styles.css
     html-math-method: mathjax
+    include-in-header:
+      - mathjax-config.html
 
 execute:
   freeze: auto
