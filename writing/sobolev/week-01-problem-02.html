@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-09-19">
-<meta name="description" content="Not Separable Hilbert Space">
+<meta name="description" content="An example of a nonseparable Hilbert space.">
 
 <title>Sobolev Spaces — Week 1, Problem 2 – Saalo Chen</title>
 <style>
@@ -179,7 +179,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Not Separable Hilbert Space
+    An example of a nonseparable Hilbert space.
   </div>
 </div>
 
@@ -204,7 +204,7 @@ window.Quarto = {
 
 <section id="problem" class="level2">
 <h2 class="anchored" data-anchor-id="problem">Problem</h2>
-<p>Give a Hilbert space which is not separable.</p>
+<p>Give an example of a Hilbert space which is not separable.</p>
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
@@ -217,14 +217,14 @@ x=(x_i)_{i\in\mathbb R}:
 \sum_{i\in\mathbb R}|x_i|^2&lt;\infty
 \right\},
 \]</span></p>
-<p>with inner product</p>
+<p>equipped with the inner product</p>
 <p><span class="math display">\[
 \langle x,y\rangle
 =
 \sum_{i\in\mathbb R}x_i\overline{y_i}.
 \]</span></p>
-<p>It is a standard fact that <span class="math inline">\(\ell^2(\mathbb R)\)</span> is a Hilbert space.</p>
-<p>For each <span class="math inline">\(i\in\mathbb R\)</span>, define <span class="math inline">\(e_i\)</span> by</p>
+<p>It is a standard fact that <span class="math inline">\(\ell^2(\mathbb R)\)</span> is a Hilbert space. We show that it is not separable.</p>
+<p>For each <span class="math inline">\(i\in\mathbb R\)</span>, define <span class="math inline">\(e_i\in\ell^2(\mathbb R)\)</span> by</p>
 <p><span class="math display">\[
 e_i(j)=\delta_{ij}.
 \]</span></p>
@@ -232,16 +232,16 @@ e_i(j)=\delta_{ij}.
 <p><span class="math display">\[
 \{e_i:i\in\mathbb R\}
 \]</span></p>
-<p>is an uncountable orthonormal family. In particular, for <span class="math inline">\(i\neq j\)</span>,</p>
+<p>is an uncountable orthonormal family. In particular, for any <span class="math inline">\(i\neq j\)</span>,</p>
 <p><span class="math display">\[
-\|e_i-e_j\|=\sqrt2.
+\|e_i-e_j\|=\sqrt{2}.
 \]</span></p>
-<p>Suppose that <span class="math inline">\(\ell^2(\mathbb R)\)</span> were separable. Then there would exist a countable dense subset <span class="math inline">\(D\)</span>.</p>
-<p>For each <span class="math inline">\(i\in\mathbb R\)</span>, by density of <span class="math inline">\(D\)</span>, choose <span class="math inline">\(d_i\in D\)</span> such that</p>
+<p>Suppose, for contradiction, that <span class="math inline">\(\ell^2(\mathbb R)\)</span> is separable. Then there exists a countable dense subset <span class="math inline">\(D\subset\ell^2(\mathbb R)\)</span>.</p>
+<p>For each <span class="math inline">\(i\in\mathbb R\)</span>, by the density of <span class="math inline">\(D\)</span>, choose <span class="math inline">\(d_i\in D\)</span> such that</p>
 <p><span class="math display">\[
 \|e_i-d_i\|&lt;\frac12.
 \]</span></p>
-<p>We claim that the points <span class="math inline">\(d_i\)</span> are all distinct. Indeed, if <span class="math inline">\(d_i=d_j=d\)</span> for some <span class="math inline">\(i\neq j\)</span>, then</p>
+<p>We claim that the points <span class="math inline">\(d_i\)</span> are all distinct. Indeed, if <span class="math inline">\(d_i=d_j=d\)</span> for some <span class="math inline">\(i\neq j\)</span>, then by the triangle inequality,</p>
 <p><span class="math display">\[
 \|e_i-e_j\|
 \le
@@ -250,18 +250,23 @@ e_i(j)=\delta_{ij}.
 \]</span></p>
 <p>which contradicts</p>
 <p><span class="math display">\[
-\|e_i-e_j\|=\sqrt2.
+\|e_i-e_j\|=\sqrt{2}.
 \]</span></p>
 <p>Therefore the map</p>
 <p><span class="math display">\[
-i\mapsto d_i
+i\longmapsto d_i
 \]</span></p>
 <p>is injective from <span class="math inline">\(\mathbb R\)</span> into <span class="math inline">\(D\)</span>. Hence</p>
 <p><span class="math display">\[
-\operatorname{card}(D)\ge \operatorname{card}(\mathbb R),
+\operatorname{card}(D)
+\ge
+\operatorname{card}(\mathbb R),
 \]</span></p>
-<p>so <span class="math inline">\(D\)</span> cannot be countable. This is a contradiction.</p>
-<p>Therefore <span class="math inline">\(\ell^2(\mathbb R)\)</span> is not separable.</p>
+<p>so <span class="math inline">\(D\)</span> is uncountable, contradicting our assumption.</p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{\ell^2(\mathbb R)\text{ is a nonseparable Hilbert space}.}
+\]</span></p>
 
 
 </section>
