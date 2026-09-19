@@ -1,0 +1,93 @@
+---
+title: "Sobolev Spaces — Week 1, Problem 1"
+date: 2026-09-19
+description: "Integrability of the singular function |x|^{-s} on the unit ball."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 1
+---
+
+## Problem
+
+Give a Hilbert space which is not separable.
+
+## Solution
+
+Consider the Hilbert space
+
+$$
+\ell^2(\mathbb R)
+=
+\left\{
+x=(x_i)_{i\in\mathbb R}:
+\sum_{i\in\mathbb R}|x_i|^2<\infty
+\right\},
+$$
+
+with inner product
+
+$$
+\langle x,y\rangle
+=
+\sum_{i\in\mathbb R}x_i\overline{y_i}.
+$$
+
+It is a standard fact that $\ell^2(\mathbb R)$ is a Hilbert space.
+
+For each $i\in\mathbb R$, define $e_i$ by
+
+$$
+e_i(j)=\delta_{ij}.
+$$
+
+Then
+
+$$
+\{e_i:i\in\mathbb R\}
+$$
+
+is an uncountable orthonormal family. In particular, for $i\neq j$,
+
+$$
+\|e_i-e_j\|=\sqrt2.
+$$
+
+Suppose that $\ell^2(\mathbb R)$ were separable. Then there would exist a countable dense subset $D$.
+
+For each $i\in\mathbb R$, by density of $D$, choose $d_i\in D$ such that
+
+$$
+\|e_i-d_i\|<\frac12.
+$$
+
+We claim that the points $d_i$ are all distinct. Indeed, if $d_i=d_j=d$ for some $i\neq j$, then
+
+$$
+\|e_i-e_j\|
+\le
+\|e_i-d\|+\|d-e_j\|
+<1,
+$$
+
+which contradicts
+
+$$
+\|e_i-e_j\|=\sqrt2.
+$$
+
+Therefore the map
+
+$$
+i\mapsto d_i
+$$
+
+is injective from $\mathbb R$ into $D$. Hence
+
+$$
+\operatorname{card}(D)\ge \operatorname{card}(\mathbb R),
+$$
+
+so $D$ cannot be countable. This is a contradiction.
+
+Therefore $\ell^2(\mathbb R)$ is not separable.
