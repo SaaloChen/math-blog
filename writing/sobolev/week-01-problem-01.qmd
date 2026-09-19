@@ -10,72 +10,72 @@ categories:
 
 ## Problem
 
-Let \(B(0,1)\subset \mathbb{R}^n\) be the unit ball. Determine for which \(s\in\mathbb{R}\),
+Let $B(0,1)\subset \mathbb{R}^n$ be the unit ball. Determine for which $s\in\mathbb{R}$,
 
-\[
-\int_{B(0,1)} \frac{1}{|x|^s}\,dx < +\infty.
-\]
+$$
+\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx < +\infty.
+$$
 
 ## Solution
 
 The only possible singularity of the integrand is at the origin. Using polar coordinates,
 
-\[
+$$
 x=r\omega,\qquad r\in(0,1),\quad \omega\in S^{n-1},
-\]
+$$
 
 and
 
-\[
+$$
 dx=r^{n-1}\,dr\,d\omega.
-\]
+$$
 
 Therefore,
 
-\[
-\int_{B(0,1)} \frac{1}{|x|^s}\,dx
+$$
+\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
 =
 \int_{S^{n-1}}\int_0^1 r^{-s}r^{n-1}\,dr\,d\omega
 =
-|S^{n-1}|\int_0^1 r^{n-1-s}\,dr.
-\]
+\lvert S^{n-1}\rvert\int_0^1 r^{n-1-s}\,dr.
+$$
 
 Recall that
 
-\[
+$$
 \int_0^1 r^\alpha\,dr<+\infty
 \quad\Longleftrightarrow\quad
 \alpha>-1.
-\]
+$$
 
 Hence the integral is finite if and only if
 
-\[
+$$
 n-1-s>-1,
-\]
+$$
 
 that is,
 
-\[
+$$
 \boxed{s<n}.
-\]
+$$
 
-More precisely, when \(s<n\),
+More precisely, when $s<n$,
 
-\[
-\int_{B(0,1)} \frac{1}{|x|^s}\,dx
+$$
+\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
 =
-\frac{|S^{n-1}|}{n-s}.
-\]
+\frac{\lvert S^{n-1}\rvert}{n-s}.
+$$
 
-When \(s=n\), the radial integral becomes
+When $s=n$, the radial integral becomes
 
-\[
+$$
 \int_0^1 \frac{dr}{r},
-\]
+$$
 
-which diverges logarithmically; when \(s>n\), it diverges even more strongly.
+which diverges logarithmically; when $s>n$, it diverges even more strongly.
 
 ## Remark
 
-This is a basic example of the general principle that, in \(\mathbb{R}^n\), a point singularity of order \(|x|^{-s}\) is locally integrable near the origin exactly when \(s<n\).
+This is a basic example of the general principle that, in $\mathbb{R}^n$, a point singularity of order $\lvert x\rvert^{-s}$ is locally integrable near the origin exactly when $s<n$.
