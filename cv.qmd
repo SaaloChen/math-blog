@@ -11,7 +11,8 @@ title: "CV"
 2022.9--2026.6: B.S. in Mathematics, Wuhan University, China.  
 2026.9--: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.
 
-**Advisor.** Zhichao Wang.  
+**Undergraduate advisor.** Prof. Qun Chen, Wuhan University.  
+**Ph.D. advisor.** Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences.
 
 ## Contact
 

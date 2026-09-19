@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://saalochen.github.io/math-blog/cv.html</loc>
+    <lastmod>2026-09-19T01:17:44.002Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/about.html</loc>
+    <lastmod>2026-09-19T01:12:37.883Z</lastmod>
+  </url>
+  <url>
     <loc>https://saalochen.github.io/math-blog/projects.html</loc>
-    <lastmod>2026-06-04T09:06:24.682Z</lastmod>
+    <lastmod>2026-09-19T01:12:37.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/index.html</loc>
+    <lastmod>2026-09-19T01:12:37.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/writing.html</loc>
+    <lastmod>2026-09-19T01:12:37.891Z</lastmod>
   </url>
 </urlset>
