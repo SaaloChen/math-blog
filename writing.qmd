@@ -1,6 +1,6 @@
 ---
 title: "Writing"
-description: "Mathematical notes, course problems, and expository writings."
+
 listing:
   contents: writing
   type: default
@@ -9,8 +9,8 @@ listing:
   sort-ui: [date, title]
   filter-ui: [title, description, categories]
   categories: true
-  date-format: "yyyy-MM-dd"
-  fields: [date, title, description, categories]
+  date-format: iso
+  fields: [date, title, categories, description]
 ---
 
 Mathematical notes, course problems, and expository writings.

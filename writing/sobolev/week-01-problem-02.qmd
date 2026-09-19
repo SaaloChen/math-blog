@@ -1,7 +1,7 @@
 ---
 title: "Sobolev Spaces — Week 1, Problem 2"
 date: 2026-09-19
-description: "Not Separable Hilbert Space"
+description: "An example of a nonseparable Hilbert space."
 categories:
   - Sobolev Spaces
   - Homework
@@ -10,7 +10,7 @@ categories:
 
 ## Problem
 
-Give a Hilbert space which is not separable.
+Give an example of a Hilbert space which is not separable.
 
 ## Solution
 
@@ -25,7 +25,7 @@ x=(x_i)_{i\in\mathbb R}:
 \right\},
 $$
 
-with inner product
+equipped with the inner product
 
 $$
 \langle x,y\rangle
@@ -33,9 +33,9 @@ $$
 \sum_{i\in\mathbb R}x_i\overline{y_i}.
 $$
 
-It is a standard fact that $\ell^2(\mathbb R)$ is a Hilbert space.
+It is a standard fact that $\ell^2(\mathbb R)$ is a Hilbert space. We show that it is not separable.
 
-For each $i\in\mathbb R$, define $e_i$ by
+For each $i\in\mathbb R$, define $e_i\in\ell^2(\mathbb R)$ by
 
 $$
 e_i(j)=\delta_{ij}.
@@ -47,21 +47,21 @@ $$
 \{e_i:i\in\mathbb R\}
 $$
 
-is an uncountable orthonormal family. In particular, for $i\neq j$,
+is an uncountable orthonormal family. In particular, for any $i\neq j$,
 
 $$
-\|e_i-e_j\|=\sqrt2.
+\|e_i-e_j\|=\sqrt{2}.
 $$
 
-Suppose that $\ell^2(\mathbb R)$ were separable. Then there would exist a countable dense subset $D$.
+Suppose, for contradiction, that $\ell^2(\mathbb R)$ is separable. Then there exists a countable dense subset $D\subset\ell^2(\mathbb R)$.
 
-For each $i\in\mathbb R$, by density of $D$, choose $d_i\in D$ such that
+For each $i\in\mathbb R$, by the density of $D$, choose $d_i\in D$ such that
 
 $$
 \|e_i-d_i\|<\frac12.
 $$
 
-We claim that the points $d_i$ are all distinct. Indeed, if $d_i=d_j=d$ for some $i\neq j$, then
+We claim that the points $d_i$ are all distinct. Indeed, if $d_i=d_j=d$ for some $i\neq j$, then by the triangle inequality,
 
 $$
 \|e_i-e_j\|
@@ -73,21 +73,27 @@ $$
 which contradicts
 
 $$
-\|e_i-e_j\|=\sqrt2.
+\|e_i-e_j\|=\sqrt{2}.
 $$
 
 Therefore the map
 
 $$
-i\mapsto d_i
+i\longmapsto d_i
 $$
 
 is injective from $\mathbb R$ into $D$. Hence
 
 $$
-\operatorname{card}(D)\ge \operatorname{card}(\mathbb R),
+\operatorname{card}(D)
+\ge
+\operatorname{card}(\mathbb R),
 $$
 
-so $D$ cannot be countable. This is a contradiction.
+so $D$ is uncountable, contradicting our assumption.
 
-Therefore $\ell^2(\mathbb R)$ is not separable.
+Therefore,
+
+$$
+\boxed{\ell^2(\mathbb R)\text{ is a nonseparable Hilbert space}.}
+$$
