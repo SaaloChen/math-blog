@@ -42,11 +42,39 @@
     "text": "Recent writing\nSee the Writing page for all posts."
   },
   {
+    "objectID": "writing/sobolev/week-01-problem-01.html",
+    "href": "writing/sobolev/week-01-problem-01.html",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "",
+    "text": "Let (B(0,1)^n) be the unit ball. Determine for which (s),\n[ _{B(0,1)} ,dx &lt; +. ]"
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-01.html#problem",
+    "href": "writing/sobolev/week-01-problem-01.html#problem",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "",
+    "text": "Let (B(0,1)^n) be the unit ball. Determine for which (s),\n[ _{B(0,1)} ,dx &lt; +. ]"
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-01.html#solution",
+    "href": "writing/sobolev/week-01-problem-01.html#solution",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "Solution",
+    "text": "Solution\nThe only possible singularity of the integrand is at the origin. Using polar coordinates,\n[ x=r,r(0,1),S^{n-1}, ]\nand\n[ dx=r^{n-1},dr,d. ]\nTherefore,\n[ {B(0,1)} ,dx = {S{n-1}}_01 r{-s}r{n-1},dr,d = |S{n-1}|_01 r^{n-1-s},dr. ]\nRecall that\n[ _0^1 r^,dr&lt;+ &gt;-1. ]\nHence the integral is finite if and only if\n[ n-1-s&gt;-1, ]\nthat is,\n[ . ]\nMore precisely, when (s&lt;n),\n[ _{B(0,1)} ,dx = . ]\nWhen (s=n), the radial integral becomes\n[ _0^1 , ]\nwhich diverges logarithmically; when (s&gt;n), it diverges even more strongly."
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-01.html#remark",
+    "href": "writing/sobolev/week-01-problem-01.html#remark",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "Remark",
+    "text": "Remark\nThis is a basic example of the general principle that, in (^n), a point singularity of order (|x|^{-s}) is locally integrable near the origin exactly when (s&lt;n)."
+  },
+  {
     "objectID": "writing.html",
     "href": "writing.html",
     "title": "Writing",
     "section": "",
-    "text": "Writing\nThis page will collect short mathematical articles, reading notes, and expository writings.\nNo posts yet."
+    "text": "Mathematical notes, course problems, and expository writings.\nThe notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\nyyyy-09-Sa\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "cv.html",
