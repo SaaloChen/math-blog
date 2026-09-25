@@ -1,0 +1,214 @@
+---
+title: "Sobolev Spaces — Week 4, Problem 2"
+date: 2026-09-25
+description: "Every locally integrable function defines a distribution."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 4
+---
+
+## Problem
+
+Let $\Omega\subset\mathbb R^n$ be open and let
+
+$$
+f\in L_{\mathrm{loc}}^1(\Omega).
+$$
+
+Define
+
+$$
+T_f(\varphi)
+=
+\int_\Omega f(x)\varphi(x)\,dx,
+\qquad
+\varphi\in C_c^\infty(\Omega).
+$$
+
+Prove that $T_f$ is a distribution on $\Omega$.
+
+## Solution
+
+Recall that a distribution on $\Omega$ is a continuous linear functional on
+
+$$
+\mathcal D(\Omega)
+=
+C_c^\infty(\Omega).
+$$
+
+We show that $T_f$ is well-defined, linear, and continuous.
+
+### Well-definedness
+
+Let
+
+$$
+\varphi\in C_c^\infty(\Omega).
+$$
+
+Since $\varphi$ has compact support, there exists a compact set
+
+$$
+K\subset\Omega
+$$
+
+such that
+
+$$
+\operatorname{supp}\varphi\subset K.
+$$
+
+Because
+
+$$
+f\in L_{\mathrm{loc}}^1(\Omega),
+$$
+
+we have
+
+$$
+\int_K|f(x)|\,dx<\infty.
+$$
+
+Moreover, $\varphi$ is bounded on $K$. Therefore,
+
+$$
+\begin{aligned}
+\int_\Omega |f(x)\varphi(x)|\,dx
+&=
+\int_K |f(x)\varphi(x)|\,dx\\
+&\leq
+\|\varphi\|_{L^\infty(K)}
+\int_K|f(x)|\,dx\\
+&<\infty.
+\end{aligned}
+$$
+
+Hence $T_f(\varphi)$ is well-defined.
+
+### Linearity
+
+Let $\varphi,\psi\in C_c^\infty(\Omega)$ and let $a,b\in\mathbb R$. Then
+
+$$
+\begin{aligned}
+T_f(a\varphi+b\psi)
+&=
+\int_\Omega
+f(x)\bigl(a\varphi(x)+b\psi(x)\bigr)\,dx\\
+&=
+aT_f(\varphi)+bT_f(\psi).
+\end{aligned}
+$$
+
+Thus $T_f$ is linear.
+
+### Continuity
+
+Let
+
+$$
+\varphi_j\to0
+\quad\text{in }\mathcal D(\Omega).
+$$
+
+By the definition of convergence in $\mathcal D(\Omega)$, there exists a compact set
+
+$$
+K\subset\Omega
+$$
+
+such that
+
+$$
+\operatorname{supp}\varphi_j\subset K
+$$
+
+for all sufficiently large $j$, and
+
+$$
+\sup_{x\in K}
+|D^\alpha\varphi_j(x)|
+\to0
+$$
+
+for every multi-index $\alpha$.
+
+In particular, taking $\alpha=0$,
+
+$$
+\|\varphi_j\|_{L^\infty(K)}
+\to0.
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+|T_f(\varphi_j)|
+&=
+\left|
+\int_K f(x)\varphi_j(x)\,dx
+\right|\\
+&\leq
+\int_K|f(x)||\varphi_j(x)|\,dx\\
+&\leq
+\|f\|_{L^1(K)}
+\|\varphi_j\|_{L^\infty(K)}\\
+&\to0.
+\end{aligned}
+$$
+
+Thus
+
+$$
+T_f(\varphi_j)\to0.
+$$
+
+Hence $T_f$ is continuous on $\mathcal D(\Omega)$.
+
+Therefore,
+
+$$
+\boxed{
+T_f\in\mathcal D'(\Omega).
+}
+$$
+
+Thus every locally integrable function defines a distribution.
+
+## Remark
+
+A distribution induced by a locally integrable function is called a **regular distribution**.
+
+We usually identify $f$ with its associated distribution and simply write
+
+$$
+\langle f,\varphi\rangle
+=
+\int_\Omega f(x)\varphi(x)\,dx.
+$$
+
+This identification is injective: if
+
+$$
+\int_\Omega f(x)\varphi(x)\,dx=0
+$$
+
+for every $\varphi\in C_c^\infty(\Omega)$, then
+
+$$
+f=0
+$$
+
+almost everywhere in $\Omega$.
+
+Thus
+
+$$
+L_{\mathrm{loc}}^1(\Omega)
+\hookrightarrow
+\mathcal D'(\Omega).
+$$

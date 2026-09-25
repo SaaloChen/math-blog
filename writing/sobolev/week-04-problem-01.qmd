@@ -1,0 +1,190 @@
+---
+title: "Sobolev Spaces — Week 4, Problem 1"
+date: 2026-09-25
+description: "Gaussian approximations converge to the Dirac delta in the sense of distributions."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 4
+---
+
+## Problem
+
+For $\sigma>0$, define the Gaussian function
+
+$$
+f_\sigma(x)
+=
+\frac{1}{\sqrt{2\pi}\sigma}
+\exp\left(-\frac{x^2}{2\sigma^2}\right),
+\qquad x\in\mathbb R.
+$$
+
+Let $T_\sigma$ be the distribution induced by $f_\sigma$:
+
+$$
+\langle T_\sigma,\varphi\rangle
+=
+\int_{\mathbb R}f_\sigma(x)\varphi(x)\,dx,
+\qquad
+\varphi\in C_c^\infty(\mathbb R).
+$$
+
+Prove that
+
+$$
+T_\sigma\longrightarrow\delta_0
+$$
+
+in the sense of distributions as $\sigma\to0$.
+
+## Solution
+
+Recall that
+
+$$
+T_\sigma\to\delta_0
+\quad\text{in }\mathcal D'(\mathbb R)
+$$
+
+means that for every test function
+
+$$
+\varphi\in C_c^\infty(\mathbb R),
+$$
+
+we have
+
+$$
+\langle T_\sigma,\varphi\rangle
+\longrightarrow
+\langle\delta_0,\varphi\rangle
+=
+\varphi(0).
+$$
+
+Let $\varphi\in C_c^\infty(\mathbb R)$. Then
+
+$$
+\langle T_\sigma,\varphi\rangle
+=
+\int_{\mathbb R}
+\frac{1}{\sqrt{2\pi}\sigma}
+e^{-x^2/(2\sigma^2)}
+\varphi(x)\,dx.
+$$
+
+Make the change of variables
+
+$$
+x=\sigma y.
+$$
+
+Then
+
+$$
+dx=\sigma\,dy,
+$$
+
+and hence
+
+$$
+\langle T_\sigma,\varphi\rangle
+=
+\int_{\mathbb R}
+\frac{1}{\sqrt{2\pi}}
+e^{-y^2/2}
+\varphi(\sigma y)\,dy.
+$$
+
+For every fixed $y\in\mathbb R$,
+
+$$
+\varphi(\sigma y)\to\varphi(0)
+$$
+
+as $\sigma\to0$.
+
+Moreover,
+
+$$
+|\varphi(\sigma y)|
+\leq
+\|\varphi\|_{L^\infty(\mathbb R)},
+$$
+
+and therefore
+
+$$
+\left|
+\frac{1}{\sqrt{2\pi}}
+e^{-y^2/2}
+\varphi(\sigma y)
+\right|
+\leq
+\frac{\|\varphi\|_{L^\infty}}{\sqrt{2\pi}}
+e^{-y^2/2}.
+$$
+
+The function on the right belongs to $L^1(\mathbb R)$. Thus, by the dominated convergence theorem,
+
+$$
+\begin{aligned}
+\lim_{\sigma\to0}
+\langle T_\sigma,\varphi\rangle
+&=
+\int_{\mathbb R}
+\frac{1}{\sqrt{2\pi}}
+e^{-y^2/2}
+\varphi(0)\,dy\\
+&=
+\varphi(0)
+\int_{\mathbb R}
+\frac{1}{\sqrt{2\pi}}
+e^{-y^2/2}\,dy.
+\end{aligned}
+$$
+
+Since the Gaussian is normalized,
+
+$$
+\int_{\mathbb R}
+\frac{1}{\sqrt{2\pi}}
+e^{-y^2/2}\,dy
+=
+1.
+$$
+
+Therefore,
+
+$$
+\lim_{\sigma\to0}
+\langle T_\sigma,\varphi\rangle
+=
+\varphi(0)
+=
+\langle\delta_0,\varphi\rangle.
+$$
+
+Since this holds for every test function $\varphi$, we conclude that
+
+$$
+\boxed{
+T_\sigma\longrightarrow\delta_0
+\quad\text{in }\mathcal D'(\mathbb R).
+}
+$$
+
+## Remark
+
+The family $\{f_\sigma\}_{\sigma>0}$ is an example of an approximate identity. It satisfies
+
+$$
+f_\sigma\geq0,
+\qquad
+\int_{\mathbb R}f_\sigma(x)\,dx=1,
+$$
+
+while its mass becomes increasingly concentrated near the origin as $\sigma\to0$.
+
+Thus the Dirac delta can be understood as the distributional limit of a family of smooth functions, even though $\delta_0$ itself cannot be represented by a locally integrable function.

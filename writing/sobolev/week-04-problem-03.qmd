@@ -1,0 +1,193 @@
+---
+title: "Sobolev Spaces — Week 4, Problem 3"
+date: 2026-09-25
+description: "The second distributional derivative of the absolute value function."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 4
+---
+
+## Problem
+
+Let
+
+$$
+u(x)=|x|,
+\qquad
+x\in\mathbb R.
+$$
+
+Compute the second derivative of $u$ in the sense of distributions.
+
+## Solution
+
+Since
+
+$$
+u(x)=|x|\in L_{\mathrm{loc}}^1(\mathbb R),
+$$
+
+it defines a distribution on $\mathbb R$.
+
+We claim that
+
+$$
+\boxed{
+u''=2\delta_0
+}
+$$
+
+in the sense of distributions.
+
+Let
+
+$$
+\varphi\in C_c^\infty(\mathbb R).
+$$
+
+By the definition of the second distributional derivative,
+
+$$
+\langle u'',\varphi\rangle
+=
+\langle u,\varphi''\rangle.
+$$
+
+Thus
+
+$$
+\langle u'',\varphi\rangle
+=
+\int_{\mathbb R}|x|\varphi''(x)\,dx.
+$$
+
+Split the integral at the origin:
+
+$$
+\langle u'',\varphi\rangle
+=
+\int_{-\infty}^0(-x)\varphi''(x)\,dx
++
+\int_0^\infty x\varphi''(x)\,dx.
+$$
+
+For the first integral, integration by parts gives
+
+$$
+\begin{aligned}
+\int_{-\infty}^0(-x)\varphi''(x)\,dx
+&=
+\left[(-x)\varphi'(x)\right]_{-\infty}^0
++
+\int_{-\infty}^0\varphi'(x)\,dx\\
+&=
+\varphi(0).
+\end{aligned}
+$$
+
+Here the boundary term vanishes because $\varphi$ has compact support.
+
+Similarly,
+
+$$
+\begin{aligned}
+\int_0^\infty x\varphi''(x)\,dx
+&=
+\left[x\varphi'(x)\right]_0^\infty
+-
+\int_0^\infty\varphi'(x)\,dx\\
+&=
+\varphi(0).
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+\langle u'',\varphi\rangle
+=
+2\varphi(0).
+$$
+
+But
+
+$$
+\langle\delta_0,\varphi\rangle
+=
+\varphi(0),
+$$
+
+so
+
+$$
+\langle u'',\varphi\rangle
+=
+\langle2\delta_0,\varphi\rangle.
+$$
+
+Since this holds for every
+
+$$
+\varphi\in C_c^\infty(\mathbb R),
+$$
+
+we conclude that
+
+$$
+\boxed{
+\frac{d^2}{dx^2}|x|
+=
+2\delta_0
+\quad\text{in }\mathcal D'(\mathbb R).
+}
+$$
+
+## Remark
+
+Classically,
+
+$$
+u'(x)
+=
+\begin{cases}
+-1, & x<0,\\
+1, & x>0.
+\end{cases}
+$$
+
+Thus, in the sense of distributions,
+
+$$
+u'
+=
+\operatorname{sgn}(x).
+$$
+
+The function $\operatorname{sgn}(x)$ has a jump of size
+
+$$
+1-(-1)=2
+$$
+
+at the origin. Its distributional derivative is therefore
+
+$$
+(\operatorname{sgn}x)'
+=
+2\delta_0.
+$$
+
+Hence one may also summarize the calculation as
+
+$$
+|x|'
+=
+\operatorname{sgn}(x),
+\qquad
+|x|''
+=
+2\delta_0.
+$$
+
+This is a basic example showing that distributional differentiation detects jump discontinuities through Dirac masses.
