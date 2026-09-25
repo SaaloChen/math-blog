@@ -1,14 +1,11 @@
 ---
-
 title: "Sobolev Spaces — Week 2, Problem 2"
 date: 2026-09-25
 description: "Reflexivity of a Banach space and its dual, and separability of a Banach space with separable dual."
 categories:
-
-* Sobolev Spaces
-* Homework
-* Week 2
-
+  - Sobolev Spaces
+  - Homework
+  - Week 2
 ---
 
 ## Problem
@@ -58,13 +55,13 @@ $$
 F\in X'''.
 $$
 
-Define $f:X\to\mathbb{K}$ by
+Define $f:X\to\mathbb K$ by
 
 $$
 f(x)=F(J_Xx),
 $$
 
-where $\mathbb{K}=\mathbb{R}$ or $\mathbb{C}$.
+where $\mathbb K=\mathbb R$ or $\mathbb C$.
 
 Since $F$ and $J_X$ are bounded linear maps, $f\in X'$.
 
@@ -131,7 +128,7 @@ $$
 J_{X'}:X'\to X'''
 $$
 
-is surjective. Hence there exists some $f\in X'$ such that
+is surjective. Hence there exists $f\in X'$ such that
 
 $$
 F=J_{X'}f.
@@ -187,7 +184,7 @@ $$
 
 Suppose that $X'$ is separable.
 
-If $X={0}$, the conclusion is trivial, so assume $X\neq{0}$.
+If $X=\{0\}$, the conclusion is trivial, so assume $X\neq\{0\}$.
 
 Since $X'$ is separable, its unit sphere
 
@@ -251,7 +248,7 @@ $$
 f|_M=0.
 $$
 
-Since ${f_n}$ is dense in $S_{X'}$, there exists $n$ such that
+Since $\{f_n\}$ is dense in $S_{X'}$, there exists $n$ such that
 
 $$
 \|f-f_n\|<\frac14.
@@ -297,7 +294,7 @@ X
 \overline{\operatorname{span}\{x_n:n\in\mathbb N\}}.
 $$
 
-The linear span of a countable set is separable: indeed, the finite linear combinations of the $x_n$ with rational coefficients are countable and dense in the real case; in the complex case one may use coefficients in
+The linear span of a countable set is separable. Indeed, the finite linear combinations of the $x_n$ with rational coefficients are countable and dense in the real case; in the complex case one may use coefficients in
 
 $$
 \mathbb Q+i\mathbb Q.
