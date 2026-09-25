@@ -1,81 +1,487 @@
 ---
-title: "Sobolev Spaces — Week 1, Problem 1"
-date: 2026-09-19
-description: "Integrability of the singular function |x|^{-s} on the unit ball."
+
+title: "Sobolev Spaces — Week 2, Problem 1"
+date: 2026-09-25
+description: "Weak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces."
 categories:
-  - Sobolev Spaces
-  - Homework
-  - Week 1
+
+* Sobolev Spaces
+* Homework
+* Week 2
+
 ---
 
 ## Problem
 
-Let $B(0,1)\subset \mathbb{R}^n$ be the unit ball. Determine for which $s\in\mathbb{R}$,
+Let $X$ be a Banach space and suppose that
 
 $$
-\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx < +\infty.
-$$
-
-## Solution
-
-The only possible singularity of the integrand is at the origin. Using polar coordinates,
-
-$$
-x=r\omega,\qquad r\in(0,1),\quad \omega\in S^{n-1},
+u_k\rightharpoonup u
+\quad\text{weakly in }X
 $$
 
 and
 
 $$
-dx=r^{n-1}\,dr\,d\omega.
+\|u_k\|_X\to \|u\|_X.
+$$
+
+Does it follow that
+
+$$
+u_k\to u
+\quad\text{strongly in }X?
+$$
+
+In particular, what happens when $X=L^p(\Omega)$ for $1\leq p\leq\infty$?
+
+## Solution
+
+In a general Banach space, the conclusion is false.
+
+For $L^p(\Omega)$, the situation is as follows:
+
+$$
+\boxed{
+\begin{aligned}
+1<p<\infty &: \quad \text{the implication is true},\\
+p=1 &: \quad \text{the implication is false in general},\\
+p=\infty &: \quad \text{the implication is false in general}.
+\end{aligned}}
+$$
+
+The positive result for $1<p<\infty$ follows from the uniform convexity of $L^p$.
+
+### The case $1<p<\infty$
+
+For every $1<p<\infty$, the space $L^p(\Omega)$ is uniformly convex. We prove more generally that in every uniformly convex Banach space,
+
+$$
+u_k\rightharpoonup u,
+\qquad
+\|u_k\|_X\to\|u\|_X
+$$
+
+imply
+
+$$
+u_k\to u
+\quad\text{strongly in }X.
+$$
+
+If $u=0$, then
+
+$$
+\|u_k-u\|_X=\|u_k\|_X\to0,
+$$
+
+so the conclusion is immediate.
+
+Suppose now that $|u|_X>0$. Define
+
+$$
+v_k=\frac{u_k}{\|u_k\|_X},
+\qquad
+v=\frac{u}{\|u\|_X}.
+$$
+
+Since
+
+$$
+\|u_k\|_X\to\|u\|_X>0,
+$$
+
+we have
+
+$$
+v_k\rightharpoonup v,
+$$
+
+and
+
+$$
+\|v_k\|_X=\|v\|_X=1.
+$$
+
+Suppose, toward a contradiction, that $v_k$ does not converge strongly to $v$. Passing to a subsequence if necessary, there exists $\varepsilon>0$ such that
+
+$$
+\|v_k-v\|_X\geq\varepsilon
+$$
+
+for every $k$.
+
+By uniform convexity, there exists $\delta>0$ such that
+
+$$
+\left\|
+\frac{v_k+v}{2}
+\right\|_X
+\leq 1-\delta.
+$$
+
+On the other hand,
+
+$$
+\frac{v_k+v}{2}\rightharpoonup v.
+$$
+
+Since the norm is weakly lower semicontinuous,
+
+$$
+\|v\|_X
+\leq
+\liminf_{k\to\infty}
+\left\|
+\frac{v_k+v}{2}
+\right\|_X.
 $$
 
 Therefore,
 
 $$
-\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
+1
+\leq
+\liminf_{k\to\infty}
+\left\|
+\frac{v_k+v}{2}
+\right\|_X
+\leq
+1-\delta,
+$$
+
+which is impossible.
+
+Hence
+
+$$
+v_k\to v
+\quad\text{strongly in }X.
+$$
+
+Finally,
+
+$$
+\begin{aligned}
+\|u_k-u\|_X
+&=
+\left\|
+\|u_k\|_Xv_k-\|u\|_Xv
+\right\|_X\\
+&\leq
+\|u_k\|_X\|v_k-v\|_X
++
+\left|
+\|u_k\|_X-\|u\|_X
+\right|.
+\end{aligned}
+$$
+
+Both terms tend to zero. Thus
+
+$$
+u_k\to u
+\quad\text{strongly in }X.
+$$
+
+Since $L^p(\Omega)$ is uniformly convex whenever $1<p<\infty$, we obtain
+
+$$
+\boxed{
+u_k\rightharpoonup u
+\text{ in }L^p,
+\quad
+\|u_k\|_{L^p}\to\|u\|_{L^p}
+\quad\Longrightarrow\quad
+u_k\to u
+\text{ in }L^p
+}
+$$
+
+for every $1<p<\infty$.
+
+### The case $p=1$
+
+The conclusion fails in $L^1$.
+
+Let $r_k$ be the $k$-th Rademacher function on $(0,1)$. Thus $r_k$ takes only the values $1$ and $-1$, with increasingly rapid dyadic oscillations.
+
+We first observe that
+
+$$
+r_k\rightharpoonup0
+\quad\text{weakly in }L^1(0,1).
+$$
+
+Indeed, let $\varphi\in L^\infty(0,1)$. Given $\varepsilon>0$, choose a dyadic step function $h$ such that
+
+$$
+\|\varphi-h\|_{L^1}<\varepsilon.
+$$
+
+For sufficiently large $k$, the function $r_k$ has zero average on each dyadic interval on which $h$ is constant. Hence
+
+$$
+\int_0^1 h r_k\,dx=0.
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+\left|
+\int_0^1\varphi r_k\,dx
+\right|
+&=
+\left|
+\int_0^1(\varphi-h)r_k\,dx
+\right|\\
+&\leq
+\|\varphi-h\|_{L^1}
+<\varepsilon.
+\end{aligned}
+$$
+
+Thus
+
+$$
+r_k\rightharpoonup0
+\quad\text{in }L^1(0,1).
+$$
+
+Now define
+
+$$
+u_k=1+r_k,
+\qquad
+u=1.
+$$
+
+Then
+
+$$
+u_k\rightharpoonup u
+\quad\text{in }L^1(0,1).
+$$
+
+Moreover, $u_k$ takes the values $0$ and $2$, each on a set of measure $1/2$, so
+
+$$
+\|u_k\|_{L^1}=1=\|u\|_{L^1}.
+$$
+
+However,
+
+$$
+\|u_k-u\|_{L^1}
 =
-\int_{S^{n-1}}\int_0^1 r^{-s}r^{n-1}\,dr\,d\omega
+\|r_k\|_{L^1}
 =
-\lvert S^{n-1}\rvert\int_0^1 r^{n-1-s}\,dr.
+1
 $$
 
-Recall that
+for every $k$.
+
+Hence
 
 $$
-\int_0^1 r^\alpha\,dr<+\infty
-\quad\Longleftrightarrow\quad
-\alpha>-1.
+u_k\not\to u
+\quad\text{strongly in }L^1(0,1).
 $$
 
-Hence the integral is finite if and only if
+Therefore the implication fails for $p=1$.
+
+### The case $p=\infty$
+
+The conclusion also fails for $p=\infty$.
+
+Consider
 
 $$
-n-1-s>-1,
-$$
-
-that is,
-
-$$
-\boxed{s<n}.
-$$
-
-More precisely, when $s<n$,
-
-$$
-\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
+\ell^\infty
 =
-\frac{\lvert S^{n-1}\rvert}{n-s}.
+L^\infty(\mathbb N),
 $$
 
-When $s=n$, the radial integral becomes
+where $\mathbb N$ is equipped with counting measure. Let $e_k$ denote the $k$-th standard basis vector,
 
 $$
-\int_0^1 \frac{dr}{r},
+e_k=(0,\ldots,0,1,0,\ldots).
 $$
 
-which diverges logarithmically; when $s>n$, it diverges even more strongly.
+We first claim that
+
+$$
+e_k\rightharpoonup0
+\quad\text{weakly in }\ell^\infty.
+$$
+
+Let
+
+$$
+\Phi\in(\ell^\infty)^*,
+$$
+
+and set
+
+$$
+a_k=\Phi(e_k).
+$$
+
+For every finite set $F\subset\mathbb N$, choose signs $\varepsilon_k\in{-1,1}$ such that
+
+$$
+\varepsilon_k a_k=|a_k|.
+$$
+
+Then
+
+$$
+\left\|
+\sum_{k\in F}\varepsilon_k e_k
+\right\|_{\ell^\infty}
+=1,
+$$
+
+and therefore
+
+$$
+\begin{aligned}
+\sum_{k\in F}|a_k|
+&=
+\Phi\left(
+\sum_{k\in F}\varepsilon_k e_k
+\right)\\
+&\leq
+\|\Phi\|.
+\end{aligned}
+$$
+
+It follows that
+
+$$
+\sum_{k=1}^\infty|\Phi(e_k)|<\infty.
+$$
+
+In particular,
+
+$$
+\Phi(e_k)\to0.
+$$
+
+Since this holds for every $\Phi\in(\ell^\infty)^*$,
+
+$$
+e_k\rightharpoonup0
+\quad\text{in }\ell^\infty.
+$$
+
+Now let
+
+$$
+u=(1,1,1,\ldots)
+$$
+
+and define
+
+$$
+u_k=u-2e_k.
+$$
+
+Since $e_k\rightharpoonup0$,
+
+$$
+u_k\rightharpoonup u
+\quad\text{weakly in }\ell^\infty.
+$$
+
+Every coordinate of $u_k$ is equal to $1$, except for the $k$-th coordinate, which is $-1$. Therefore,
+
+$$
+\|u_k\|_{\ell^\infty}
+=
+1
+=
+\|u\|_{\ell^\infty}.
+$$
+
+Thus the norms converge. However,
+
+$$
+\|u_k-u\|_{\ell^\infty}
+=
+\|-2e_k\|_{\ell^\infty}
+=
+2
+$$
+
+for every $k$.
+
+Consequently,
+
+$$
+u_k\not\to u
+\quad\text{strongly in }\ell^\infty.
+$$
+
+Hence the implication fails for $p=\infty$.
 
 ## Remark
 
-This is a basic example of the general principle that, in $\mathbb{R}^n$, a point singularity of order $\lvert x\rvert^{-s}$ is locally integrable near the origin exactly when $s<n$.
+The property
+
+$$
+u_k\rightharpoonup u,
+\qquad
+\|u_k\|\to\|u\|
+\quad\Longrightarrow\quad
+u_k\to u
+$$
+
+is known as the **Radon--Riesz property**, or equivalently the **Kadec--Klee property** for sequences.
+
+Every uniformly convex Banach space has this property. In particular,
+
+$$
+\boxed{
+L^p(\Omega)\text{ has this property for }1<p<\infty.
+}
+$$
+
+In contrast, $L^1$ and $L^\infty$ do not have this property in general.
+
+The Hilbert space case $p=2$ is especially simple. Indeed,
+
+$$
+\|u_k-u\|_{L^2}^2
+=
+\|u_k\|_{L^2}^2
++
+\|u\|_{L^2}^2
+-
+2\langle u_k,u\rangle.
+$$
+
+Weak convergence gives
+
+$$
+\langle u_k,u\rangle
+\to
+\|u\|_{L^2}^2,
+$$
+
+while convergence of the norms gives
+
+$$
+\|u_k\|_{L^2}^2
+\to
+\|u\|_{L^2}^2.
+$$
+
+Hence
+
+$$
+\|u_k-u\|_{L^2}\to0.
+$$
+
+One should also distinguish weak convergence from weak-* convergence in $L^\infty$. Since $L^\infty$ is naturally the dual of $L^1$ under suitable hypotheses, weak-* convergence is tested only against $L^1$, whereas weak convergence is tested against the entire dual $(L^\infty)^*$. The counterexample above is stronger: it uses genuine weak convergence in $\ell^\infty$.
