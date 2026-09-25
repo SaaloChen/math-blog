@@ -112,6 +112,111 @@
     "text": "Remark\nThe convexity assumption guarantees that the entire line segment joining \\(x\\) and \\(y\\) remains inside \\(\\Omega\\). This allows the multidimensional problem to be reduced directly to the one-dimensional mean value theorem.\nAs an immediate consequence,\n\\[\n|f(y)-f(x)|\n\\leq\n\\sup_{z\\in[x,y]}|\\nabla f(z)|\\,|x-y|.\n\\]\nIn particular, if \\(\\Omega\\) is convex and\n\\[\n\\|\\nabla f\\|_{L^\\infty(\\Omega)}&lt;\\infty,\n\\]\nthen\n\\[\n|f(y)-f(x)|\n\\leq\n\\|\\nabla f\\|_{L^\\infty(\\Omega)}|x-y|,\n\\]\nso \\(f\\) is Lipschitz continuous on \\(\\Omega\\)."
   },
   {
+    "objectID": "writing/sobolev/week-04-problem-01.html",
+    "href": "writing/sobolev/week-04-problem-01.html",
+    "title": "Sobolev Spaces — Week 4, Problem 1",
+    "section": "",
+    "text": "For \\(\\sigma&gt;0\\), define the Gaussian function\n\\[\nf_\\sigma(x)\n=\n\\frac{1}{\\sqrt{2\\pi}\\sigma}\n\\exp\\left(-\\frac{x^2}{2\\sigma^2}\\right),\n\\qquad x\\in\\mathbb R.\n\\]\nLet \\(T_\\sigma\\) be the distribution induced by \\(f_\\sigma\\):\n\\[\n\\langle T_\\sigma,\\varphi\\rangle\n=\n\\int_{\\mathbb R}f_\\sigma(x)\\varphi(x)\\,dx,\n\\qquad\n\\varphi\\in C_c^\\infty(\\mathbb R).\n\\]\nProve that\n\\[\nT_\\sigma\\longrightarrow\\delta_0\n\\]\nin the sense of distributions as \\(\\sigma\\to0\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-01.html#problem",
+    "href": "writing/sobolev/week-04-problem-01.html#problem",
+    "title": "Sobolev Spaces — Week 4, Problem 1",
+    "section": "",
+    "text": "For \\(\\sigma&gt;0\\), define the Gaussian function\n\\[\nf_\\sigma(x)\n=\n\\frac{1}{\\sqrt{2\\pi}\\sigma}\n\\exp\\left(-\\frac{x^2}{2\\sigma^2}\\right),\n\\qquad x\\in\\mathbb R.\n\\]\nLet \\(T_\\sigma\\) be the distribution induced by \\(f_\\sigma\\):\n\\[\n\\langle T_\\sigma,\\varphi\\rangle\n=\n\\int_{\\mathbb R}f_\\sigma(x)\\varphi(x)\\,dx,\n\\qquad\n\\varphi\\in C_c^\\infty(\\mathbb R).\n\\]\nProve that\n\\[\nT_\\sigma\\longrightarrow\\delta_0\n\\]\nin the sense of distributions as \\(\\sigma\\to0\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-01.html#solution",
+    "href": "writing/sobolev/week-04-problem-01.html#solution",
+    "title": "Sobolev Spaces — Week 4, Problem 1",
+    "section": "Solution",
+    "text": "Solution\nRecall that\n\\[\nT_\\sigma\\to\\delta_0\n\\quad\\text{in }\\mathcal D'(\\mathbb R)\n\\]\nmeans that for every test function\n\\[\n\\varphi\\in C_c^\\infty(\\mathbb R),\n\\]\nwe have\n\\[\n\\langle T_\\sigma,\\varphi\\rangle\n\\longrightarrow\n\\langle\\delta_0,\\varphi\\rangle\n=\n\\varphi(0).\n\\]\nLet \\(\\varphi\\in C_c^\\infty(\\mathbb R)\\). Then\n\\[\n\\langle T_\\sigma,\\varphi\\rangle\n=\n\\int_{\\mathbb R}\n\\frac{1}{\\sqrt{2\\pi}\\sigma}\ne^{-x^2/(2\\sigma^2)}\n\\varphi(x)\\,dx.\n\\]\nMake the change of variables\n\\[\nx=\\sigma y.\n\\]\nThen\n\\[\ndx=\\sigma\\,dy,\n\\]\nand hence\n\\[\n\\langle T_\\sigma,\\varphi\\rangle\n=\n\\int_{\\mathbb R}\n\\frac{1}{\\sqrt{2\\pi}}\ne^{-y^2/2}\n\\varphi(\\sigma y)\\,dy.\n\\]\nFor every fixed \\(y\\in\\mathbb R\\),\n\\[\n\\varphi(\\sigma y)\\to\\varphi(0)\n\\]\nas \\(\\sigma\\to0\\).\nMoreover,\n\\[\n|\\varphi(\\sigma y)|\n\\leq\n\\|\\varphi\\|_{L^\\infty(\\mathbb R)},\n\\]\nand therefore\n\\[\n\\left|\n\\frac{1}{\\sqrt{2\\pi}}\ne^{-y^2/2}\n\\varphi(\\sigma y)\n\\right|\n\\leq\n\\frac{\\|\\varphi\\|_{L^\\infty}}{\\sqrt{2\\pi}}\ne^{-y^2/2}.\n\\]\nThe function on the right belongs to \\(L^1(\\mathbb R)\\). Thus, by the dominated convergence theorem,\n\\[\n\\begin{aligned}\n\\lim_{\\sigma\\to0}\n\\langle T_\\sigma,\\varphi\\rangle\n&=\n\\int_{\\mathbb R}\n\\frac{1}{\\sqrt{2\\pi}}\ne^{-y^2/2}\n\\varphi(0)\\,dy\\\\\n&=\n\\varphi(0)\n\\int_{\\mathbb R}\n\\frac{1}{\\sqrt{2\\pi}}\ne^{-y^2/2}\\,dy.\n\\end{aligned}\n\\]\nSince the Gaussian is normalized,\n\\[\n\\int_{\\mathbb R}\n\\frac{1}{\\sqrt{2\\pi}}\ne^{-y^2/2}\\,dy\n=\n1.\n\\]\nTherefore,\n\\[\n\\lim_{\\sigma\\to0}\n\\langle T_\\sigma,\\varphi\\rangle\n=\n\\varphi(0)\n=\n\\langle\\delta_0,\\varphi\\rangle.\n\\]\nSince this holds for every test function \\(\\varphi\\), we conclude that\n\\[\n\\boxed{\nT_\\sigma\\longrightarrow\\delta_0\n\\quad\\text{in }\\mathcal D'(\\mathbb R).\n}\n\\]"
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-01.html#remark",
+    "href": "writing/sobolev/week-04-problem-01.html#remark",
+    "title": "Sobolev Spaces — Week 4, Problem 1",
+    "section": "Remark",
+    "text": "Remark\nThe family \\(\\{f_\\sigma\\}_{\\sigma&gt;0}\\) is an example of an approximate identity. It satisfies\n\\[\nf_\\sigma\\geq0,\n\\qquad\n\\int_{\\mathbb R}f_\\sigma(x)\\,dx=1,\n\\]\nwhile its mass becomes increasingly concentrated near the origin as \\(\\sigma\\to0\\).\nThus the Dirac delta can be understood as the distributional limit of a family of smooth functions, even though \\(\\delta_0\\) itself cannot be represented by a locally integrable function."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-03.html",
+    "href": "writing/sobolev/week-04-problem-03.html",
+    "title": "Sobolev Spaces — Week 4, Problem 3",
+    "section": "",
+    "text": "Let\n\\[\nu(x)=|x|,\n\\qquad\nx\\in\\mathbb R.\n\\]\nCompute the second derivative of \\(u\\) in the sense of distributions."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-03.html#problem",
+    "href": "writing/sobolev/week-04-problem-03.html#problem",
+    "title": "Sobolev Spaces — Week 4, Problem 3",
+    "section": "",
+    "text": "Let\n\\[\nu(x)=|x|,\n\\qquad\nx\\in\\mathbb R.\n\\]\nCompute the second derivative of \\(u\\) in the sense of distributions."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-03.html#solution",
+    "href": "writing/sobolev/week-04-problem-03.html#solution",
+    "title": "Sobolev Spaces — Week 4, Problem 3",
+    "section": "Solution",
+    "text": "Solution\nSince\n\\[\nu(x)=|x|\\in L_{\\mathrm{loc}}^1(\\mathbb R),\n\\]\nit defines a distribution on \\(\\mathbb R\\).\nWe claim that\n\\[\n\\boxed{\nu''=2\\delta_0\n}\n\\]\nin the sense of distributions.\nLet\n\\[\n\\varphi\\in C_c^\\infty(\\mathbb R).\n\\]\nBy the definition of the second distributional derivative,\n\\[\n\\langle u'',\\varphi\\rangle\n=\n\\langle u,\\varphi''\\rangle.\n\\]\nThus\n\\[\n\\langle u'',\\varphi\\rangle\n=\n\\int_{\\mathbb R}|x|\\varphi''(x)\\,dx.\n\\]\nSplit the integral at the origin:\n\\[\n\\langle u'',\\varphi\\rangle\n=\n\\int_{-\\infty}^0(-x)\\varphi''(x)\\,dx\n+\n\\int_0^\\infty x\\varphi''(x)\\,dx.\n\\]\nFor the first integral, integration by parts gives\n\\[\n\\begin{aligned}\n\\int_{-\\infty}^0(-x)\\varphi''(x)\\,dx\n&=\n\\left[(-x)\\varphi'(x)\\right]_{-\\infty}^0\n+\n\\int_{-\\infty}^0\\varphi'(x)\\,dx\\\\\n&=\n\\varphi(0).\n\\end{aligned}\n\\]\nHere the boundary term vanishes because \\(\\varphi\\) has compact support.\nSimilarly,\n\\[\n\\begin{aligned}\n\\int_0^\\infty x\\varphi''(x)\\,dx\n&=\n\\left[x\\varphi'(x)\\right]_0^\\infty\n-\n\\int_0^\\infty\\varphi'(x)\\,dx\\\\\n&=\n\\varphi(0).\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\langle u'',\\varphi\\rangle\n=\n2\\varphi(0).\n\\]\nBut\n\\[\n\\langle\\delta_0,\\varphi\\rangle\n=\n\\varphi(0),\n\\]\nso\n\\[\n\\langle u'',\\varphi\\rangle\n=\n\\langle2\\delta_0,\\varphi\\rangle.\n\\]\nSince this holds for every\n\\[\n\\varphi\\in C_c^\\infty(\\mathbb R),\n\\]\nwe conclude that\n\\[\n\\boxed{\n\\frac{d^2}{dx^2}|x|\n=\n2\\delta_0\n\\quad\\text{in }\\mathcal D'(\\mathbb R).\n}\n\\]"
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-03.html#remark",
+    "href": "writing/sobolev/week-04-problem-03.html#remark",
+    "title": "Sobolev Spaces — Week 4, Problem 3",
+    "section": "Remark",
+    "text": "Remark\nClassically,\n\\[\nu'(x)\n=\n\\begin{cases}\n-1, & x&lt;0,\\\\\n1, & x&gt;0.\n\\end{cases}\n\\]\nThus, in the sense of distributions,\n\\[\nu'\n=\n\\operatorname{sgn}(x).\n\\]\nThe function \\(\\operatorname{sgn}(x)\\) has a jump of size\n\\[\n1-(-1)=2\n\\]\nat the origin. Its distributional derivative is therefore\n\\[\n(\\operatorname{sgn}x)'\n=\n2\\delta_0.\n\\]\nHence one may also summarize the calculation as\n\\[\n|x|'\n=\n\\operatorname{sgn}(x),\n\\qquad\n|x|''\n=\n2\\delta_0.\n\\]\nThis is a basic example showing that distributional differentiation detects jump discontinuities through Dirac masses."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
+  },
+  {
+    "objectID": "cv.html#yiming-chen",
+    "href": "cv.html#yiming-chen",
+    "title": "CV",
+    "section": "",
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
+  },
+  {
+    "objectID": "cv.html#contact",
+    "href": "cv.html#contact",
+    "title": "CV",
+    "section": "Contact",
+    "text": "Contact\nEmail: saalo@foxmail.com"
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-02.html",
+    "href": "writing/sobolev/week-04-problem-02.html",
+    "title": "Sobolev Spaces — Week 4, Problem 2",
+    "section": "",
+    "text": "Let \\(\\Omega\\subset\\mathbb R^n\\) be open and let\n\\[\nf\\in L_{\\mathrm{loc}}^1(\\Omega).\n\\]\nDefine\n\\[\nT_f(\\varphi)\n=\n\\int_\\Omega f(x)\\varphi(x)\\,dx,\n\\qquad\n\\varphi\\in C_c^\\infty(\\Omega).\n\\]\nProve that \\(T_f\\) is a distribution on \\(\\Omega\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-02.html#problem",
+    "href": "writing/sobolev/week-04-problem-02.html#problem",
+    "title": "Sobolev Spaces — Week 4, Problem 2",
+    "section": "",
+    "text": "Let \\(\\Omega\\subset\\mathbb R^n\\) be open and let\n\\[\nf\\in L_{\\mathrm{loc}}^1(\\Omega).\n\\]\nDefine\n\\[\nT_f(\\varphi)\n=\n\\int_\\Omega f(x)\\varphi(x)\\,dx,\n\\qquad\n\\varphi\\in C_c^\\infty(\\Omega).\n\\]\nProve that \\(T_f\\) is a distribution on \\(\\Omega\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-02.html#solution",
+    "href": "writing/sobolev/week-04-problem-02.html#solution",
+    "title": "Sobolev Spaces — Week 4, Problem 2",
+    "section": "Solution",
+    "text": "Solution\nRecall that a distribution on \\(\\Omega\\) is a continuous linear functional on\n\\[\n\\mathcal D(\\Omega)\n=\nC_c^\\infty(\\Omega).\n\\]\nWe show that \\(T_f\\) is well-defined, linear, and continuous.\n\nWell-definedness\nLet\n\\[\n\\varphi\\in C_c^\\infty(\\Omega).\n\\]\nSince \\(\\varphi\\) has compact support, there exists a compact set\n\\[\nK\\subset\\Omega\n\\]\nsuch that\n\\[\n\\operatorname{supp}\\varphi\\subset K.\n\\]\nBecause\n\\[\nf\\in L_{\\mathrm{loc}}^1(\\Omega),\n\\]\nwe have\n\\[\n\\int_K|f(x)|\\,dx&lt;\\infty.\n\\]\nMoreover, \\(\\varphi\\) is bounded on \\(K\\). Therefore,\n\\[\n\\begin{aligned}\n\\int_\\Omega |f(x)\\varphi(x)|\\,dx\n&=\n\\int_K |f(x)\\varphi(x)|\\,dx\\\\\n&\\leq\n\\|\\varphi\\|_{L^\\infty(K)}\n\\int_K|f(x)|\\,dx\\\\\n&&lt;\\infty.\n\\end{aligned}\n\\]\nHence \\(T_f(\\varphi)\\) is well-defined.\n\n\nLinearity\nLet \\(\\varphi,\\psi\\in C_c^\\infty(\\Omega)\\) and let \\(a,b\\in\\mathbb R\\). Then\n\\[\n\\begin{aligned}\nT_f(a\\varphi+b\\psi)\n&=\n\\int_\\Omega\nf(x)\\bigl(a\\varphi(x)+b\\psi(x)\\bigr)\\,dx\\\\\n&=\naT_f(\\varphi)+bT_f(\\psi).\n\\end{aligned}\n\\]\nThus \\(T_f\\) is linear.\n\n\nContinuity\nLet\n\\[\n\\varphi_j\\to0\n\\quad\\text{in }\\mathcal D(\\Omega).\n\\]\nBy the definition of convergence in \\(\\mathcal D(\\Omega)\\), there exists a compact set\n\\[\nK\\subset\\Omega\n\\]\nsuch that\n\\[\n\\operatorname{supp}\\varphi_j\\subset K\n\\]\nfor all sufficiently large \\(j\\), and\n\\[\n\\sup_{x\\in K}\n|D^\\alpha\\varphi_j(x)|\n\\to0\n\\]\nfor every multi-index \\(\\alpha\\).\nIn particular, taking \\(\\alpha=0\\),\n\\[\n\\|\\varphi_j\\|_{L^\\infty(K)}\n\\to0.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n|T_f(\\varphi_j)|\n&=\n\\left|\n\\int_K f(x)\\varphi_j(x)\\,dx\n\\right|\\\\\n&\\leq\n\\int_K|f(x)||\\varphi_j(x)|\\,dx\\\\\n&\\leq\n\\|f\\|_{L^1(K)}\n\\|\\varphi_j\\|_{L^\\infty(K)}\\\\\n&\\to0.\n\\end{aligned}\n\\]\nThus\n\\[\nT_f(\\varphi_j)\\to0.\n\\]\nHence \\(T_f\\) is continuous on \\(\\mathcal D(\\Omega)\\).\nTherefore,\n\\[\n\\boxed{\nT_f\\in\\mathcal D'(\\Omega).\n}\n\\]\nThus every locally integrable function defines a distribution."
+  },
+  {
+    "objectID": "writing/sobolev/week-04-problem-02.html#remark",
+    "href": "writing/sobolev/week-04-problem-02.html#remark",
+    "title": "Sobolev Spaces — Week 4, Problem 2",
+    "section": "Remark",
+    "text": "Remark\nA distribution induced by a locally integrable function is called a regular distribution.\nWe usually identify \\(f\\) with its associated distribution and simply write\n\\[\n\\langle f,\\varphi\\rangle\n=\n\\int_\\Omega f(x)\\varphi(x)\\,dx.\n\\]\nThis identification is injective: if\n\\[\n\\int_\\Omega f(x)\\varphi(x)\\,dx=0\n\\]\nfor every \\(\\varphi\\in C_c^\\infty(\\Omega)\\), then\n\\[\nf=0\n\\]\nalmost everywhere in \\(\\Omega\\).\nThus\n\\[\nL_{\\mathrm{loc}}^1(\\Omega)\n\\hookrightarrow\n\\mathcal D'(\\Omega).\n\\]"
+  },
+  {
     "objectID": "writing/sobolev/week-01-problem-01.html",
     "href": "writing/sobolev/week-01-problem-01.html",
     "title": "Sobolev Spaces — Week 1, Problem 1",
@@ -138,27 +243,6 @@
     "title": "Sobolev Spaces — Week 1, Problem 1",
     "section": "Remark",
     "text": "Remark\nThis is a basic example of the general principle that, in \\(\\mathbb{R}^n\\), a point singularity of order \\(\\lvert x\\rvert^{-s}\\) is locally integrable near the origin exactly when \\(s&lt;n\\)."
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
-    "section": "",
-    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
-  },
-  {
-    "objectID": "cv.html#yiming-chen",
-    "href": "cv.html#yiming-chen",
-    "title": "CV",
-    "section": "",
-    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
-  },
-  {
-    "objectID": "cv.html#contact",
-    "href": "cv.html#contact",
-    "title": "CV",
-    "section": "Contact",
-    "text": "Contact\nEmail: saalo@foxmail.com"
   },
   {
     "objectID": "writing/sobolev/week-03-problem-02.html",
@@ -256,6 +340,6 @@
     "href": "writing.html",
     "title": "Writing",
     "section": "",
-    "text": "Mathematical notes, course problems, and expository writings.\nThe notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nSobolev Spaces — Week 3, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nA counterexample showing that the embedding from C^1 into C^{0,1} is not compact.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 3, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nThe Lagrange mean value theorem in several dimensions on a convex domain.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 2, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nWeak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 2, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nReflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 3, Problem 3\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nThe Dirac delta as a distribution.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nAn example of a nonseparable Hilbert space.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\nNo matching items"
+    "text": "Mathematical notes, course problems, and expository writings.\nThe notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nSobolev Spaces — Week 4, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 4\n\n\n\nEvery locally integrable function defines a distribution.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 4, Problem 3\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 4\n\n\n\nThe second distributional derivative of the absolute value function.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 4, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 4\n\n\n\nGaussian approximations converge to the Dirac delta in the sense of distributions.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 3, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nA counterexample showing that the embedding from C^1 into C^{0,1} is not compact.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 3, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nThe Lagrange mean value theorem in several dimensions on a convex domain.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 2, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nWeak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 2, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nReflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 3, Problem 3\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nThe Dirac delta as a distribution.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nAn example of a nonseparable Hilbert space.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\nNo matching items"
   }
 ]
