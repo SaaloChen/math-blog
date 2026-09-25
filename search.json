@@ -7,20 +7,6 @@
     "text": "I use this website as a public mathematical notebook. The main purpose is not to make finished survey articles, but to record ideas clearly enough that they remain useful months later.\nThe guiding style is simple: state the result, explain the geometric picture, then write the proof in a form that can be checked."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects & Notes",
-    "section": "",
-    "text": "This page collects selected notes, expository writings, and lecture-style materials."
-  },
-  {
-    "objectID": "projects.html#notes",
-    "href": "projects.html#notes",
-    "title": "Projects & Notes",
-    "section": "Notes",
-    "text": "Notes\n\nAllard Regularity Theorem Notes/ Allard正则性定理笔记\nDate: 2026-06-03.\nNotes on Allard’s regularity theorem, including its statement, geometric meaning, main assumptions, and its role in the regularity theory of varifolds. It might be simplified in the future.\nElliptic PDE Regularity Notes/二阶椭圆PDE的正则性笔记, Chinese Version\nDate: 2026-06-04.\nNotes in Chinese on regularity theory for second-order elliptic partial differential equations, including basic estimates and related analytical tools. This is a really long note, and it is better to use it with Han-Lin or Gilbarg-Trudinger.\nYau Competition Geometry and Topology Notes/丘赛几何与拓扑复习笔记, Chinese Version\nDate: 2026-06-03.\nNotes in Chinese for reviewing geometry and topology topics in the Yau Mathematical Sciences Competition, including selected definitions, theorems, examples, and problem-solving techniques. It should be noted that it does not include “Spectral Sequences”, which requires many diagrams.\nRegularity of Minimal Surface Equations/极小曲面方程的正则性\nDate: 2026-06-03.\nA short version for geometric analysts to understand the regularity theory quickly, including 4 steps of improvement of regularity. It can be regarded as a short version of the regularity theory for elliptic PDEs as well."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
@@ -40,6 +26,27 @@
     "title": "Home",
     "section": "Recent writing",
     "text": "Recent writing\nSee the Writing page for all posts."
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-02.html",
+    "href": "writing/sobolev/week-01-problem-02.html",
+    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "section": "",
+    "text": "Give an example of a Hilbert space which is not separable."
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-02.html#problem",
+    "href": "writing/sobolev/week-01-problem-02.html#problem",
+    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "section": "",
+    "text": "Give an example of a Hilbert space which is not separable."
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-02.html#solution",
+    "href": "writing/sobolev/week-01-problem-02.html#solution",
+    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "section": "Solution",
+    "text": "Solution\nConsider the Hilbert space\n\\[\n\\ell^2(\\mathbb R)\n=\n\\left\\{\nx=(x_i)_{i\\in\\mathbb R}:\n\\sum_{i\\in\\mathbb R}|x_i|^2&lt;\\infty\n\\right\\},\n\\]\nequipped with the inner product\n\\[\n\\langle x,y\\rangle\n=\n\\sum_{i\\in\\mathbb R}x_i\\overline{y_i}.\n\\]\nIt is a standard fact that \\(\\ell^2(\\mathbb R)\\) is a Hilbert space. We show that it is not separable.\nFor each \\(i\\in\\mathbb R\\), define \\(e_i\\in\\ell^2(\\mathbb R)\\) by\n\\[\ne_i(j)=\\delta_{ij}.\n\\]\nThen\n\\[\n\\{e_i:i\\in\\mathbb R\\}\n\\]\nis an uncountable orthonormal family. In particular, for any \\(i\\neq j\\),\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nSuppose, for contradiction, that \\(\\ell^2(\\mathbb R)\\) is separable. Then there exists a countable dense subset \\(D\\subset\\ell^2(\\mathbb R)\\).\nFor each \\(i\\in\\mathbb R\\), by the density of \\(D\\), choose \\(d_i\\in D\\) such that\n\\[\n\\|e_i-d_i\\|&lt;\\frac12.\n\\]\nWe claim that the points \\(d_i\\) are all distinct. Indeed, if \\(d_i=d_j=d\\) for some \\(i\\neq j\\), then by the triangle inequality,\n\\[\n\\|e_i-e_j\\|\n\\le\n\\|e_i-d\\|+\\|d-e_j\\|\n&lt;1,\n\\]\nwhich contradicts\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nTherefore the map\n\\[\ni\\longmapsto d_i\n\\]\nis injective from \\(\\mathbb R\\) into \\(D\\). Hence\n\\[\n\\operatorname{card}(D)\n\\ge\n\\operatorname{card}(\\mathbb R),\n\\]\nso \\(D\\) is uncountable, contradicting our assumption.\nTherefore,\n\\[\n\\boxed{\\ell^2(\\mathbb R)\\text{ is a nonseparable Hilbert space}.}\n\\]"
   },
   {
     "objectID": "writing/sobolev/week-01-problem-01.html",
@@ -70,34 +77,6 @@
     "text": "Remark\nThis is a basic example of the general principle that, in \\(\\mathbb{R}^n\\), a point singularity of order \\(\\lvert x\\rvert^{-s}\\) is locally integrable near the origin exactly when \\(s&lt;n\\)."
   },
   {
-    "objectID": "writing/sobolev/week-01-problem-02.html",
-    "href": "writing/sobolev/week-01-problem-02.html",
-    "title": "Sobolev Spaces — Week 1, Problem 2",
-    "section": "",
-    "text": "Give an example of a Hilbert space which is not separable."
-  },
-  {
-    "objectID": "writing/sobolev/week-01-problem-02.html#problem",
-    "href": "writing/sobolev/week-01-problem-02.html#problem",
-    "title": "Sobolev Spaces — Week 1, Problem 2",
-    "section": "",
-    "text": "Give an example of a Hilbert space which is not separable."
-  },
-  {
-    "objectID": "writing/sobolev/week-01-problem-02.html#solution",
-    "href": "writing/sobolev/week-01-problem-02.html#solution",
-    "title": "Sobolev Spaces — Week 1, Problem 2",
-    "section": "Solution",
-    "text": "Solution\nConsider the Hilbert space\n\\[\n\\ell^2(\\mathbb R)\n=\n\\left\\{\nx=(x_i)_{i\\in\\mathbb R}:\n\\sum_{i\\in\\mathbb R}|x_i|^2&lt;\\infty\n\\right\\},\n\\]\nequipped with the inner product\n\\[\n\\langle x,y\\rangle\n=\n\\sum_{i\\in\\mathbb R}x_i\\overline{y_i}.\n\\]\nIt is a standard fact that \\(\\ell^2(\\mathbb R)\\) is a Hilbert space. We show that it is not separable.\nFor each \\(i\\in\\mathbb R\\), define \\(e_i\\in\\ell^2(\\mathbb R)\\) by\n\\[\ne_i(j)=\\delta_{ij}.\n\\]\nThen\n\\[\n\\{e_i:i\\in\\mathbb R\\}\n\\]\nis an uncountable orthonormal family. In particular, for any \\(i\\neq j\\),\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nSuppose, for contradiction, that \\(\\ell^2(\\mathbb R)\\) is separable. Then there exists a countable dense subset \\(D\\subset\\ell^2(\\mathbb R)\\).\nFor each \\(i\\in\\mathbb R\\), by the density of \\(D\\), choose \\(d_i\\in D\\) such that\n\\[\n\\|e_i-d_i\\|&lt;\\frac12.\n\\]\nWe claim that the points \\(d_i\\) are all distinct. Indeed, if \\(d_i=d_j=d\\) for some \\(i\\neq j\\), then by the triangle inequality,\n\\[\n\\|e_i-e_j\\|\n\\le\n\\|e_i-d\\|+\\|d-e_j\\|\n&lt;1,\n\\]\nwhich contradicts\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nTherefore the map\n\\[\ni\\longmapsto d_i\n\\]\nis injective from \\(\\mathbb R\\) into \\(D\\). Hence\n\\[\n\\operatorname{card}(D)\n\\ge\n\\operatorname{card}(\\mathbb R),\n\\]\nso \\(D\\) is uncountable, contradicting our assumption.\nTherefore,\n\\[\n\\boxed{\\ell^2(\\mathbb R)\\text{ is a nonseparable Hilbert space}.}\n\\]"
-  },
-  {
-    "objectID": "writing.html",
-    "href": "writing.html",
-    "title": "Writing",
-    "section": "",
-    "text": "Mathematical notes, course problems, and expository writings.\nThe notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nAn example of a nonseparable Hilbert space.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "CV",
@@ -117,5 +96,54 @@
     "title": "CV",
     "section": "Contact",
     "text": "Contact\nEmail: saalo@foxmail.com"
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html",
+    "href": "writing/sobolev/week-02-problem-01.html",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "",
+    "text": "Let \\(B(0,1)\\subset \\mathbb{R}^n\\) be the unit ball. Determine for which \\(s\\in\\mathbb{R}\\),\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx &lt; +\\infty.\n\\]"
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html#problem",
+    "href": "writing/sobolev/week-02-problem-01.html#problem",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "",
+    "text": "Let \\(B(0,1)\\subset \\mathbb{R}^n\\) be the unit ball. Determine for which \\(s\\in\\mathbb{R}\\),\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx &lt; +\\infty.\n\\]"
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html#solution",
+    "href": "writing/sobolev/week-02-problem-01.html#solution",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "Solution",
+    "text": "Solution\nThe only possible singularity of the integrand is at the origin. Using polar coordinates,\n\\[\nx=r\\omega,\\qquad r\\in(0,1),\\quad \\omega\\in S^{n-1},\n\\]\nand\n\\[\ndx=r^{n-1}\\,dr\\,d\\omega.\n\\]\nTherefore,\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx\n=\n\\int_{S^{n-1}}\\int_0^1 r^{-s}r^{n-1}\\,dr\\,d\\omega\n=\n\\lvert S^{n-1}\\rvert\\int_0^1 r^{n-1-s}\\,dr.\n\\]\nRecall that\n\\[\n\\int_0^1 r^\\alpha\\,dr&lt;+\\infty\n\\quad\\Longleftrightarrow\\quad\n\\alpha&gt;-1.\n\\]\nHence the integral is finite if and only if\n\\[\nn-1-s&gt;-1,\n\\]\nthat is,\n\\[\n\\boxed{s&lt;n}.\n\\]\nMore precisely, when \\(s&lt;n\\),\n\\[\n\\int_{B(0,1)} \\frac{1}{\\lvert x\\rvert^s}\\,dx\n=\n\\frac{\\lvert S^{n-1}\\rvert}{n-s}.\n\\]\nWhen \\(s=n\\), the radial integral becomes\n\\[\n\\int_0^1 \\frac{dr}{r},\n\\]\nwhich diverges logarithmically; when \\(s&gt;n\\), it diverges even more strongly."
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html#remark",
+    "href": "writing/sobolev/week-02-problem-01.html#remark",
+    "title": "Sobolev Spaces — Week 1, Problem 1",
+    "section": "Remark",
+    "text": "Remark\nThis is a basic example of the general principle that, in \\(\\mathbb{R}^n\\), a point singularity of order \\(\\lvert x\\rvert^{-s}\\) is locally integrable near the origin exactly when \\(s&lt;n\\)."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects & Notes",
+    "section": "",
+    "text": "This page collects selected notes, expository writings, and lecture-style materials."
+  },
+  {
+    "objectID": "projects.html#notes",
+    "href": "projects.html#notes",
+    "title": "Projects & Notes",
+    "section": "Notes",
+    "text": "Notes\n\nAllard Regularity Theorem Notes/ Allard正则性定理笔记\nDate: 2026-06-03.\nNotes on Allard’s regularity theorem, including its statement, geometric meaning, main assumptions, and its role in the regularity theory of varifolds. It might be simplified in the future.\nElliptic PDE Regularity Notes/二阶椭圆PDE的正则性笔记, Chinese Version\nDate: 2026-06-04.\nNotes in Chinese on regularity theory for second-order elliptic partial differential equations, including basic estimates and related analytical tools. This is a really long note, and it is better to use it with Han-Lin or Gilbarg-Trudinger.\nYau Competition Geometry and Topology Notes/丘赛几何与拓扑复习笔记, Chinese Version\nDate: 2026-06-03.\nNotes in Chinese for reviewing geometry and topology topics in the Yau Mathematical Sciences Competition, including selected definitions, theorems, examples, and problem-solving techniques. It should be noted that it does not include “Spectral Sequences”, which requires many diagrams.\nRegularity of Minimal Surface Equations/极小曲面方程的正则性\nDate: 2026-06-03.\nA short version for geometric analysts to understand the regularity theory quickly, including 4 steps of improvement of regularity. It can be regarded as a short version of the regularity theory for elliptic PDEs as well."
+  },
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Mathematical notes, course problems, and expository writings.\nThe notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nAn example of a nonseparable Hilbert space.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\nNo matching items"
   }
 ]
