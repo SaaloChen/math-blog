@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-19">
-<meta name="description" content="Integrability of the singular function |x|^{-s} on the unit ball.">
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="Weak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.">
 
-<title>Sobolev Spaces — Week 1, Problem 1 – Saalo Chen</title>
+<title>Sobolev Spaces — Week 2, Problem 1 – Saalo Chen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -160,7 +160,12 @@ window.Quarto = {
    
   <ul>
   <li><a href="#problem" id="toc-problem" class="nav-link active" data-scroll-target="#problem">Problem</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a>
+  <ul class="collapse">
+  <li><a href="#the-case-1pinfty" id="toc-the-case-1pinfty" class="nav-link" data-scroll-target="#the-case-1pinfty">The case <span class="math inline">\(1&lt;p&lt;\infty\)</span></a></li>
+  <li><a href="#the-case-p1" id="toc-the-case-p1" class="nav-link" data-scroll-target="#the-case-p1">The case <span class="math inline">\(p=1\)</span></a></li>
+  <li><a href="#the-case-pinfty" id="toc-the-case-pinfty" class="nav-link" data-scroll-target="#the-case-pinfty">The case <span class="math inline">\(p=\infty\)</span></a></li>
+  </ul></li>
   <li><a href="#remark" id="toc-remark" class="nav-link" data-scroll-target="#remark">Remark</a></li>
   </ul>
 </nav>
@@ -170,17 +175,17 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sobolev Spaces — Week 1, Problem 1</h1>
+<h1 class="title">Sobolev Spaces — Week 2, Problem 1</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Sobolev Spaces</div>
     <div class="quarto-category">Homework</div>
-    <div class="quarto-category">Week 1</div>
+    <div class="quarto-category">Week 2</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Integrability of the singular function |x|^{-s} on the unit ball.
+    Weak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.
   </div>
 </div>
 
@@ -191,7 +196,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 19, 2026</p>
+      <p class="date">September 25, 2026</p>
     </div>
   </div>
   
@@ -205,58 +210,365 @@ window.Quarto = {
 
 <section id="problem" class="level2">
 <h2 class="anchored" data-anchor-id="problem">Problem</h2>
-<p>Let <span class="math inline">\(B(0,1)\subset \mathbb{R}^n\)</span> be the unit ball. Determine for which <span class="math inline">\(s\in\mathbb{R}\)</span>,</p>
+<p>Let <span class="math inline">\(X\)</span> be a Banach space and suppose that</p>
 <p><span class="math display">\[
-\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx &lt; +\infty.
-\]</span></p>
-</section>
-<section id="solution" class="level2">
-<h2 class="anchored" data-anchor-id="solution">Solution</h2>
-<p>The only possible singularity of the integrand is at the origin. Using polar coordinates,</p>
-<p><span class="math display">\[
-x=r\omega,\qquad r\in(0,1),\quad \omega\in S^{n-1},
+u_k\rightharpoonup u
+\quad\text{weakly in }X
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-dx=r^{n-1}\,dr\,d\omega.
+\|u_k\|_X\to \|u\|_X.
+\]</span></p>
+<p>Does it follow that</p>
+<p><span class="math display">\[
+u_k\to u
+\quad\text{strongly in }X?
+\]</span></p>
+<p>In particular, what happens when <span class="math inline">\(X=L^p(\Omega)\)</span> for <span class="math inline">\(1\leq p\leq\infty\)</span>?</p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>In a general Banach space, the conclusion is false.</p>
+<p>For <span class="math inline">\(L^p(\Omega)\)</span>, the situation is as follows:</p>
+<p><span class="math display">\[
+\boxed{
+\begin{aligned}
+1&lt;p&lt;\infty &amp;: \quad \text{the implication is true},\\
+p=1 &amp;: \quad \text{the implication is false in general},\\
+p=\infty &amp;: \quad \text{the implication is false in general}.
+\end{aligned}}
+\]</span></p>
+<p>The positive result for <span class="math inline">\(1&lt;p&lt;\infty\)</span> follows from the uniform convexity of <span class="math inline">\(L^p\)</span>.</p>
+<section id="the-case-1pinfty" class="level3">
+<h3 class="anchored" data-anchor-id="the-case-1pinfty">The case <span class="math inline">\(1&lt;p&lt;\infty\)</span></h3>
+<p>For every <span class="math inline">\(1&lt;p&lt;\infty\)</span>, the space <span class="math inline">\(L^p(\Omega)\)</span> is uniformly convex. We prove more generally that in every uniformly convex Banach space,</p>
+<p><span class="math display">\[
+u_k\rightharpoonup u,
+\qquad
+\|u_k\|_X\to\|u\|_X
+\]</span></p>
+<p>imply</p>
+<p><span class="math display">\[
+u_k\to u
+\quad\text{strongly in }X.
+\]</span></p>
+<p>If <span class="math inline">\(u=0\)</span>, then</p>
+<p><span class="math display">\[
+\|u_k-u\|_X=\|u_k\|_X\to0,
+\]</span></p>
+<p>so the conclusion is immediate.</p>
+<p>Suppose now that <span class="math inline">\(\|u\|_X&gt;0\)</span>. Define</p>
+<p><span class="math display">\[
+v_k=\frac{u_k}{\|u_k\|_X},
+\qquad
+v=\frac{u}{\|u\|_X}.
+\]</span></p>
+<p>Since</p>
+<p><span class="math display">\[
+\|u_k\|_X\to\|u\|_X&gt;0,
+\]</span></p>
+<p>we have</p>
+<p><span class="math display">\[
+v_k\rightharpoonup v,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\|v_k\|_X=\|v\|_X=1.
+\]</span></p>
+<p>Suppose, toward a contradiction, that <span class="math inline">\(v_k\)</span> does not converge strongly to <span class="math inline">\(v\)</span>. Passing to a subsequence if necessary, there exists <span class="math inline">\(\varepsilon&gt;0\)</span> such that</p>
+<p><span class="math display">\[
+\|v_k-v\|_X\geq\varepsilon
+\]</span></p>
+<p>for every <span class="math inline">\(k\)</span>.</p>
+<p>By uniform convexity, there exists <span class="math inline">\(\delta&gt;0\)</span> such that</p>
+<p><span class="math display">\[
+\left\|
+\frac{v_k+v}{2}
+\right\|_X
+\leq 1-\delta.
+\]</span></p>
+<p>On the other hand,</p>
+<p><span class="math display">\[
+\frac{v_k+v}{2}\rightharpoonup v.
+\]</span></p>
+<p>Since the norm is weakly lower semicontinuous,</p>
+<p><span class="math display">\[
+\|v\|_X
+\leq
+\liminf_{k\to\infty}
+\left\|
+\frac{v_k+v}{2}
+\right\|_X.
 \]</span></p>
 <p>Therefore,</p>
 <p><span class="math display">\[
-\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
+1
+\leq
+\liminf_{k\to\infty}
+\left\|
+\frac{v_k+v}{2}
+\right\|_X
+\leq
+1-\delta,
+\]</span></p>
+<p>which is impossible.</p>
+<p>Hence</p>
+<p><span class="math display">\[
+v_k\to v
+\quad\text{strongly in }X.
+\]</span></p>
+<p>Finally,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\|u_k-u\|_X
+&amp;=
+\left\|
+\|u_k\|_Xv_k-\|u\|_Xv
+\right\|_X\\
+&amp;\leq
+\|u_k\|_X\|v_k-v\|_X
++
+\left|
+\|u_k\|_X-\|u\|_X
+\right|.
+\end{aligned}
+\]</span></p>
+<p>Both terms tend to zero. Thus</p>
+<p><span class="math display">\[
+u_k\to u
+\quad\text{strongly in }X.
+\]</span></p>
+<p>Since <span class="math inline">\(L^p(\Omega)\)</span> is uniformly convex whenever <span class="math inline">\(1&lt;p&lt;\infty\)</span>, we obtain</p>
+<p><span class="math display">\[
+\boxed{
+u_k\rightharpoonup u
+\text{ in }L^p,
+\quad
+\|u_k\|_{L^p}\to\|u\|_{L^p}
+\quad\Longrightarrow\quad
+u_k\to u
+\text{ in }L^p
+}
+\]</span></p>
+<p>for every <span class="math inline">\(1&lt;p&lt;\infty\)</span>.</p>
+</section>
+<section id="the-case-p1" class="level3">
+<h3 class="anchored" data-anchor-id="the-case-p1">The case <span class="math inline">\(p=1\)</span></h3>
+<p>The conclusion fails in <span class="math inline">\(L^1\)</span>.</p>
+<p>Let <span class="math inline">\(r_k\)</span> be the <span class="math inline">\(k\)</span>-th Rademacher function on <span class="math inline">\((0,1)\)</span>. Thus <span class="math inline">\(r_k\)</span> takes only the values <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span>, with increasingly rapid dyadic oscillations.</p>
+<p>We first observe that</p>
+<p><span class="math display">\[
+r_k\rightharpoonup0
+\quad\text{weakly in }L^1(0,1).
+\]</span></p>
+<p>Indeed, let <span class="math inline">\(\varphi\in L^\infty(0,1)\)</span>. Given <span class="math inline">\(\varepsilon&gt;0\)</span>, choose a dyadic step function <span class="math inline">\(h\)</span> such that</p>
+<p><span class="math display">\[
+\|\varphi-h\|_{L^1}&lt;\varepsilon.
+\]</span></p>
+<p>For sufficiently large <span class="math inline">\(k\)</span>, the function <span class="math inline">\(r_k\)</span> has zero average on each dyadic interval on which <span class="math inline">\(h\)</span> is constant. Hence</p>
+<p><span class="math display">\[
+\int_0^1 h r_k\,dx=0.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\left|
+\int_0^1\varphi r_k\,dx
+\right|
+&amp;=
+\left|
+\int_0^1(\varphi-h)r_k\,dx
+\right|\\
+&amp;\leq
+\|\varphi-h\|_{L^1}
+&lt;\varepsilon.
+\end{aligned}
+\]</span></p>
+<p>Thus</p>
+<p><span class="math display">\[
+r_k\rightharpoonup0
+\quad\text{in }L^1(0,1).
+\]</span></p>
+<p>Now define</p>
+<p><span class="math display">\[
+u_k=1+r_k,
+\qquad
+u=1.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+u_k\rightharpoonup u
+\quad\text{in }L^1(0,1).
+\]</span></p>
+<p>Moreover, <span class="math inline">\(u_k\)</span> takes the values <span class="math inline">\(0\)</span> and <span class="math inline">\(2\)</span>, each on a set of measure <span class="math inline">\(1/2\)</span>, so</p>
+<p><span class="math display">\[
+\|u_k\|_{L^1}=1=\|u\|_{L^1}.
+\]</span></p>
+<p>However,</p>
+<p><span class="math display">\[
+\|u_k-u\|_{L^1}
 =
-\int_{S^{n-1}}\int_0^1 r^{-s}r^{n-1}\,dr\,d\omega
+\|r_k\|_{L^1}
 =
-\lvert S^{n-1}\rvert\int_0^1 r^{n-1-s}\,dr.
+1
 \]</span></p>
-<p>Recall that</p>
+<p>for every <span class="math inline">\(k\)</span>.</p>
+<p>Hence</p>
 <p><span class="math display">\[
-\int_0^1 r^\alpha\,dr&lt;+\infty
-\quad\Longleftrightarrow\quad
-\alpha&gt;-1.
+u_k\not\to u
+\quad\text{strongly in }L^1(0,1).
 \]</span></p>
-<p>Hence the integral is finite if and only if</p>
+<p>Therefore the implication fails for <span class="math inline">\(p=1\)</span>.</p>
+</section>
+<section id="the-case-pinfty" class="level3">
+<h3 class="anchored" data-anchor-id="the-case-pinfty">The case <span class="math inline">\(p=\infty\)</span></h3>
+<p>The conclusion also fails for <span class="math inline">\(p=\infty\)</span>.</p>
+<p>Consider</p>
 <p><span class="math display">\[
-n-1-s&gt;-1,
-\]</span></p>
-<p>that is,</p>
-<p><span class="math display">\[
-\boxed{s&lt;n}.
-\]</span></p>
-<p>More precisely, when <span class="math inline">\(s&lt;n\)</span>,</p>
-<p><span class="math display">\[
-\int_{B(0,1)} \frac{1}{\lvert x\rvert^s}\,dx
+\ell^\infty
 =
-\frac{\lvert S^{n-1}\rvert}{n-s}.
+L^\infty(\mathbb N),
 \]</span></p>
-<p>When <span class="math inline">\(s=n\)</span>, the radial integral becomes</p>
+<p>where <span class="math inline">\(\mathbb N\)</span> is equipped with counting measure. Let <span class="math inline">\(e_k\)</span> denote the <span class="math inline">\(k\)</span>-th standard basis vector,</p>
 <p><span class="math display">\[
-\int_0^1 \frac{dr}{r},
+e_k=(0,\ldots,0,1,0,\ldots).
 \]</span></p>
-<p>which diverges logarithmically; when <span class="math inline">\(s&gt;n\)</span>, it diverges even more strongly.</p>
+<p>We first claim that</p>
+<p><span class="math display">\[
+e_k\rightharpoonup0
+\quad\text{weakly in }\ell^\infty.
+\]</span></p>
+<p>Let</p>
+<p><span class="math display">\[
+\Phi\in(\ell^\infty)^*,
+\]</span></p>
+<p>and set</p>
+<p><span class="math display">\[
+a_k=\Phi(e_k).
+\]</span></p>
+<p>For every finite set <span class="math inline">\(F\subset\mathbb N\)</span>, choose scalars <span class="math inline">\(\varepsilon_k\)</span> with</p>
+<p><span class="math display">\[
+|\varepsilon_k|=1
+\]</span></p>
+<p>such that</p>
+<p><span class="math display">\[
+\varepsilon_k a_k=|a_k|.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+\left\|
+\sum_{k\in F}\varepsilon_k e_k
+\right\|_{\ell^\infty}
+=1.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{k\in F}|a_k|
+&amp;=
+\Phi\left(
+\sum_{k\in F}\varepsilon_k e_k
+\right)\\
+&amp;\leq
+\|\Phi\|.
+\end{aligned}
+\]</span></p>
+<p>It follows that</p>
+<p><span class="math display">\[
+\sum_{k=1}^\infty|\Phi(e_k)|&lt;\infty.
+\]</span></p>
+<p>In particular,</p>
+<p><span class="math display">\[
+\Phi(e_k)\to0.
+\]</span></p>
+<p>Since this holds for every <span class="math inline">\(\Phi\in(\ell^\infty)^*\)</span>,</p>
+<p><span class="math display">\[
+e_k\rightharpoonup0
+\quad\text{in }\ell^\infty.
+\]</span></p>
+<p>Now let</p>
+<p><span class="math display">\[
+u=(1,1,1,\ldots)
+\]</span></p>
+<p>and define</p>
+<p><span class="math display">\[
+u_k=u-2e_k.
+\]</span></p>
+<p>Since <span class="math inline">\(e_k\rightharpoonup0\)</span>,</p>
+<p><span class="math display">\[
+u_k\rightharpoonup u
+\quad\text{weakly in }\ell^\infty.
+\]</span></p>
+<p>Every coordinate of <span class="math inline">\(u_k\)</span> is equal to <span class="math inline">\(1\)</span>, except for the <span class="math inline">\(k\)</span>-th coordinate, which is <span class="math inline">\(-1\)</span>. Therefore,</p>
+<p><span class="math display">\[
+\|u_k\|_{\ell^\infty}
+=
+1
+=
+\|u\|_{\ell^\infty}.
+\]</span></p>
+<p>Thus the norms converge. However,</p>
+<p><span class="math display">\[
+\|u_k-u\|_{\ell^\infty}
+=
+\|-2e_k\|_{\ell^\infty}
+=
+2
+\]</span></p>
+<p>for every <span class="math inline">\(k\)</span>.</p>
+<p>Consequently,</p>
+<p><span class="math display">\[
+u_k\not\to u
+\quad\text{strongly in }\ell^\infty.
+\]</span></p>
+<p>Hence the implication fails for <span class="math inline">\(p=\infty\)</span>.</p>
+</section>
 </section>
 <section id="remark" class="level2">
 <h2 class="anchored" data-anchor-id="remark">Remark</h2>
-<p>This is a basic example of the general principle that, in <span class="math inline">\(\mathbb{R}^n\)</span>, a point singularity of order <span class="math inline">\(\lvert x\rvert^{-s}\)</span> is locally integrable near the origin exactly when <span class="math inline">\(s&lt;n\)</span>.</p>
+<p>The property</p>
+<p><span class="math display">\[
+u_k\rightharpoonup u,
+\qquad
+\|u_k\|\to\|u\|
+\quad\Longrightarrow\quad
+u_k\to u
+\]</span></p>
+<p>is known as the <strong>Radon–Riesz property</strong>, or the <strong>Kadec–Klee property</strong>.</p>
+<p>Every uniformly convex Banach space has this property. In particular,</p>
+<p><span class="math display">\[
+\boxed{
+L^p(\Omega)\text{ has this property for }1&lt;p&lt;\infty.
+}
+\]</span></p>
+<p>In contrast, <span class="math inline">\(L^1\)</span> and <span class="math inline">\(L^\infty\)</span> do not have this property in general.</p>
+<p>The Hilbert space case <span class="math inline">\(p=2\)</span> is especially simple. Indeed,</p>
+<p><span class="math display">\[
+\|u_k-u\|_{L^2}^2
+=
+\|u_k\|_{L^2}^2
++
+\|u\|_{L^2}^2
+-
+2\langle u_k,u\rangle.
+\]</span></p>
+<p>Weak convergence gives</p>
+<p><span class="math display">\[
+\langle u_k,u\rangle
+\to
+\|u\|_{L^2}^2,
+\]</span></p>
+<p>while convergence of the norms gives</p>
+<p><span class="math display">\[
+\|u_k\|_{L^2}^2
+\to
+\|u\|_{L^2}^2.
+\]</span></p>
+<p>Hence</p>
+<p><span class="math display">\[
+\|u_k-u\|_{L^2}\to0.
+\]</span></p>
+<p>One should also distinguish weak convergence from weak-* convergence in <span class="math inline">\(L^\infty\)</span>. Weak-* convergence is tested against the chosen predual, whereas weak convergence is tested against the entire dual <span class="math inline">\((L^\infty)^*\)</span>. The counterexample above uses genuine weak convergence in <span class="math inline">\(\ell^\infty\)</span>.</p>
 
 
 </section>

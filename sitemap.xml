@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://saalochen.github.io/math-blog/about.html</loc>
-    <lastmod>2026-09-25T08:20:34.379Z</lastmod>
+    <lastmod>2026-09-25T08:47:39.015Z</lastmod>
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/index.html</loc>
-    <lastmod>2026-09-25T08:20:34.387Z</lastmod>
+    <lastmod>2026-09-25T08:47:39.026Z</lastmod>
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/writing/sobolev/week-01-problem-02.html</loc>
-    <lastmod>2026-09-25T08:20:34.389Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saalochen.github.io/math-blog/writing/sobolev/week-01-problem-01.html</loc>
-    <lastmod>2026-09-25T08:20:34.389Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saalochen.github.io/math-blog/cv.html</loc>
-    <lastmod>2026-09-25T08:20:34.379Z</lastmod>
+    <lastmod>2026-09-25T08:47:39.028Z</lastmod>
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/writing/sobolev/week-02-problem-01.html</loc>
-    <lastmod>2026-09-25T08:20:34.389Z</lastmod>
+    <lastmod>2026-09-25T08:47:39.028Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/cv.html</loc>
+    <lastmod>2026-09-25T08:47:39.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/writing/sobolev/week-01-problem-01.html</loc>
+    <lastmod>2026-09-25T08:47:39.028Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/writing/sobolev/week-02-problem-02.html</loc>
+    <lastmod>2026-09-25T08:47:39.028Z</lastmod>
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/projects.html</loc>
-    <lastmod>2026-09-25T08:20:34.388Z</lastmod>
+    <lastmod>2026-09-25T08:47:39.026Z</lastmod>
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/writing.html</loc>
-    <lastmod>2026-09-25T08:20:34.388Z</lastmod>
+    <lastmod>2026-09-25T08:47:39.026Z</lastmod>
   </url>
 </urlset>

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="Reflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.">
 
-<title>Writing – Saalo Chen</title>
+<title>Sobolev Spaces — Week 2, Problem 2 – Saalo Chen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,21 +31,19 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bbc30056dcc90b8bd601e9557b16bf8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-bbc30056dcc90b8bd601e9557b16bf8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -59,35 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script>
 window.MathJax = {
   options: {
@@ -126,7 +97,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -136,7 +107,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Saalo Chen</span>
     </a>
   </div>
@@ -146,23 +117,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./writing.html" aria-current="page"> 
+    <a class="nav-link" href="../../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects &amp; Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -184,21 +155,49 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="SG9tZXdvcms=">Homework <span class="quarto-category-count">(4)</span></div><div class="category" data-category="U29ib2xldiUyMFNwYWNlcw==">Sobolev Spaces <span class="quarto-category-count">(4)</span></div><div class="category" data-category="V2VlayUyMDE=">Week 1 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2VlayUyMDI=">Week 2 <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem" id="toc-problem" class="nav-link active" data-scroll-target="#problem">Problem</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a>
+  <ul class="collapse">
+  <li><a href="#reflexivity-of-x-and-x" id="toc-reflexivity-of-x-and-x" class="nav-link" data-scroll-target="#reflexivity-of-x-and-x">1. Reflexivity of <span class="math inline">\(X\)</span> and <span class="math inline">\(X'\)</span></a></li>
+  <li><a href="#separability-of-x-implies-separability-of-x" id="toc-separability-of-x-implies-separability-of-x" class="nav-link" data-scroll-target="#separability-of-x-implies-separability-of-x">2. Separability of <span class="math inline">\(X'\)</span> implies separability of <span class="math inline">\(X\)</span></a></li>
+  </ul></li>
+  <li><a href="#remark" id="toc-remark" class="nav-link" data-scroll-target="#remark">Remark</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing</h1>
-</div>
+<h1 class="title">Sobolev Spaces — Week 2, Problem 2</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Sobolev Spaces</div>
+    <div class="quarto-category">Homework</div>
+    <div class="quarto-category">Week 2</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Reflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -208,143 +207,259 @@ window.Quarto = {
 </header>
 
 
-<p>Mathematical notes, course problems, and expository writings.</p>
-<p>The notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.</p>
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Let <span class="math inline">\(X\)</span> be a Banach space and let <span class="math inline">\(X'\)</span> denote its dual space.</p>
+<ol type="1">
+<li>Prove that <span class="math inline">\(X\)</span> is reflexive if and only if <span class="math inline">\(X'\)</span> is reflexive.</li>
+<li>Prove that if <span class="math inline">\(X'\)</span> is separable, then <span class="math inline">\(X\)</span> is separable.</li>
+</ol>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<section id="reflexivity-of-x-and-x" class="level3">
+<h3 class="anchored" data-anchor-id="reflexivity-of-x-and-x">1. Reflexivity of <span class="math inline">\(X\)</span> and <span class="math inline">\(X'\)</span></h3>
+<p>Recall the canonical embedding</p>
+<p><span class="math display">\[
+J_X:X\longrightarrow X'',
+\qquad
+J_X(x)(f)=f(x),
+\]</span></p>
+<p>for <span class="math inline">\(x\in X\)</span> and <span class="math inline">\(f\in X'\)</span>.</p>
+<p>The space <span class="math inline">\(X\)</span> is reflexive precisely when <span class="math inline">\(J_X\)</span> is surjective.</p>
+<p>We prove the two implications separately.</p>
+<section id="x-reflexive-implies-x-reflexive" class="level4">
+<h4 class="anchored" data-anchor-id="x-reflexive-implies-x-reflexive"><span class="math inline">\(X\)</span> reflexive implies <span class="math inline">\(X'\)</span> reflexive</h4>
+<p>Suppose that <span class="math inline">\(X\)</span> is reflexive. Then</p>
+<p><span class="math display">\[
+J_X(X)=X''.
+\]</span></p>
+<p>We want to show that the canonical embedding</p>
+<p><span class="math display">\[
+J_{X'}:X'\longrightarrow X'''
+\]</span></p>
+<p>is surjective.</p>
+<p>Let</p>
+<p><span class="math display">\[
+F\in X'''.
+\]</span></p>
+<p>Define <span class="math inline">\(f:X\to\mathbb K\)</span> by</p>
+<p><span class="math display">\[
+f(x)=F(J_Xx),
+\]</span></p>
+<p>where <span class="math inline">\(\mathbb K=\mathbb R\)</span> or <span class="math inline">\(\mathbb C\)</span>.</p>
+<p>Since <span class="math inline">\(F\)</span> and <span class="math inline">\(J_X\)</span> are bounded linear maps, <span class="math inline">\(f\in X'\)</span>.</p>
+<p>We claim that</p>
+<p><span class="math display">\[
+F=J_{X'}f.
+\]</span></p>
+<p>Indeed, let <span class="math inline">\(x''\in X''\)</span>. Since <span class="math inline">\(X\)</span> is reflexive, there exists <span class="math inline">\(x\in X\)</span> such that</p>
+<p><span class="math display">\[
+x''=J_Xx.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\begin{aligned}
+(J_{X'}f)(x'')
+&amp;=x''(f)\\
+&amp;=(J_Xx)(f)\\
+&amp;=f(x)\\
+&amp;=F(J_Xx)\\
+&amp;=F(x'').
+\end{aligned}
+\]</span></p>
+<p>Thus</p>
+<p><span class="math display">\[
+F=J_{X'}f.
+\]</span></p>
+<p>Hence <span class="math inline">\(J_{X'}\)</span> is surjective, and therefore <span class="math inline">\(X'\)</span> is reflexive.</p>
+</section>
+<section id="x-reflexive-implies-x-reflexive-1" class="level4">
+<h4 class="anchored" data-anchor-id="x-reflexive-implies-x-reflexive-1"><span class="math inline">\(X'\)</span> reflexive implies <span class="math inline">\(X\)</span> reflexive</h4>
+<p>Now suppose that <span class="math inline">\(X'\)</span> is reflexive.</p>
+<p>Assume, toward a contradiction, that <span class="math inline">\(X\)</span> is not reflexive. Then</p>
+<p><span class="math display">\[
+J_X(X)\subsetneq X''.
+\]</span></p>
+<p>Since <span class="math inline">\(J_X\)</span> is an isometry and <span class="math inline">\(X\)</span> is Banach, <span class="math inline">\(J_X(X)\)</span> is a closed subspace of <span class="math inline">\(X''\)</span>.</p>
+<p>By the Hahn–Banach theorem, there exists a nonzero functional</p>
+<p><span class="math display">\[
+F\in X'''
+\]</span></p>
+<p>such that</p>
+<p><span class="math display">\[
+F|_{J_X(X)}=0.
+\]</span></p>
+<p>Since <span class="math inline">\(X'\)</span> is reflexive, the canonical map</p>
+<p><span class="math display">\[
+J_{X'}:X'\to X'''
+\]</span></p>
+<p>is surjective. Hence there exists <span class="math inline">\(f\in X'\)</span> such that</p>
+<p><span class="math display">\[
+F=J_{X'}f.
+\]</span></p>
+<p>For every <span class="math inline">\(x\in X\)</span>,</p>
+<p><span class="math display">\[
+0
+=
+F(J_Xx)
+=
+(J_{X'}f)(J_Xx).
+\]</span></p>
+<p>But</p>
+<p><span class="math display">\[
+(J_{X'}f)(J_Xx)
+=
+(J_Xx)(f)
+=
+f(x).
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+f(x)=0
+\]</span></p>
+<p>for every <span class="math inline">\(x\in X\)</span>, so <span class="math inline">\(f=0\)</span>. Consequently,</p>
+<p><span class="math display">\[
+F=J_{X'}f=0,
+\]</span></p>
+<p>contradicting the choice of <span class="math inline">\(F\)</span>.</p>
+<p>Thus <span class="math inline">\(J_X(X)=X''\)</span>, and hence <span class="math inline">\(X\)</span> is reflexive.</p>
+<p>We have proved</p>
+<p><span class="math display">\[
+\boxed{
+X\text{ is reflexive}
+\quad\Longleftrightarrow\quad
+X'\text{ is reflexive}.
+}
+\]</span></p>
+</section>
+</section>
+<section id="separability-of-x-implies-separability-of-x" class="level3">
+<h3 class="anchored" data-anchor-id="separability-of-x-implies-separability-of-x">2. Separability of <span class="math inline">\(X'\)</span> implies separability of <span class="math inline">\(X\)</span></h3>
+<p>Suppose that <span class="math inline">\(X'\)</span> is separable.</p>
+<p>If <span class="math inline">\(X=\{0\}\)</span>, the conclusion is trivial, so assume <span class="math inline">\(X\neq\{0\}\)</span>.</p>
+<p>Since <span class="math inline">\(X'\)</span> is separable, its unit sphere</p>
+<p><span class="math display">\[
+S_{X'}
+=
+\{f\in X':\|f\|=1\}
+\]</span></p>
+<p>contains a countable dense subset. Let</p>
+<p><span class="math display">\[
+\{f_n\}_{n=1}^\infty
+\]</span></p>
+<p>be dense in <span class="math inline">\(S_{X'}\)</span>.</p>
+<p>For every <span class="math inline">\(n\)</span>, since</p>
+<p><span class="math display">\[
+\|f_n\|=1,
+\]</span></p>
+<p>by the definition of the operator norm we can choose <span class="math inline">\(x_n\in X\)</span> such that</p>
+<p><span class="math display">\[
+\|x_n\|=1
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+|f_n(x_n)|&gt;\frac12.
+\]</span></p>
+<p>Let</p>
+<p><span class="math display">\[
+M
+=
+\overline{\operatorname{span}\{x_n:n\in\mathbb N\}}.
+\]</span></p>
+<p>We claim that</p>
+<p><span class="math display">\[
+M=X.
+\]</span></p>
+<p>Suppose otherwise. Then <span class="math inline">\(M\)</span> is a proper closed subspace of <span class="math inline">\(X\)</span>. By the Hahn–Banach theorem, there exists</p>
+<p><span class="math display">\[
+f\in X'
+\]</span></p>
+<p>such that</p>
+<p><span class="math display">\[
+\|f\|=1,
+\qquad
+f|_M=0.
+\]</span></p>
+<p>Since <span class="math inline">\(\{f_n\}\)</span> is dense in <span class="math inline">\(S_{X'}\)</span>, there exists <span class="math inline">\(n\)</span> such that</p>
+<p><span class="math display">\[
+\|f-f_n\|&lt;\frac14.
+\]</span></p>
+<p>Since <span class="math inline">\(x_n\in M\)</span>, we have</p>
+<p><span class="math display">\[
+f(x_n)=0.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\begin{aligned}
+|f_n(x_n)|
+&amp;=
+|(f_n-f)(x_n)|\\
+&amp;\leq
+\|f_n-f\|\|x_n\|\\
+&amp;&lt;
+\frac14.
+\end{aligned}
+\]</span></p>
+<p>This contradicts our choice of <span class="math inline">\(x_n\)</span>, for which</p>
+<p><span class="math display">\[
+|f_n(x_n)|&gt;\frac12.
+\]</span></p>
+<p>Hence</p>
+<p><span class="math display">\[
+M=X.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+X
+=
+\overline{\operatorname{span}\{x_n:n\in\mathbb N\}}.
+\]</span></p>
+<p>The linear span of a countable set is separable. Indeed, the finite linear combinations of the <span class="math inline">\(x_n\)</span> with rational coefficients are countable and dense in the real case; in the complex case one may use coefficients in</p>
+<p><span class="math display">\[
+\mathbb Q+i\mathbb Q.
+\]</span></p>
+<p>Consequently, <span class="math inline">\(X\)</span> is separable.</p>
+<p>Thus</p>
+<p><span class="math display">\[
+\boxed{
+X'\text{ separable}
+\quad\Longrightarrow\quad
+X\text{ separable}.
+}
+\]</span></p>
+</section>
+</section>
+<section id="remark" class="level2">
+<h2 class="anchored" data-anchor-id="remark">Remark</h2>
+<p>The converse of the second statement is false in general.</p>
+<p>A Banach space may be separable while its dual is nonseparable. The standard example is</p>
+<p><span class="math display">\[
+X=\ell^1.
+\]</span></p>
+<p>The space <span class="math inline">\(\ell^1\)</span> is separable, whereas</p>
+<p><span class="math display">\[
+(\ell^1)'=\ell^\infty
+\]</span></p>
+<p>is not separable.</p>
+<p>Thus</p>
+<p><span class="math display">\[
+X'\text{ separable}
+\Longrightarrow
+X\text{ separable},
+\]</span></p>
+<p>but in general</p>
+<p><span class="math display">\[
+X\text{ separable}
+\centernot\Longrightarrow
+X'\text{ separable}.
+\]</span></p>
+<p>However, if <span class="math inline">\(X\)</span> is both separable and reflexive, then <span class="math inline">\(X'\)</span> is also separable.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDI=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326059028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="465">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-02-problem-01.html" class="no-external">Sobolev Spaces — Week 2, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDI='); return false;">Week 2</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-02-problem-01.html" class="no-external">
-<p>Weak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-02-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDI=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326059028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-02-problem-02.html" class="no-external">Sobolev Spaces — Week 2, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDI='); return false;">Week 2</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-02-problem-02.html" class="no-external">
-<p>Reflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-02-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1790326059028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">Sobolev Spaces — Week 1, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<p>Integrability of the singular function |x|^{-s} on the unit ball.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-19
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1790326059028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="133">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">Sobolev Spaces — Week 1, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<p>An example of a nonseparable Hilbert space.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-19
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
