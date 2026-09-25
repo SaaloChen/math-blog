@@ -1,14 +1,11 @@
 ---
-
 title: "Sobolev Spaces — Week 2, Problem 1"
 date: 2026-09-25
 description: "Weak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces."
 categories:
-
-* Sobolev Spaces
-* Homework
-* Week 2
-
+  - Sobolev Spaces
+  - Homework
+  - Week 2
 ---
 
 ## Problem
@@ -77,7 +74,7 @@ $$
 
 so the conclusion is immediate.
 
-Suppose now that $|u|_X>0$. Define
+Suppose now that $\|u\|_X>0$. Define
 
 $$
 v_k=\frac{u_k}{\|u_k\|_X},
@@ -328,7 +325,13 @@ $$
 a_k=\Phi(e_k).
 $$
 
-For every finite set $F\subset\mathbb N$, choose signs $\varepsilon_k\in{-1,1}$ such that
+For every finite set $F\subset\mathbb N$, choose scalars $\varepsilon_k$ with
+
+$$
+|\varepsilon_k|=1
+$$
+
+such that
 
 $$
 \varepsilon_k a_k=|a_k|.
@@ -340,10 +343,10 @@ $$
 \left\|
 \sum_{k\in F}\varepsilon_k e_k
 \right\|_{\ell^\infty}
-=1,
+=1.
 $$
 
-and therefore
+Therefore,
 
 $$
 \begin{aligned}
@@ -438,7 +441,7 @@ u_k\rightharpoonup u,
 u_k\to u
 $$
 
-is known as the **Radon--Riesz property**, or equivalently the **Kadec--Klee property** for sequences.
+is known as the **Radon--Riesz property**, or the **Kadec--Klee property**.
 
 Every uniformly convex Banach space has this property. In particular,
 
@@ -484,4 +487,4 @@ $$
 \|u_k-u\|_{L^2}\to0.
 $$
 
-One should also distinguish weak convergence from weak-* convergence in $L^\infty$. Since $L^\infty$ is naturally the dual of $L^1$ under suitable hypotheses, weak-* convergence is tested only against $L^1$, whereas weak convergence is tested against the entire dual $(L^\infty)^*$. The counterexample above is stronger: it uses genuine weak convergence in $\ell^\infty$.
+One should also distinguish weak convergence from weak-* convergence in $L^\infty$. Weak-* convergence is tested against the chosen predual, whereas weak convergence is tested against the entire dual $(L^\infty)^*$. The counterexample above uses genuine weak convergence in $\ell^\infty$.
