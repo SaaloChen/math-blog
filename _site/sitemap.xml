@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://saalochen.github.io/math-blog/cv.html</loc>
-    <lastmod>2026-09-19T01:17:44.002Z</lastmod>
+    <lastmod>2026-09-19T01:21:43.853Z</lastmod>
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/about.html</loc>
@@ -18,6 +18,10 @@
   </url>
   <url>
     <loc>https://saalochen.github.io/math-blog/writing.html</loc>
-    <lastmod>2026-09-19T01:12:37.891Z</lastmod>
+    <lastmod>2026-09-19T03:01:33.285Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saalochen.github.io/math-blog/writing/sobolev/week-01-problem-01.html</loc>
+    <lastmod>2026-09-19T02:09:25.403Z</lastmod>
   </url>
 </urlset>
