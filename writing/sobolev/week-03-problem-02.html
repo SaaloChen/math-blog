@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="A counterexample showing that the embedding from C^1 into C^{0,1} is not compact.">
 
-<title>Writing – Saalo Chen</title>
+<title>Sobolev Spaces — Week 3, Problem 2 – Saalo Chen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,21 +31,19 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bbc30056dcc90b8bd601e9557b16bf8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-bbc30056dcc90b8bd601e9557b16bf8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -59,35 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script>
 window.MathJax = {
   options: {
@@ -126,7 +97,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -136,7 +107,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Saalo Chen</span>
     </a>
   </div>
@@ -146,23 +117,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./writing.html" aria-current="page"> 
+    <a class="nav-link" href="../../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects &amp; Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -184,21 +155,45 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="SG9tZXdvcms=">Homework <span class="quarto-category-count">(7)</span></div><div class="category" data-category="U29ib2xldiUyMFNwYWNlcw==">Sobolev Spaces <span class="quarto-category-count">(7)</span></div><div class="category" data-category="V2VlayUyMDE=">Week 1 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2VlayUyMDI=">Week 2 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2VlayUyMDM=">Week 3 <span class="quarto-category-count">(3)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem" id="toc-problem" class="nav-link active" data-scroll-target="#problem">Problem</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#remark" id="toc-remark" class="nav-link" data-scroll-target="#remark">Remark</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing</h1>
-</div>
+<h1 class="title">Sobolev Spaces — Week 3, Problem 2</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Sobolev Spaces</div>
+    <div class="quarto-category">Homework</div>
+    <div class="quarto-category">Week 3</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    A counterexample showing that the embedding from C^1 into C^{0,1} is not compact.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -208,221 +203,172 @@ window.Quarto = {
 </header>
 
 
-<p>Mathematical notes, course problems, and expository writings.</p>
-<p>The notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.</p>
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Construct a counterexample showing that the continuous embedding</p>
+<p><span class="math display">\[
+C^1(\overline{\Omega})
+\hookrightarrow
+C^{0,1}(\overline{\Omega})
+\]</span></p>
+<p>is not compact, even when <span class="math inline">\(\Omega\)</span> is a bounded convex domain.</p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>It is enough to consider the one-dimensional convex domain</p>
+<p><span class="math display">\[
+\Omega=(0,1).
+\]</span></p>
+<p>For <span class="math inline">\(k\geq1\)</span>, define</p>
+<p><span class="math display">\[
+u_k(x)
+=
+\frac{1}{\pi 2^k}
+\sin(\pi 2^k x),
+\qquad
+x\in[0,1].
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+u_k'(x)
+=
+\cos(\pi 2^k x).
+\]</span></p>
+<p>Hence</p>
+<p><span class="math display">\[
+\|u_k\|_{L^\infty(0,1)}
+\leq
+\frac{1}{\pi2^k}
+\leq
+\frac1\pi,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\|u_k'\|_{L^\infty(0,1)}
+=
+1.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\|u_k\|_{C^1([0,1])}
+=
+\|u_k\|_{L^\infty}
++
+\|u_k'\|_{L^\infty}
+\leq
+1+\frac1\pi.
+\]</span></p>
+<p>Thus <span class="math inline">\(\{u_k\}\)</span> is bounded in <span class="math inline">\(C^1([0,1])\)</span>.</p>
+<p>We now show that it has no convergent subsequence in <span class="math inline">\(C^{0,1}([0,1])\)</span>.</p>
+<p>Recall that for a continuously differentiable function <span class="math inline">\(v\)</span> on <span class="math inline">\([0,1]\)</span>,</p>
+<p><span class="math display">\[
+[v]_{C^{0,1}}
+=
+\sup_{x\neq y}
+\frac{|v(x)-v(y)|}{|x-y|}
+=
+\|v'\|_{L^\infty(0,1)}.
+\]</span></p>
+<p>Let <span class="math inline">\(l&gt;k\)</span>. Consider the point</p>
+<p><span class="math display">\[
+x_k=2^{-k}.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+u_k'(x_k)
+=
+\cos(\pi)
+=
+-1.
+\]</span></p>
+<p>On the other hand,</p>
+<p><span class="math display">\[
+u_l'(x_k)
+=
+\cos\left(\pi2^l2^{-k}\right)
+=
+\cos\left(\pi2^{l-k}\right).
+\]</span></p>
+<p>Since <span class="math inline">\(l-k\geq1\)</span>, the integer <span class="math inline">\(2^{l-k}\)</span> is even, and hence</p>
+<p><span class="math display">\[
+u_l'(x_k)=1.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+|u_l'(x_k)-u_k'(x_k)|
+=
+2.
+\]</span></p>
+<p>It follows that</p>
+<p><span class="math display">\[
+\|u_l'-u_k'\|_{L^\infty(0,1)}
+\geq2.
+\]</span></p>
+<p>Consequently,</p>
+<p><span class="math display">\[
+[u_l-u_k]_{C^{0,1}}
+=
+\|u_l'-u_k'\|_{L^\infty}
+\geq2.
+\]</span></p>
+<p>Thus</p>
+<p><span class="math display">\[
+\|u_l-u_k\|_{C^{0,1}([0,1])}
+\geq2
+\]</span></p>
+<p>whenever <span class="math inline">\(l&gt;k\)</span>.</p>
+<p>Hence <span class="math inline">\(\{u_k\}\)</span> has no Cauchy subsequence in <span class="math inline">\(C^{0,1}([0,1])\)</span>, and therefore it has no convergent subsequence in <span class="math inline">\(C^{0,1}([0,1])\)</span>.</p>
+<p>We conclude that</p>
+<p><span class="math display">\[
+\boxed{
+C^1([0,1])
+\hookrightarrow
+C^{0,1}([0,1])
+\text{ is not compact}.
+}
+\]</span></p>
+<p>Thus, even for a bounded convex domain,</p>
+<p><span class="math display">\[
+\boxed{
+C^1(\overline{\Omega})
+\hookrightarrow
+C^{0,1}(\overline{\Omega})
+}
+\]</span></p>
+<p>is in general not a compact embedding.</p>
+</section>
+<section id="remark" class="level2">
+<h2 class="anchored" data-anchor-id="remark">Remark</h2>
+<p>Notice that in this example,</p>
+<p><span class="math display">\[
+\|u_k\|_{L^\infty}\to0,
+\]</span></p>
+<p>so</p>
+<p><span class="math display">\[
+u_k\to0
+\]</span></p>
+<p>uniformly.</p>
+<p>The obstruction to compactness comes entirely from the first derivatives:</p>
+<p><span class="math display">\[
+u_k'(x)
+=
+\cos(\pi2^k x),
+\]</span></p>
+<p>which oscillate more and more rapidly while retaining the same <span class="math inline">\(L^\infty\)</span> norm.</p>
+<p>This illustrates the distinction between the compact embedding</p>
+<p><span class="math display">\[
+C^1(\overline{\Omega})
+\hookrightarrow
+C^{0,\alpha}(\overline{\Omega}),
+\qquad
+0\leq\alpha&lt;1,
+\]</span></p>
+<p>and the borderline embedding into <span class="math inline">\(C^{0,1}\)</span>, which is not compact.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDM=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-03-problem-02.html" class="no-external">Sobolev Spaces — Week 3, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDM='); return false;">Week 3</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-03-problem-02.html" class="no-external">
-<p>A counterexample showing that the embedding from C^1 into C^{0,1} is not compact.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-03-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDM=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-03-problem-01.html" class="no-external">Sobolev Spaces — Week 3, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDM='); return false;">Week 3</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-03-problem-01.html" class="no-external">
-<p>The Lagrange mean value theorem in several dimensions on a convex domain.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-03-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDI=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="465">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-02-problem-01.html" class="no-external">Sobolev Spaces — Week 2, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDI='); return false;">Week 2</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-02-problem-01.html" class="no-external">
-<p>Weak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-02-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDI=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-02-problem-02.html" class="no-external">Sobolev Spaces — Week 2, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDI='); return false;">Week 2</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-02-problem-02.html" class="no-external">
-<p>Reflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-02-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDM=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-03-problem-03.html" class="no-external">Sobolev Spaces — Week 3, Problem 3</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDM='); return false;">Week 3</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-03-problem-03.html" class="no-external">
-<p>The Dirac delta as a distribution.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-03-problem-03.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">Sobolev Spaces — Week 1, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<p>Integrability of the singular function |x|^{-s} on the unit ball.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-19
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="133">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">Sobolev Spaces — Week 1, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<p>An example of a nonseparable Hilbert space.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-19
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

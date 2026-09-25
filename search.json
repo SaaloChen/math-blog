@@ -28,74 +28,88 @@
     "text": "Recent writing\nSee the Writing page for all posts."
   },
   {
-    "objectID": "writing/sobolev/week-01-problem-02.html",
-    "href": "writing/sobolev/week-01-problem-02.html",
-    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "objectID": "writing/sobolev/week-03-problem-03.html",
+    "href": "writing/sobolev/week-03-problem-03.html",
+    "title": "Sobolev Spaces — Week 3, Problem 3",
     "section": "",
-    "text": "Give an example of a Hilbert space which is not separable."
+    "text": "Let \\(\\Omega\\subset\\mathbb R^n\\) be open and let \\(x_0\\in\\Omega\\).\nDefine the Dirac delta at \\(x_0\\) by\n\\[\n\\delta_{x_0}(\\varphi)\n=\n\\varphi(x_0),\n\\qquad\n\\varphi\\in C_c^\\infty(\\Omega).\n\\]\nProve that \\(\\delta_{x_0}\\) is a distribution on \\(\\Omega\\)."
   },
   {
-    "objectID": "writing/sobolev/week-01-problem-02.html#problem",
-    "href": "writing/sobolev/week-01-problem-02.html#problem",
-    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "objectID": "writing/sobolev/week-03-problem-03.html#problem",
+    "href": "writing/sobolev/week-03-problem-03.html#problem",
+    "title": "Sobolev Spaces — Week 3, Problem 3",
     "section": "",
-    "text": "Give an example of a Hilbert space which is not separable."
+    "text": "Let \\(\\Omega\\subset\\mathbb R^n\\) be open and let \\(x_0\\in\\Omega\\).\nDefine the Dirac delta at \\(x_0\\) by\n\\[\n\\delta_{x_0}(\\varphi)\n=\n\\varphi(x_0),\n\\qquad\n\\varphi\\in C_c^\\infty(\\Omega).\n\\]\nProve that \\(\\delta_{x_0}\\) is a distribution on \\(\\Omega\\)."
   },
   {
-    "objectID": "writing/sobolev/week-01-problem-02.html#solution",
-    "href": "writing/sobolev/week-01-problem-02.html#solution",
-    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "objectID": "writing/sobolev/week-03-problem-03.html#solution",
+    "href": "writing/sobolev/week-03-problem-03.html#solution",
+    "title": "Sobolev Spaces — Week 3, Problem 3",
     "section": "Solution",
-    "text": "Solution\nConsider the Hilbert space\n\\[\n\\ell^2(\\mathbb R)\n=\n\\left\\{\nx=(x_i)_{i\\in\\mathbb R}:\n\\sum_{i\\in\\mathbb R}|x_i|^2&lt;\\infty\n\\right\\},\n\\]\nequipped with the inner product\n\\[\n\\langle x,y\\rangle\n=\n\\sum_{i\\in\\mathbb R}x_i\\overline{y_i}.\n\\]\nIt is a standard fact that \\(\\ell^2(\\mathbb R)\\) is a Hilbert space. We show that it is not separable.\nFor each \\(i\\in\\mathbb R\\), define \\(e_i\\in\\ell^2(\\mathbb R)\\) by\n\\[\ne_i(j)=\\delta_{ij}.\n\\]\nThen\n\\[\n\\{e_i:i\\in\\mathbb R\\}\n\\]\nis an uncountable orthonormal family. In particular, for any \\(i\\neq j\\),\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nSuppose, for contradiction, that \\(\\ell^2(\\mathbb R)\\) is separable. Then there exists a countable dense subset \\(D\\subset\\ell^2(\\mathbb R)\\).\nFor each \\(i\\in\\mathbb R\\), by the density of \\(D\\), choose \\(d_i\\in D\\) such that\n\\[\n\\|e_i-d_i\\|&lt;\\frac12.\n\\]\nWe claim that the points \\(d_i\\) are all distinct. Indeed, if \\(d_i=d_j=d\\) for some \\(i\\neq j\\), then by the triangle inequality,\n\\[\n\\|e_i-e_j\\|\n\\le\n\\|e_i-d\\|+\\|d-e_j\\|\n&lt;1,\n\\]\nwhich contradicts\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nTherefore the map\n\\[\ni\\longmapsto d_i\n\\]\nis injective from \\(\\mathbb R\\) into \\(D\\). Hence\n\\[\n\\operatorname{card}(D)\n\\ge\n\\operatorname{card}(\\mathbb R),\n\\]\nso \\(D\\) is uncountable, contradicting our assumption.\nTherefore,\n\\[\n\\boxed{\\ell^2(\\mathbb R)\\text{ is a nonseparable Hilbert space}.}\n\\]"
+    "text": "Solution\nRecall that a distribution on \\(\\Omega\\) is a continuous linear functional on the space of test functions\n\\[\n\\mathcal D(\\Omega)\n=\nC_c^\\infty(\\Omega).\n\\]\nThus we need to prove that\n\\[\n\\delta_{x_0}:\\mathcal D(\\Omega)\\to\\mathbb R\n\\]\nis linear and continuous.\n\nLinearity\nLet \\(\\varphi,\\psi\\in C_c^\\infty(\\Omega)\\) and let \\(a,b\\in\\mathbb R\\). Then\n\\[\n\\begin{aligned}\n\\delta_{x_0}(a\\varphi+b\\psi)\n&=\n(a\\varphi+b\\psi)(x_0)\\\\\n&=\na\\varphi(x_0)+b\\psi(x_0)\\\\\n&=\na\\delta_{x_0}(\\varphi)\n+\nb\\delta_{x_0}(\\psi).\n\\end{aligned}\n\\]\nHence \\(\\delta_{x_0}\\) is linear.\n\n\nContinuity\nLet \\(K\\subset\\Omega\\) be compact. For every\n\\[\n\\varphi\\in C_c^\\infty(\\Omega)\n\\]\nwith\n\\[\n\\operatorname{supp}\\varphi\\subset K,\n\\]\nwe have\n\\[\n|\\delta_{x_0}(\\varphi)|\n=\n|\\varphi(x_0)|.\n\\]\nIf \\(x_0\\notin K\\), then\n\\[\n\\varphi(x_0)=0,\n\\]\nand hence\n\\[\n\\delta_{x_0}(\\varphi)=0.\n\\]\nIf \\(x_0\\in K\\), then\n\\[\n|\\delta_{x_0}(\\varphi)|\n=\n|\\varphi(x_0)|\n\\leq\n\\sup_{x\\in K}|\\varphi(x)|.\n\\]\nTherefore, in either case,\n\\[\n|\\delta_{x_0}(\\varphi)|\n\\leq\n\\sup_{x\\in K}|\\varphi(x)|.\n\\]\nThe right-hand side is one of the standard seminorms defining the topology of\n\\[\nC_c^\\infty(\\Omega).\n\\]\nHence \\(\\delta_{x_0}\\) is continuous.\nEquivalently, suppose that\n\\[\n\\varphi_j\\to0\n\\quad\\text{in }\\mathcal D(\\Omega).\n\\]\nThen there exists a compact set\n\\[\nK\\subset\\Omega\n\\]\nsuch that\n\\[\n\\operatorname{supp}\\varphi_j\\subset K\n\\]\nfor all sufficiently large \\(j\\), and\n\\[\n\\sup_{x\\in K}\n|D^\\alpha\\varphi_j(x)|\n\\to0\n\\]\nfor every multi-index \\(\\alpha\\).\nTaking \\(\\alpha=0\\), we obtain\n\\[\n\\sup_{x\\in K}|\\varphi_j(x)|\n\\to0.\n\\]\nHence\n\\[\n|\\delta_{x_0}(\\varphi_j)|\n=\n|\\varphi_j(x_0)|\n\\leq\n\\sup_{x\\in K}|\\varphi_j(x)|\n\\to0.\n\\]\nTherefore \\(\\delta_{x_0}\\) is continuous on \\(\\mathcal D(\\Omega)\\).\nWe conclude that\n\\[\n\\boxed{\n\\delta_{x_0}\\in\\mathcal D'(\\Omega).\n}\n\\]\nThus the Dirac delta is a distribution."
   },
   {
-    "objectID": "writing/sobolev/week-02-problem-01.html",
-    "href": "writing/sobolev/week-02-problem-01.html",
-    "title": "Sobolev Spaces — Week 2, Problem 1",
-    "section": "",
-    "text": "Let \\(X\\) be a Banach space and suppose that\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{weakly in }X\n\\]\nand\n\\[\n\\|u_k\\|_X\\to \\|u\\|_X.\n\\]\nDoes it follow that\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X?\n\\]\nIn particular, what happens when \\(X=L^p(\\Omega)\\) for \\(1\\leq p\\leq\\infty\\)?"
-  },
-  {
-    "objectID": "writing/sobolev/week-02-problem-01.html#problem",
-    "href": "writing/sobolev/week-02-problem-01.html#problem",
-    "title": "Sobolev Spaces — Week 2, Problem 1",
-    "section": "",
-    "text": "Let \\(X\\) be a Banach space and suppose that\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{weakly in }X\n\\]\nand\n\\[\n\\|u_k\\|_X\\to \\|u\\|_X.\n\\]\nDoes it follow that\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X?\n\\]\nIn particular, what happens when \\(X=L^p(\\Omega)\\) for \\(1\\leq p\\leq\\infty\\)?"
-  },
-  {
-    "objectID": "writing/sobolev/week-02-problem-01.html#solution",
-    "href": "writing/sobolev/week-02-problem-01.html#solution",
-    "title": "Sobolev Spaces — Week 2, Problem 1",
-    "section": "Solution",
-    "text": "Solution\nIn a general Banach space, the conclusion is false.\nFor \\(L^p(\\Omega)\\), the situation is as follows:\n\\[\n\\boxed{\n\\begin{aligned}\n1&lt;p&lt;\\infty &: \\quad \\text{the implication is true},\\\\\np=1 &: \\quad \\text{the implication is false in general},\\\\\np=\\infty &: \\quad \\text{the implication is false in general}.\n\\end{aligned}}\n\\]\nThe positive result for \\(1&lt;p&lt;\\infty\\) follows from the uniform convexity of \\(L^p\\).\n\nThe case \\(1&lt;p&lt;\\infty\\)\nFor every \\(1&lt;p&lt;\\infty\\), the space \\(L^p(\\Omega)\\) is uniformly convex. We prove more generally that in every uniformly convex Banach space,\n\\[\nu_k\\rightharpoonup u,\n\\qquad\n\\|u_k\\|_X\\to\\|u\\|_X\n\\]\nimply\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X.\n\\]\nIf \\(u=0\\), then\n\\[\n\\|u_k-u\\|_X=\\|u_k\\|_X\\to0,\n\\]\nso the conclusion is immediate.\nSuppose now that \\(\\|u\\|_X&gt;0\\). Define\n\\[\nv_k=\\frac{u_k}{\\|u_k\\|_X},\n\\qquad\nv=\\frac{u}{\\|u\\|_X}.\n\\]\nSince\n\\[\n\\|u_k\\|_X\\to\\|u\\|_X&gt;0,\n\\]\nwe have\n\\[\nv_k\\rightharpoonup v,\n\\]\nand\n\\[\n\\|v_k\\|_X=\\|v\\|_X=1.\n\\]\nSuppose, toward a contradiction, that \\(v_k\\) does not converge strongly to \\(v\\). Passing to a subsequence if necessary, there exists \\(\\varepsilon&gt;0\\) such that\n\\[\n\\|v_k-v\\|_X\\geq\\varepsilon\n\\]\nfor every \\(k\\).\nBy uniform convexity, there exists \\(\\delta&gt;0\\) such that\n\\[\n\\left\\|\n\\frac{v_k+v}{2}\n\\right\\|_X\n\\leq 1-\\delta.\n\\]\nOn the other hand,\n\\[\n\\frac{v_k+v}{2}\\rightharpoonup v.\n\\]\nSince the norm is weakly lower semicontinuous,\n\\[\n\\|v\\|_X\n\\leq\n\\liminf_{k\\to\\infty}\n\\left\\|\n\\frac{v_k+v}{2}\n\\right\\|_X.\n\\]\nTherefore,\n\\[\n1\n\\leq\n\\liminf_{k\\to\\infty}\n\\left\\|\n\\frac{v_k+v}{2}\n\\right\\|_X\n\\leq\n1-\\delta,\n\\]\nwhich is impossible.\nHence\n\\[\nv_k\\to v\n\\quad\\text{strongly in }X.\n\\]\nFinally,\n\\[\n\\begin{aligned}\n\\|u_k-u\\|_X\n&=\n\\left\\|\n\\|u_k\\|_Xv_k-\\|u\\|_Xv\n\\right\\|_X\\\\\n&\\leq\n\\|u_k\\|_X\\|v_k-v\\|_X\n+\n\\left|\n\\|u_k\\|_X-\\|u\\|_X\n\\right|.\n\\end{aligned}\n\\]\nBoth terms tend to zero. Thus\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X.\n\\]\nSince \\(L^p(\\Omega)\\) is uniformly convex whenever \\(1&lt;p&lt;\\infty\\), we obtain\n\\[\n\\boxed{\nu_k\\rightharpoonup u\n\\text{ in }L^p,\n\\quad\n\\|u_k\\|_{L^p}\\to\\|u\\|_{L^p}\n\\quad\\Longrightarrow\\quad\nu_k\\to u\n\\text{ in }L^p\n}\n\\]\nfor every \\(1&lt;p&lt;\\infty\\).\n\n\nThe case \\(p=1\\)\nThe conclusion fails in \\(L^1\\).\nLet \\(r_k\\) be the \\(k\\)-th Rademacher function on \\((0,1)\\). Thus \\(r_k\\) takes only the values \\(1\\) and \\(-1\\), with increasingly rapid dyadic oscillations.\nWe first observe that\n\\[\nr_k\\rightharpoonup0\n\\quad\\text{weakly in }L^1(0,1).\n\\]\nIndeed, let \\(\\varphi\\in L^\\infty(0,1)\\). Given \\(\\varepsilon&gt;0\\), choose a dyadic step function \\(h\\) such that\n\\[\n\\|\\varphi-h\\|_{L^1}&lt;\\varepsilon.\n\\]\nFor sufficiently large \\(k\\), the function \\(r_k\\) has zero average on each dyadic interval on which \\(h\\) is constant. Hence\n\\[\n\\int_0^1 h r_k\\,dx=0.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n\\left|\n\\int_0^1\\varphi r_k\\,dx\n\\right|\n&=\n\\left|\n\\int_0^1(\\varphi-h)r_k\\,dx\n\\right|\\\\\n&\\leq\n\\|\\varphi-h\\|_{L^1}\n&lt;\\varepsilon.\n\\end{aligned}\n\\]\nThus\n\\[\nr_k\\rightharpoonup0\n\\quad\\text{in }L^1(0,1).\n\\]\nNow define\n\\[\nu_k=1+r_k,\n\\qquad\nu=1.\n\\]\nThen\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{in }L^1(0,1).\n\\]\nMoreover, \\(u_k\\) takes the values \\(0\\) and \\(2\\), each on a set of measure \\(1/2\\), so\n\\[\n\\|u_k\\|_{L^1}=1=\\|u\\|_{L^1}.\n\\]\nHowever,\n\\[\n\\|u_k-u\\|_{L^1}\n=\n\\|r_k\\|_{L^1}\n=\n1\n\\]\nfor every \\(k\\).\nHence\n\\[\nu_k\\not\\to u\n\\quad\\text{strongly in }L^1(0,1).\n\\]\nTherefore the implication fails for \\(p=1\\).\n\n\nThe case \\(p=\\infty\\)\nThe conclusion also fails for \\(p=\\infty\\).\nConsider\n\\[\n\\ell^\\infty\n=\nL^\\infty(\\mathbb N),\n\\]\nwhere \\(\\mathbb N\\) is equipped with counting measure. Let \\(e_k\\) denote the \\(k\\)-th standard basis vector,\n\\[\ne_k=(0,\\ldots,0,1,0,\\ldots).\n\\]\nWe first claim that\n\\[\ne_k\\rightharpoonup0\n\\quad\\text{weakly in }\\ell^\\infty.\n\\]\nLet\n\\[\n\\Phi\\in(\\ell^\\infty)^*,\n\\]\nand set\n\\[\na_k=\\Phi(e_k).\n\\]\nFor every finite set \\(F\\subset\\mathbb N\\), choose scalars \\(\\varepsilon_k\\) with\n\\[\n|\\varepsilon_k|=1\n\\]\nsuch that\n\\[\n\\varepsilon_k a_k=|a_k|.\n\\]\nThen\n\\[\n\\left\\|\n\\sum_{k\\in F}\\varepsilon_k e_k\n\\right\\|_{\\ell^\\infty}\n=1.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n\\sum_{k\\in F}|a_k|\n&=\n\\Phi\\left(\n\\sum_{k\\in F}\\varepsilon_k e_k\n\\right)\\\\\n&\\leq\n\\|\\Phi\\|.\n\\end{aligned}\n\\]\nIt follows that\n\\[\n\\sum_{k=1}^\\infty|\\Phi(e_k)|&lt;\\infty.\n\\]\nIn particular,\n\\[\n\\Phi(e_k)\\to0.\n\\]\nSince this holds for every \\(\\Phi\\in(\\ell^\\infty)^*\\),\n\\[\ne_k\\rightharpoonup0\n\\quad\\text{in }\\ell^\\infty.\n\\]\nNow let\n\\[\nu=(1,1,1,\\ldots)\n\\]\nand define\n\\[\nu_k=u-2e_k.\n\\]\nSince \\(e_k\\rightharpoonup0\\),\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{weakly in }\\ell^\\infty.\n\\]\nEvery coordinate of \\(u_k\\) is equal to \\(1\\), except for the \\(k\\)-th coordinate, which is \\(-1\\). Therefore,\n\\[\n\\|u_k\\|_{\\ell^\\infty}\n=\n1\n=\n\\|u\\|_{\\ell^\\infty}.\n\\]\nThus the norms converge. However,\n\\[\n\\|u_k-u\\|_{\\ell^\\infty}\n=\n\\|-2e_k\\|_{\\ell^\\infty}\n=\n2\n\\]\nfor every \\(k\\).\nConsequently,\n\\[\nu_k\\not\\to u\n\\quad\\text{strongly in }\\ell^\\infty.\n\\]\nHence the implication fails for \\(p=\\infty\\)."
-  },
-  {
-    "objectID": "writing/sobolev/week-02-problem-01.html#remark",
-    "href": "writing/sobolev/week-02-problem-01.html#remark",
-    "title": "Sobolev Spaces — Week 2, Problem 1",
+    "objectID": "writing/sobolev/week-03-problem-03.html#remark",
+    "href": "writing/sobolev/week-03-problem-03.html#remark",
+    "title": "Sobolev Spaces — Week 3, Problem 3",
     "section": "Remark",
-    "text": "Remark\nThe property\n\\[\nu_k\\rightharpoonup u,\n\\qquad\n\\|u_k\\|\\to\\|u\\|\n\\quad\\Longrightarrow\\quad\nu_k\\to u\n\\]\nis known as the Radon–Riesz property, or the Kadec–Klee property.\nEvery uniformly convex Banach space has this property. In particular,\n\\[\n\\boxed{\nL^p(\\Omega)\\text{ has this property for }1&lt;p&lt;\\infty.\n}\n\\]\nIn contrast, \\(L^1\\) and \\(L^\\infty\\) do not have this property in general.\nThe Hilbert space case \\(p=2\\) is especially simple. Indeed,\n\\[\n\\|u_k-u\\|_{L^2}^2\n=\n\\|u_k\\|_{L^2}^2\n+\n\\|u\\|_{L^2}^2\n-\n2\\langle u_k,u\\rangle.\n\\]\nWeak convergence gives\n\\[\n\\langle u_k,u\\rangle\n\\to\n\\|u\\|_{L^2}^2,\n\\]\nwhile convergence of the norms gives\n\\[\n\\|u_k\\|_{L^2}^2\n\\to\n\\|u\\|_{L^2}^2.\n\\]\nHence\n\\[\n\\|u_k-u\\|_{L^2}\\to0.\n\\]\nOne should also distinguish weak convergence from weak-* convergence in \\(L^\\infty\\). Weak-* convergence is tested against the chosen predual, whereas weak convergence is tested against the entire dual \\((L^\\infty)^*\\). The counterexample above uses genuine weak convergence in \\(\\ell^\\infty\\)."
+    "text": "Remark\nThe Dirac delta is a distribution of order zero, since\n\\[\n|\\delta_{x_0}(\\varphi)|\n\\leq\n\\|\\varphi\\|_{L^\\infty}.\n\\]\nIt is not induced by any locally integrable function.\nIndeed, if there were some\n\\[\nf\\in L_{\\mathrm{loc}}^1(\\Omega)\n\\]\nsuch that\n\\[\n\\varphi(x_0)\n=\n\\int_\\Omega f(x)\\varphi(x)\\,dx\n\\]\nfor every \\(\\varphi\\in C_c^\\infty(\\Omega)\\), then testing against functions supported away from \\(x_0\\) would imply\n\\[\nf=0\n\\]\nalmost everywhere on\n\\[\n\\Omega\\setminus\\{x_0\\}.\n\\]\nSince the singleton \\(\\{x_0\\}\\) has Lebesgue measure zero, this would imply\n\\[\nf=0\n\\]\nalmost everywhere in \\(\\Omega\\), contradicting\n\\[\n\\delta_{x_0}\\neq0.\n\\]\nThus the Dirac delta is a genuine distribution rather than an ordinary function."
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "writing/sobolev/week-02-problem-02.html",
+    "href": "writing/sobolev/week-02-problem-02.html",
+    "title": "Sobolev Spaces — Week 2, Problem 2",
     "section": "",
-    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
+    "text": "Let \\(X\\) be a Banach space and let \\(X'\\) denote its dual space.\n\nProve that \\(X\\) is reflexive if and only if \\(X'\\) is reflexive.\nProve that if \\(X'\\) is separable, then \\(X\\) is separable."
   },
   {
-    "objectID": "cv.html#yiming-chen",
-    "href": "cv.html#yiming-chen",
-    "title": "CV",
+    "objectID": "writing/sobolev/week-02-problem-02.html#problem",
+    "href": "writing/sobolev/week-02-problem-02.html#problem",
+    "title": "Sobolev Spaces — Week 2, Problem 2",
     "section": "",
-    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
+    "text": "Let \\(X\\) be a Banach space and let \\(X'\\) denote its dual space.\n\nProve that \\(X\\) is reflexive if and only if \\(X'\\) is reflexive.\nProve that if \\(X'\\) is separable, then \\(X\\) is separable."
   },
   {
-    "objectID": "cv.html#contact",
-    "href": "cv.html#contact",
-    "title": "CV",
-    "section": "Contact",
-    "text": "Contact\nEmail: saalo@foxmail.com"
+    "objectID": "writing/sobolev/week-02-problem-02.html#solution",
+    "href": "writing/sobolev/week-02-problem-02.html#solution",
+    "title": "Sobolev Spaces — Week 2, Problem 2",
+    "section": "Solution",
+    "text": "Solution\n\n1. Reflexivity of \\(X\\) and \\(X'\\)\nRecall the canonical embedding\n\\[\nJ_X:X\\longrightarrow X'',\n\\qquad\nJ_X(x)(f)=f(x),\n\\]\nfor \\(x\\in X\\) and \\(f\\in X'\\).\nThe space \\(X\\) is reflexive precisely when \\(J_X\\) is surjective.\nWe prove the two implications separately.\n\n\\(X\\) reflexive implies \\(X'\\) reflexive\nSuppose that \\(X\\) is reflexive. Then\n\\[\nJ_X(X)=X''.\n\\]\nWe want to show that the canonical embedding\n\\[\nJ_{X'}:X'\\longrightarrow X'''\n\\]\nis surjective.\nLet\n\\[\nF\\in X'''.\n\\]\nDefine \\(f:X\\to\\mathbb K\\) by\n\\[\nf(x)=F(J_Xx),\n\\]\nwhere \\(\\mathbb K=\\mathbb R\\) or \\(\\mathbb C\\).\nSince \\(F\\) and \\(J_X\\) are bounded linear maps, \\(f\\in X'\\).\nWe claim that\n\\[\nF=J_{X'}f.\n\\]\nIndeed, let \\(x''\\in X''\\). Since \\(X\\) is reflexive, there exists \\(x\\in X\\) such that\n\\[\nx''=J_Xx.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n(J_{X'}f)(x'')\n&=x''(f)\\\\\n&=(J_Xx)(f)\\\\\n&=f(x)\\\\\n&=F(J_Xx)\\\\\n&=F(x'').\n\\end{aligned}\n\\]\nThus\n\\[\nF=J_{X'}f.\n\\]\nHence \\(J_{X'}\\) is surjective, and therefore \\(X'\\) is reflexive.\n\n\n\\(X'\\) reflexive implies \\(X\\) reflexive\nNow suppose that \\(X'\\) is reflexive.\nAssume, toward a contradiction, that \\(X\\) is not reflexive. Then\n\\[\nJ_X(X)\\subsetneq X''.\n\\]\nSince \\(J_X\\) is an isometry and \\(X\\) is Banach, \\(J_X(X)\\) is a closed subspace of \\(X''\\).\nBy the Hahn–Banach theorem, there exists a nonzero functional\n\\[\nF\\in X'''\n\\]\nsuch that\n\\[\nF|_{J_X(X)}=0.\n\\]\nSince \\(X'\\) is reflexive, the canonical map\n\\[\nJ_{X'}:X'\\to X'''\n\\]\nis surjective. Hence there exists \\(f\\in X'\\) such that\n\\[\nF=J_{X'}f.\n\\]\nFor every \\(x\\in X\\),\n\\[\n0\n=\nF(J_Xx)\n=\n(J_{X'}f)(J_Xx).\n\\]\nBut\n\\[\n(J_{X'}f)(J_Xx)\n=\n(J_Xx)(f)\n=\nf(x).\n\\]\nTherefore,\n\\[\nf(x)=0\n\\]\nfor every \\(x\\in X\\), so \\(f=0\\). Consequently,\n\\[\nF=J_{X'}f=0,\n\\]\ncontradicting the choice of \\(F\\).\nThus \\(J_X(X)=X''\\), and hence \\(X\\) is reflexive.\nWe have proved\n\\[\n\\boxed{\nX\\text{ is reflexive}\n\\quad\\Longleftrightarrow\\quad\nX'\\text{ is reflexive}.\n}\n\\]\n\n\n\n2. Separability of \\(X'\\) implies separability of \\(X\\)\nSuppose that \\(X'\\) is separable.\nIf \\(X=\\{0\\}\\), the conclusion is trivial, so assume \\(X\\neq\\{0\\}\\).\nSince \\(X'\\) is separable, its unit sphere\n\\[\nS_{X'}\n=\n\\{f\\in X':\\|f\\|=1\\}\n\\]\ncontains a countable dense subset. Let\n\\[\n\\{f_n\\}_{n=1}^\\infty\n\\]\nbe dense in \\(S_{X'}\\).\nFor every \\(n\\), since\n\\[\n\\|f_n\\|=1,\n\\]\nby the definition of the operator norm we can choose \\(x_n\\in X\\) such that\n\\[\n\\|x_n\\|=1\n\\]\nand\n\\[\n|f_n(x_n)|&gt;\\frac12.\n\\]\nLet\n\\[\nM\n=\n\\overline{\\operatorname{span}\\{x_n:n\\in\\mathbb N\\}}.\n\\]\nWe claim that\n\\[\nM=X.\n\\]\nSuppose otherwise. Then \\(M\\) is a proper closed subspace of \\(X\\). By the Hahn–Banach theorem, there exists\n\\[\nf\\in X'\n\\]\nsuch that\n\\[\n\\|f\\|=1,\n\\qquad\nf|_M=0.\n\\]\nSince \\(\\{f_n\\}\\) is dense in \\(S_{X'}\\), there exists \\(n\\) such that\n\\[\n\\|f-f_n\\|&lt;\\frac14.\n\\]\nSince \\(x_n\\in M\\), we have\n\\[\nf(x_n)=0.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n|f_n(x_n)|\n&=\n|(f_n-f)(x_n)|\\\\\n&\\leq\n\\|f_n-f\\|\\|x_n\\|\\\\\n&&lt;\n\\frac14.\n\\end{aligned}\n\\]\nThis contradicts our choice of \\(x_n\\), for which\n\\[\n|f_n(x_n)|&gt;\\frac12.\n\\]\nHence\n\\[\nM=X.\n\\]\nTherefore,\n\\[\nX\n=\n\\overline{\\operatorname{span}\\{x_n:n\\in\\mathbb N\\}}.\n\\]\nThe linear span of a countable set is separable. Indeed, the finite linear combinations of the \\(x_n\\) with rational coefficients are countable and dense in the real case; in the complex case one may use coefficients in\n\\[\n\\mathbb Q+i\\mathbb Q.\n\\]\nConsequently, \\(X\\) is separable.\nThus\n\\[\n\\boxed{\nX'\\text{ separable}\n\\quad\\Longrightarrow\\quad\nX\\text{ separable}.\n}\n\\]"
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-02.html#remark",
+    "href": "writing/sobolev/week-02-problem-02.html#remark",
+    "title": "Sobolev Spaces — Week 2, Problem 2",
+    "section": "Remark",
+    "text": "Remark\nThe converse of the second statement is false in general.\nA Banach space may be separable while its dual is nonseparable. The standard example is\n\\[\nX=\\ell^1.\n\\]\nThe space \\(\\ell^1\\) is separable, whereas\n\\[\n(\\ell^1)'=\\ell^\\infty\n\\]\nis not separable.\nThus\n\\[\nX'\\text{ separable}\n\\Longrightarrow\nX\\text{ separable},\n\\]\nbut in general\n\\[\nX\\text{ separable}\n\\nRightarrow\nX'\\text{ separable}.\n\\]\nHowever, if \\(X\\) is both separable and reflexive, then \\(X'\\) is also separable."
+  },
+  {
+    "objectID": "writing/sobolev/week-03-problem-01.html",
+    "href": "writing/sobolev/week-03-problem-01.html",
+    "title": "Sobolev Spaces — Week 3, Problem 1",
+    "section": "",
+    "text": "Let \\(\\Omega\\subset\\mathbb R^n\\) be a convex open set and let\n\\[\nf\\in C^1(\\Omega).\n\\]\nProve that for any \\(x,y\\in\\Omega\\), there exists a point\n\\[\n\\xi\\in [x,y]\n\\]\nsuch that\n\\[\nf(y)-f(x)\n=\n\\nabla f(\\xi)\\cdot (y-x).\n\\]\nHere\n\\[\n[x,y]\n=\n\\{x+t(y-x):0\\leq t\\leq1\\}\n\\]\ndenotes the line segment joining \\(x\\) and \\(y\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-03-problem-01.html#problem",
+    "href": "writing/sobolev/week-03-problem-01.html#problem",
+    "title": "Sobolev Spaces — Week 3, Problem 1",
+    "section": "",
+    "text": "Let \\(\\Omega\\subset\\mathbb R^n\\) be a convex open set and let\n\\[\nf\\in C^1(\\Omega).\n\\]\nProve that for any \\(x,y\\in\\Omega\\), there exists a point\n\\[\n\\xi\\in [x,y]\n\\]\nsuch that\n\\[\nf(y)-f(x)\n=\n\\nabla f(\\xi)\\cdot (y-x).\n\\]\nHere\n\\[\n[x,y]\n=\n\\{x+t(y-x):0\\leq t\\leq1\\}\n\\]\ndenotes the line segment joining \\(x\\) and \\(y\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-03-problem-01.html#solution",
+    "href": "writing/sobolev/week-03-problem-01.html#solution",
+    "title": "Sobolev Spaces — Week 3, Problem 1",
+    "section": "Solution",
+    "text": "Solution\nIf \\(x=y\\), the conclusion is immediate. Thus assume that \\(x\\neq y\\).\nSince \\(\\Omega\\) is convex,\n\\[\nx+t(y-x)\\in\\Omega\n\\]\nfor every \\(t\\in[0,1]\\).\nDefine the one-dimensional function\n\\[\ng:[0,1]\\to\\mathbb R\n\\]\nby\n\\[\ng(t)\n=\nf\\bigl(x+t(y-x)\\bigr).\n\\]\nSince \\(f\\in C^1(\\Omega)\\), we have\n\\[\ng\\in C^1([0,1]).\n\\]\nBy the ordinary one-dimensional Lagrange mean value theorem, there exists some\n\\[\nt_0\\in(0,1)\n\\]\nsuch that\n\\[\ng(1)-g(0)=g'(t_0).\n\\]\nNow\n\\[\ng(1)=f(y),\n\\qquad\ng(0)=f(x).\n\\]\nBy the chain rule,\n\\[\ng'(t)\n=\n\\nabla f\\bigl(x+t(y-x)\\bigr)\\cdot(y-x).\n\\]\nTherefore,\n\\[\nf(y)-f(x)\n=\n\\nabla f\\bigl(x+t_0(y-x)\\bigr)\\cdot(y-x).\n\\]\nSet\n\\[\n\\xi=x+t_0(y-x).\n\\]\nThen \\(\\xi\\in[x,y]\\), and hence\n\\[\n\\boxed{\nf(y)-f(x)\n=\n\\nabla f(\\xi)\\cdot(y-x).\n}\n\\]\nThis proves the multivariable Lagrange mean value theorem."
+  },
+  {
+    "objectID": "writing/sobolev/week-03-problem-01.html#remark",
+    "href": "writing/sobolev/week-03-problem-01.html#remark",
+    "title": "Sobolev Spaces — Week 3, Problem 1",
+    "section": "Remark",
+    "text": "Remark\nThe convexity assumption guarantees that the entire line segment joining \\(x\\) and \\(y\\) remains inside \\(\\Omega\\). This allows the multidimensional problem to be reduced directly to the one-dimensional mean value theorem.\nAs an immediate consequence,\n\\[\n|f(y)-f(x)|\n\\leq\n\\sup_{z\\in[x,y]}|\\nabla f(z)|\\,|x-y|.\n\\]\nIn particular, if \\(\\Omega\\) is convex and\n\\[\n\\|\\nabla f\\|_{L^\\infty(\\Omega)}&lt;\\infty,\n\\]\nthen\n\\[\n|f(y)-f(x)|\n\\leq\n\\|\\nabla f\\|_{L^\\infty(\\Omega)}|x-y|,\n\\]\nso \\(f\\) is Lipschitz continuous on \\(\\Omega\\)."
   },
   {
     "objectID": "writing/sobolev/week-01-problem-01.html",
@@ -126,32 +140,102 @@
     "text": "Remark\nThis is a basic example of the general principle that, in \\(\\mathbb{R}^n\\), a point singularity of order \\(\\lvert x\\rvert^{-s}\\) is locally integrable near the origin exactly when \\(s&lt;n\\)."
   },
   {
-    "objectID": "writing/sobolev/week-02-problem-02.html",
-    "href": "writing/sobolev/week-02-problem-02.html",
-    "title": "Sobolev Spaces — Week 2, Problem 2",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
     "section": "",
-    "text": "Let \\(X\\) be a Banach space and let \\(X'\\) denote its dual space.\n\nProve that \\(X\\) is reflexive if and only if \\(X'\\) is reflexive.\nProve that if \\(X'\\) is separable, then \\(X\\) is separable."
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
   },
   {
-    "objectID": "writing/sobolev/week-02-problem-02.html#problem",
-    "href": "writing/sobolev/week-02-problem-02.html#problem",
-    "title": "Sobolev Spaces — Week 2, Problem 2",
+    "objectID": "cv.html#yiming-chen",
+    "href": "cv.html#yiming-chen",
+    "title": "CV",
     "section": "",
-    "text": "Let \\(X\\) be a Banach space and let \\(X'\\) denote its dual space.\n\nProve that \\(X\\) is reflexive if and only if \\(X'\\) is reflexive.\nProve that if \\(X'\\) is separable, then \\(X\\) is separable."
+    "text": "Research interests. Minimal surfaces, geometric analysis, min-max theory.\n\n\n2022.9–2026.6: B.S. in Mathematics, Wuhan University, China.\n2026.9–: Ph.D. student in Mathematics, Fudan University / Shanghai Center for Mathematical Sciences, China.\nUndergraduate advisor. Prof. Qun Chen, Wuhan University.\nPh.D. advisor. Prof. Zhichao Wang, Fudan University / Shanghai Center for Mathematical Sciences."
   },
   {
-    "objectID": "writing/sobolev/week-02-problem-02.html#solution",
-    "href": "writing/sobolev/week-02-problem-02.html#solution",
-    "title": "Sobolev Spaces — Week 2, Problem 2",
+    "objectID": "cv.html#contact",
+    "href": "cv.html#contact",
+    "title": "CV",
+    "section": "Contact",
+    "text": "Contact\nEmail: saalo@foxmail.com"
+  },
+  {
+    "objectID": "writing/sobolev/week-03-problem-02.html",
+    "href": "writing/sobolev/week-03-problem-02.html",
+    "title": "Sobolev Spaces — Week 3, Problem 2",
+    "section": "",
+    "text": "Construct a counterexample showing that the continuous embedding\n\\[\nC^1(\\overline{\\Omega})\n\\hookrightarrow\nC^{0,1}(\\overline{\\Omega})\n\\]\nis not compact, even when \\(\\Omega\\) is a bounded convex domain."
+  },
+  {
+    "objectID": "writing/sobolev/week-03-problem-02.html#problem",
+    "href": "writing/sobolev/week-03-problem-02.html#problem",
+    "title": "Sobolev Spaces — Week 3, Problem 2",
+    "section": "",
+    "text": "Construct a counterexample showing that the continuous embedding\n\\[\nC^1(\\overline{\\Omega})\n\\hookrightarrow\nC^{0,1}(\\overline{\\Omega})\n\\]\nis not compact, even when \\(\\Omega\\) is a bounded convex domain."
+  },
+  {
+    "objectID": "writing/sobolev/week-03-problem-02.html#solution",
+    "href": "writing/sobolev/week-03-problem-02.html#solution",
+    "title": "Sobolev Spaces — Week 3, Problem 2",
     "section": "Solution",
-    "text": "Solution\n\n1. Reflexivity of \\(X\\) and \\(X'\\)\nRecall the canonical embedding\n\\[\nJ_X:X\\longrightarrow X'',\n\\qquad\nJ_X(x)(f)=f(x),\n\\]\nfor \\(x\\in X\\) and \\(f\\in X'\\).\nThe space \\(X\\) is reflexive precisely when \\(J_X\\) is surjective.\nWe prove the two implications separately.\n\n\\(X\\) reflexive implies \\(X'\\) reflexive\nSuppose that \\(X\\) is reflexive. Then\n\\[\nJ_X(X)=X''.\n\\]\nWe want to show that the canonical embedding\n\\[\nJ_{X'}:X'\\longrightarrow X'''\n\\]\nis surjective.\nLet\n\\[\nF\\in X'''.\n\\]\nDefine \\(f:X\\to\\mathbb K\\) by\n\\[\nf(x)=F(J_Xx),\n\\]\nwhere \\(\\mathbb K=\\mathbb R\\) or \\(\\mathbb C\\).\nSince \\(F\\) and \\(J_X\\) are bounded linear maps, \\(f\\in X'\\).\nWe claim that\n\\[\nF=J_{X'}f.\n\\]\nIndeed, let \\(x''\\in X''\\). Since \\(X\\) is reflexive, there exists \\(x\\in X\\) such that\n\\[\nx''=J_Xx.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n(J_{X'}f)(x'')\n&=x''(f)\\\\\n&=(J_Xx)(f)\\\\\n&=f(x)\\\\\n&=F(J_Xx)\\\\\n&=F(x'').\n\\end{aligned}\n\\]\nThus\n\\[\nF=J_{X'}f.\n\\]\nHence \\(J_{X'}\\) is surjective, and therefore \\(X'\\) is reflexive.\n\n\n\\(X'\\) reflexive implies \\(X\\) reflexive\nNow suppose that \\(X'\\) is reflexive.\nAssume, toward a contradiction, that \\(X\\) is not reflexive. Then\n\\[\nJ_X(X)\\subsetneq X''.\n\\]\nSince \\(J_X\\) is an isometry and \\(X\\) is Banach, \\(J_X(X)\\) is a closed subspace of \\(X''\\).\nBy the Hahn–Banach theorem, there exists a nonzero functional\n\\[\nF\\in X'''\n\\]\nsuch that\n\\[\nF|_{J_X(X)}=0.\n\\]\nSince \\(X'\\) is reflexive, the canonical map\n\\[\nJ_{X'}:X'\\to X'''\n\\]\nis surjective. Hence there exists \\(f\\in X'\\) such that\n\\[\nF=J_{X'}f.\n\\]\nFor every \\(x\\in X\\),\n\\[\n0\n=\nF(J_Xx)\n=\n(J_{X'}f)(J_Xx).\n\\]\nBut\n\\[\n(J_{X'}f)(J_Xx)\n=\n(J_Xx)(f)\n=\nf(x).\n\\]\nTherefore,\n\\[\nf(x)=0\n\\]\nfor every \\(x\\in X\\), so \\(f=0\\). Consequently,\n\\[\nF=J_{X'}f=0,\n\\]\ncontradicting the choice of \\(F\\).\nThus \\(J_X(X)=X''\\), and hence \\(X\\) is reflexive.\nWe have proved\n\\[\n\\boxed{\nX\\text{ is reflexive}\n\\quad\\Longleftrightarrow\\quad\nX'\\text{ is reflexive}.\n}\n\\]\n\n\n\n2. Separability of \\(X'\\) implies separability of \\(X\\)\nSuppose that \\(X'\\) is separable.\nIf \\(X=\\{0\\}\\), the conclusion is trivial, so assume \\(X\\neq\\{0\\}\\).\nSince \\(X'\\) is separable, its unit sphere\n\\[\nS_{X'}\n=\n\\{f\\in X':\\|f\\|=1\\}\n\\]\ncontains a countable dense subset. Let\n\\[\n\\{f_n\\}_{n=1}^\\infty\n\\]\nbe dense in \\(S_{X'}\\).\nFor every \\(n\\), since\n\\[\n\\|f_n\\|=1,\n\\]\nby the definition of the operator norm we can choose \\(x_n\\in X\\) such that\n\\[\n\\|x_n\\|=1\n\\]\nand\n\\[\n|f_n(x_n)|&gt;\\frac12.\n\\]\nLet\n\\[\nM\n=\n\\overline{\\operatorname{span}\\{x_n:n\\in\\mathbb N\\}}.\n\\]\nWe claim that\n\\[\nM=X.\n\\]\nSuppose otherwise. Then \\(M\\) is a proper closed subspace of \\(X\\). By the Hahn–Banach theorem, there exists\n\\[\nf\\in X'\n\\]\nsuch that\n\\[\n\\|f\\|=1,\n\\qquad\nf|_M=0.\n\\]\nSince \\(\\{f_n\\}\\) is dense in \\(S_{X'}\\), there exists \\(n\\) such that\n\\[\n\\|f-f_n\\|&lt;\\frac14.\n\\]\nSince \\(x_n\\in M\\), we have\n\\[\nf(x_n)=0.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n|f_n(x_n)|\n&=\n|(f_n-f)(x_n)|\\\\\n&\\leq\n\\|f_n-f\\|\\|x_n\\|\\\\\n&&lt;\n\\frac14.\n\\end{aligned}\n\\]\nThis contradicts our choice of \\(x_n\\), for which\n\\[\n|f_n(x_n)|&gt;\\frac12.\n\\]\nHence\n\\[\nM=X.\n\\]\nTherefore,\n\\[\nX\n=\n\\overline{\\operatorname{span}\\{x_n:n\\in\\mathbb N\\}}.\n\\]\nThe linear span of a countable set is separable. Indeed, the finite linear combinations of the \\(x_n\\) with rational coefficients are countable and dense in the real case; in the complex case one may use coefficients in\n\\[\n\\mathbb Q+i\\mathbb Q.\n\\]\nConsequently, \\(X\\) is separable.\nThus\n\\[\n\\boxed{\nX'\\text{ separable}\n\\quad\\Longrightarrow\\quad\nX\\text{ separable}.\n}\n\\]"
+    "text": "Solution\nIt is enough to consider the one-dimensional convex domain\n\\[\n\\Omega=(0,1).\n\\]\nFor \\(k\\geq1\\), define\n\\[\nu_k(x)\n=\n\\frac{1}{\\pi 2^k}\n\\sin(\\pi 2^k x),\n\\qquad\nx\\in[0,1].\n\\]\nThen\n\\[\nu_k'(x)\n=\n\\cos(\\pi 2^k x).\n\\]\nHence\n\\[\n\\|u_k\\|_{L^\\infty(0,1)}\n\\leq\n\\frac{1}{\\pi2^k}\n\\leq\n\\frac1\\pi,\n\\]\nand\n\\[\n\\|u_k'\\|_{L^\\infty(0,1)}\n=\n1.\n\\]\nTherefore,\n\\[\n\\|u_k\\|_{C^1([0,1])}\n=\n\\|u_k\\|_{L^\\infty}\n+\n\\|u_k'\\|_{L^\\infty}\n\\leq\n1+\\frac1\\pi.\n\\]\nThus \\(\\{u_k\\}\\) is bounded in \\(C^1([0,1])\\).\nWe now show that it has no convergent subsequence in \\(C^{0,1}([0,1])\\).\nRecall that for a continuously differentiable function \\(v\\) on \\([0,1]\\),\n\\[\n[v]_{C^{0,1}}\n=\n\\sup_{x\\neq y}\n\\frac{|v(x)-v(y)|}{|x-y|}\n=\n\\|v'\\|_{L^\\infty(0,1)}.\n\\]\nLet \\(l&gt;k\\). Consider the point\n\\[\nx_k=2^{-k}.\n\\]\nThen\n\\[\nu_k'(x_k)\n=\n\\cos(\\pi)\n=\n-1.\n\\]\nOn the other hand,\n\\[\nu_l'(x_k)\n=\n\\cos\\left(\\pi2^l2^{-k}\\right)\n=\n\\cos\\left(\\pi2^{l-k}\\right).\n\\]\nSince \\(l-k\\geq1\\), the integer \\(2^{l-k}\\) is even, and hence\n\\[\nu_l'(x_k)=1.\n\\]\nTherefore,\n\\[\n|u_l'(x_k)-u_k'(x_k)|\n=\n2.\n\\]\nIt follows that\n\\[\n\\|u_l'-u_k'\\|_{L^\\infty(0,1)}\n\\geq2.\n\\]\nConsequently,\n\\[\n[u_l-u_k]_{C^{0,1}}\n=\n\\|u_l'-u_k'\\|_{L^\\infty}\n\\geq2.\n\\]\nThus\n\\[\n\\|u_l-u_k\\|_{C^{0,1}([0,1])}\n\\geq2\n\\]\nwhenever \\(l&gt;k\\).\nHence \\(\\{u_k\\}\\) has no Cauchy subsequence in \\(C^{0,1}([0,1])\\), and therefore it has no convergent subsequence in \\(C^{0,1}([0,1])\\).\nWe conclude that\n\\[\n\\boxed{\nC^1([0,1])\n\\hookrightarrow\nC^{0,1}([0,1])\n\\text{ is not compact}.\n}\n\\]\nThus, even for a bounded convex domain,\n\\[\n\\boxed{\nC^1(\\overline{\\Omega})\n\\hookrightarrow\nC^{0,1}(\\overline{\\Omega})\n}\n\\]\nis in general not a compact embedding."
   },
   {
-    "objectID": "writing/sobolev/week-02-problem-02.html#remark",
-    "href": "writing/sobolev/week-02-problem-02.html#remark",
-    "title": "Sobolev Spaces — Week 2, Problem 2",
+    "objectID": "writing/sobolev/week-03-problem-02.html#remark",
+    "href": "writing/sobolev/week-03-problem-02.html#remark",
+    "title": "Sobolev Spaces — Week 3, Problem 2",
     "section": "Remark",
-    "text": "Remark\nThe converse of the second statement is false in general.\nA Banach space may be separable while its dual is nonseparable. The standard example is\n\\[\nX=\\ell^1.\n\\]\nThe space \\(\\ell^1\\) is separable, whereas\n\\[\n(\\ell^1)'=\\ell^\\infty\n\\]\nis not separable.\nThus\n\\[\nX'\\text{ separable}\n\\Longrightarrow\nX\\text{ separable},\n\\]\nbut in general\n\\[\nX\\text{ separable}\n\\centernot\\Longrightarrow\nX'\\text{ separable}.\n\\]\nHowever, if \\(X\\) is both separable and reflexive, then \\(X'\\) is also separable."
+    "text": "Remark\nNotice that in this example,\n\\[\n\\|u_k\\|_{L^\\infty}\\to0,\n\\]\nso\n\\[\nu_k\\to0\n\\]\nuniformly.\nThe obstruction to compactness comes entirely from the first derivatives:\n\\[\nu_k'(x)\n=\n\\cos(\\pi2^k x),\n\\]\nwhich oscillate more and more rapidly while retaining the same \\(L^\\infty\\) norm.\nThis illustrates the distinction between the compact embedding\n\\[\nC^1(\\overline{\\Omega})\n\\hookrightarrow\nC^{0,\\alpha}(\\overline{\\Omega}),\n\\qquad\n0\\leq\\alpha&lt;1,\n\\]\nand the borderline embedding into \\(C^{0,1}\\), which is not compact."
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html",
+    "href": "writing/sobolev/week-02-problem-01.html",
+    "title": "Sobolev Spaces — Week 2, Problem 1",
+    "section": "",
+    "text": "Let \\(X\\) be a Banach space and suppose that\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{weakly in }X\n\\]\nand\n\\[\n\\|u_k\\|_X\\to \\|u\\|_X.\n\\]\nDoes it follow that\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X?\n\\]\nIn particular, what happens when \\(X=L^p(\\Omega)\\) for \\(1\\leq p\\leq\\infty\\)?"
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html#problem",
+    "href": "writing/sobolev/week-02-problem-01.html#problem",
+    "title": "Sobolev Spaces — Week 2, Problem 1",
+    "section": "",
+    "text": "Let \\(X\\) be a Banach space and suppose that\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{weakly in }X\n\\]\nand\n\\[\n\\|u_k\\|_X\\to \\|u\\|_X.\n\\]\nDoes it follow that\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X?\n\\]\nIn particular, what happens when \\(X=L^p(\\Omega)\\) for \\(1\\leq p\\leq\\infty\\)?"
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html#solution",
+    "href": "writing/sobolev/week-02-problem-01.html#solution",
+    "title": "Sobolev Spaces — Week 2, Problem 1",
+    "section": "Solution",
+    "text": "Solution\nIn a general Banach space, the conclusion is false.\nFor \\(L^p(\\Omega)\\), the situation is as follows:\n\\[\n\\boxed{\n\\begin{aligned}\n1&lt;p&lt;\\infty &: \\quad \\text{the implication is true},\\\\\np=1 &: \\quad \\text{the implication is false in general},\\\\\np=\\infty &: \\quad \\text{the implication is false in general}.\n\\end{aligned}}\n\\]\nThe positive result for \\(1&lt;p&lt;\\infty\\) follows from the uniform convexity of \\(L^p\\).\n\nThe case \\(1&lt;p&lt;\\infty\\)\nFor every \\(1&lt;p&lt;\\infty\\), the space \\(L^p(\\Omega)\\) is uniformly convex. We prove more generally that in every uniformly convex Banach space,\n\\[\nu_k\\rightharpoonup u,\n\\qquad\n\\|u_k\\|_X\\to\\|u\\|_X\n\\]\nimply\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X.\n\\]\nIf \\(u=0\\), then\n\\[\n\\|u_k-u\\|_X=\\|u_k\\|_X\\to0,\n\\]\nso the conclusion is immediate.\nSuppose now that \\(\\|u\\|_X&gt;0\\). Define\n\\[\nv_k=\\frac{u_k}{\\|u_k\\|_X},\n\\qquad\nv=\\frac{u}{\\|u\\|_X}.\n\\]\nSince\n\\[\n\\|u_k\\|_X\\to\\|u\\|_X&gt;0,\n\\]\nwe have\n\\[\nv_k\\rightharpoonup v,\n\\]\nand\n\\[\n\\|v_k\\|_X=\\|v\\|_X=1.\n\\]\nSuppose, toward a contradiction, that \\(v_k\\) does not converge strongly to \\(v\\). Passing to a subsequence if necessary, there exists \\(\\varepsilon&gt;0\\) such that\n\\[\n\\|v_k-v\\|_X\\geq\\varepsilon\n\\]\nfor every \\(k\\).\nBy uniform convexity, there exists \\(\\delta&gt;0\\) such that\n\\[\n\\left\\|\n\\frac{v_k+v}{2}\n\\right\\|_X\n\\leq 1-\\delta.\n\\]\nOn the other hand,\n\\[\n\\frac{v_k+v}{2}\\rightharpoonup v.\n\\]\nSince the norm is weakly lower semicontinuous,\n\\[\n\\|v\\|_X\n\\leq\n\\liminf_{k\\to\\infty}\n\\left\\|\n\\frac{v_k+v}{2}\n\\right\\|_X.\n\\]\nTherefore,\n\\[\n1\n\\leq\n\\liminf_{k\\to\\infty}\n\\left\\|\n\\frac{v_k+v}{2}\n\\right\\|_X\n\\leq\n1-\\delta,\n\\]\nwhich is impossible.\nHence\n\\[\nv_k\\to v\n\\quad\\text{strongly in }X.\n\\]\nFinally,\n\\[\n\\begin{aligned}\n\\|u_k-u\\|_X\n&=\n\\left\\|\n\\|u_k\\|_Xv_k-\\|u\\|_Xv\n\\right\\|_X\\\\\n&\\leq\n\\|u_k\\|_X\\|v_k-v\\|_X\n+\n\\left|\n\\|u_k\\|_X-\\|u\\|_X\n\\right|.\n\\end{aligned}\n\\]\nBoth terms tend to zero. Thus\n\\[\nu_k\\to u\n\\quad\\text{strongly in }X.\n\\]\nSince \\(L^p(\\Omega)\\) is uniformly convex whenever \\(1&lt;p&lt;\\infty\\), we obtain\n\\[\n\\boxed{\nu_k\\rightharpoonup u\n\\text{ in }L^p,\n\\quad\n\\|u_k\\|_{L^p}\\to\\|u\\|_{L^p}\n\\quad\\Longrightarrow\\quad\nu_k\\to u\n\\text{ in }L^p\n}\n\\]\nfor every \\(1&lt;p&lt;\\infty\\).\n\n\nThe case \\(p=1\\)\nThe conclusion fails in \\(L^1\\).\nLet \\(r_k\\) be the \\(k\\)-th Rademacher function on \\((0,1)\\). Thus \\(r_k\\) takes only the values \\(1\\) and \\(-1\\), with increasingly rapid dyadic oscillations.\nWe first observe that\n\\[\nr_k\\rightharpoonup0\n\\quad\\text{weakly in }L^1(0,1).\n\\]\nIndeed, let \\(\\varphi\\in L^\\infty(0,1)\\). Given \\(\\varepsilon&gt;0\\), choose a dyadic step function \\(h\\) such that\n\\[\n\\|\\varphi-h\\|_{L^1}&lt;\\varepsilon.\n\\]\nFor sufficiently large \\(k\\), the function \\(r_k\\) has zero average on each dyadic interval on which \\(h\\) is constant. Hence\n\\[\n\\int_0^1 h r_k\\,dx=0.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n\\left|\n\\int_0^1\\varphi r_k\\,dx\n\\right|\n&=\n\\left|\n\\int_0^1(\\varphi-h)r_k\\,dx\n\\right|\\\\\n&\\leq\n\\|\\varphi-h\\|_{L^1}\n&lt;\\varepsilon.\n\\end{aligned}\n\\]\nThus\n\\[\nr_k\\rightharpoonup0\n\\quad\\text{in }L^1(0,1).\n\\]\nNow define\n\\[\nu_k=1+r_k,\n\\qquad\nu=1.\n\\]\nThen\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{in }L^1(0,1).\n\\]\nMoreover, \\(u_k\\) takes the values \\(0\\) and \\(2\\), each on a set of measure \\(1/2\\), so\n\\[\n\\|u_k\\|_{L^1}=1=\\|u\\|_{L^1}.\n\\]\nHowever,\n\\[\n\\|u_k-u\\|_{L^1}\n=\n\\|r_k\\|_{L^1}\n=\n1\n\\]\nfor every \\(k\\).\nHence\n\\[\nu_k\\not\\to u\n\\quad\\text{strongly in }L^1(0,1).\n\\]\nTherefore the implication fails for \\(p=1\\).\n\n\nThe case \\(p=\\infty\\)\nThe conclusion also fails for \\(p=\\infty\\).\nConsider\n\\[\n\\ell^\\infty\n=\nL^\\infty(\\mathbb N),\n\\]\nwhere \\(\\mathbb N\\) is equipped with counting measure. Let \\(e_k\\) denote the \\(k\\)-th standard basis vector,\n\\[\ne_k=(0,\\ldots,0,1,0,\\ldots).\n\\]\nWe first claim that\n\\[\ne_k\\rightharpoonup0\n\\quad\\text{weakly in }\\ell^\\infty.\n\\]\nLet\n\\[\n\\Phi\\in(\\ell^\\infty)^*,\n\\]\nand set\n\\[\na_k=\\Phi(e_k).\n\\]\nFor every finite set \\(F\\subset\\mathbb N\\), choose scalars \\(\\varepsilon_k\\) with\n\\[\n|\\varepsilon_k|=1\n\\]\nsuch that\n\\[\n\\varepsilon_k a_k=|a_k|.\n\\]\nThen\n\\[\n\\left\\|\n\\sum_{k\\in F}\\varepsilon_k e_k\n\\right\\|_{\\ell^\\infty}\n=1.\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n\\sum_{k\\in F}|a_k|\n&=\n\\Phi\\left(\n\\sum_{k\\in F}\\varepsilon_k e_k\n\\right)\\\\\n&\\leq\n\\|\\Phi\\|.\n\\end{aligned}\n\\]\nIt follows that\n\\[\n\\sum_{k=1}^\\infty|\\Phi(e_k)|&lt;\\infty.\n\\]\nIn particular,\n\\[\n\\Phi(e_k)\\to0.\n\\]\nSince this holds for every \\(\\Phi\\in(\\ell^\\infty)^*\\),\n\\[\ne_k\\rightharpoonup0\n\\quad\\text{in }\\ell^\\infty.\n\\]\nNow let\n\\[\nu=(1,1,1,\\ldots)\n\\]\nand define\n\\[\nu_k=u-2e_k.\n\\]\nSince \\(e_k\\rightharpoonup0\\),\n\\[\nu_k\\rightharpoonup u\n\\quad\\text{weakly in }\\ell^\\infty.\n\\]\nEvery coordinate of \\(u_k\\) is equal to \\(1\\), except for the \\(k\\)-th coordinate, which is \\(-1\\). Therefore,\n\\[\n\\|u_k\\|_{\\ell^\\infty}\n=\n1\n=\n\\|u\\|_{\\ell^\\infty}.\n\\]\nThus the norms converge. However,\n\\[\n\\|u_k-u\\|_{\\ell^\\infty}\n=\n\\|-2e_k\\|_{\\ell^\\infty}\n=\n2\n\\]\nfor every \\(k\\).\nConsequently,\n\\[\nu_k\\not\\to u\n\\quad\\text{strongly in }\\ell^\\infty.\n\\]\nHence the implication fails for \\(p=\\infty\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-02-problem-01.html#remark",
+    "href": "writing/sobolev/week-02-problem-01.html#remark",
+    "title": "Sobolev Spaces — Week 2, Problem 1",
+    "section": "Remark",
+    "text": "Remark\nThe property\n\\[\nu_k\\rightharpoonup u,\n\\qquad\n\\|u_k\\|\\to\\|u\\|\n\\quad\\Longrightarrow\\quad\nu_k\\to u\n\\]\nis known as the Radon–Riesz property, or the Kadec–Klee property.\nEvery uniformly convex Banach space has this property. In particular,\n\\[\n\\boxed{\nL^p(\\Omega)\\text{ has this property for }1&lt;p&lt;\\infty.\n}\n\\]\nIn contrast, \\(L^1\\) and \\(L^\\infty\\) do not have this property in general.\nThe Hilbert space case \\(p=2\\) is especially simple. Indeed,\n\\[\n\\|u_k-u\\|_{L^2}^2\n=\n\\|u_k\\|_{L^2}^2\n+\n\\|u\\|_{L^2}^2\n-\n2\\langle u_k,u\\rangle.\n\\]\nWeak convergence gives\n\\[\n\\langle u_k,u\\rangle\n\\to\n\\|u\\|_{L^2}^2,\n\\]\nwhile convergence of the norms gives\n\\[\n\\|u_k\\|_{L^2}^2\n\\to\n\\|u\\|_{L^2}^2.\n\\]\nHence\n\\[\n\\|u_k-u\\|_{L^2}\\to0.\n\\]\nOne should also distinguish weak convergence from weak-* convergence in \\(L^\\infty\\). Weak-* convergence is tested against the chosen predual, whereas weak convergence is tested against the entire dual \\((L^\\infty)^*\\). The counterexample above uses genuine weak convergence in \\(\\ell^\\infty\\)."
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-02.html",
+    "href": "writing/sobolev/week-01-problem-02.html",
+    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "section": "",
+    "text": "Give an example of a Hilbert space which is not separable."
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-02.html#problem",
+    "href": "writing/sobolev/week-01-problem-02.html#problem",
+    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "section": "",
+    "text": "Give an example of a Hilbert space which is not separable."
+  },
+  {
+    "objectID": "writing/sobolev/week-01-problem-02.html#solution",
+    "href": "writing/sobolev/week-01-problem-02.html#solution",
+    "title": "Sobolev Spaces — Week 1, Problem 2",
+    "section": "Solution",
+    "text": "Solution\nConsider the Hilbert space\n\\[\n\\ell^2(\\mathbb R)\n=\n\\left\\{\nx=(x_i)_{i\\in\\mathbb R}:\n\\sum_{i\\in\\mathbb R}|x_i|^2&lt;\\infty\n\\right\\},\n\\]\nequipped with the inner product\n\\[\n\\langle x,y\\rangle\n=\n\\sum_{i\\in\\mathbb R}x_i\\overline{y_i}.\n\\]\nIt is a standard fact that \\(\\ell^2(\\mathbb R)\\) is a Hilbert space. We show that it is not separable.\nFor each \\(i\\in\\mathbb R\\), define \\(e_i\\in\\ell^2(\\mathbb R)\\) by\n\\[\ne_i(j)=\\delta_{ij}.\n\\]\nThen\n\\[\n\\{e_i:i\\in\\mathbb R\\}\n\\]\nis an uncountable orthonormal family. In particular, for any \\(i\\neq j\\),\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nSuppose, for contradiction, that \\(\\ell^2(\\mathbb R)\\) is separable. Then there exists a countable dense subset \\(D\\subset\\ell^2(\\mathbb R)\\).\nFor each \\(i\\in\\mathbb R\\), by the density of \\(D\\), choose \\(d_i\\in D\\) such that\n\\[\n\\|e_i-d_i\\|&lt;\\frac12.\n\\]\nWe claim that the points \\(d_i\\) are all distinct. Indeed, if \\(d_i=d_j=d\\) for some \\(i\\neq j\\), then by the triangle inequality,\n\\[\n\\|e_i-e_j\\|\n\\le\n\\|e_i-d\\|+\\|d-e_j\\|\n&lt;1,\n\\]\nwhich contradicts\n\\[\n\\|e_i-e_j\\|=\\sqrt{2}.\n\\]\nTherefore the map\n\\[\ni\\longmapsto d_i\n\\]\nis injective from \\(\\mathbb R\\) into \\(D\\). Hence\n\\[\n\\operatorname{card}(D)\n\\ge\n\\operatorname{card}(\\mathbb R),\n\\]\nso \\(D\\) is uncountable, contradicting our assumption.\nTherefore,\n\\[\n\\boxed{\\ell^2(\\mathbb R)\\text{ is a nonseparable Hilbert space}.}\n\\]"
   },
   {
     "objectID": "projects.html",
@@ -172,6 +256,6 @@
     "href": "writing.html",
     "title": "Writing",
     "section": "",
-    "text": "Mathematical notes, course problems, and expository writings.\nThe notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nSobolev Spaces — Week 2, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nWeak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 2, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nReflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nAn example of a nonseparable Hilbert space.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\nNo matching items"
+    "text": "Mathematical notes, course problems, and expository writings.\nThe notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nSobolev Spaces — Week 3, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nA counterexample showing that the embedding from C^1 into C^{0,1} is not compact.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 3, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nThe Lagrange mean value theorem in several dimensions on a convex domain.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 2, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nWeak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 2, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 2\n\n\n\nReflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 3, Problem 3\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 3\n\n\n\nThe Dirac delta as a distribution.\n\n\n\n\n\n2026-09-25\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 1\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nIntegrability of the singular function |x|^{-s} on the unit ball.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\n\n\nSobolev Spaces — Week 1, Problem 2\n\n\n\nSobolev Spaces\n\nHomework\n\nWeek 1\n\n\n\nAn example of a nonseparable Hilbert space.\n\n\n\n\n\n2026-09-19\n\n\n\n\n\nNo matching items"
   }
 ]

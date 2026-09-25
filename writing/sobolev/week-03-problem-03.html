@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="The Dirac delta as a distribution.">
 
-<title>Writing – Saalo Chen</title>
+<title>Sobolev Spaces — Week 3, Problem 3 – Saalo Chen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,21 +31,19 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bbc30056dcc90b8bd601e9557b16bf8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-bbc30056dcc90b8bd601e9557b16bf8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -59,35 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script>
 window.MathJax = {
   options: {
@@ -126,7 +97,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -136,7 +107,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Saalo Chen</span>
     </a>
   </div>
@@ -146,23 +117,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./writing.html" aria-current="page"> 
+    <a class="nav-link" href="../../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects &amp; Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -184,21 +155,49 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="SG9tZXdvcms=">Homework <span class="quarto-category-count">(7)</span></div><div class="category" data-category="U29ib2xldiUyMFNwYWNlcw==">Sobolev Spaces <span class="quarto-category-count">(7)</span></div><div class="category" data-category="V2VlayUyMDE=">Week 1 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2VlayUyMDI=">Week 2 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2VlayUyMDM=">Week 3 <span class="quarto-category-count">(3)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem" id="toc-problem" class="nav-link active" data-scroll-target="#problem">Problem</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a>
+  <ul class="collapse">
+  <li><a href="#linearity" id="toc-linearity" class="nav-link" data-scroll-target="#linearity">Linearity</a></li>
+  <li><a href="#continuity" id="toc-continuity" class="nav-link" data-scroll-target="#continuity">Continuity</a></li>
+  </ul></li>
+  <li><a href="#remark" id="toc-remark" class="nav-link" data-scroll-target="#remark">Remark</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing</h1>
-</div>
+<h1 class="title">Sobolev Spaces — Week 3, Problem 3</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Sobolev Spaces</div>
+    <div class="quarto-category">Homework</div>
+    <div class="quarto-category">Week 3</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    The Dirac delta as a distribution.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -208,221 +207,178 @@ window.Quarto = {
 </header>
 
 
-<p>Mathematical notes, course problems, and expository writings.</p>
-<p>The notes below are listed from newest to oldest. You can search by title or keyword, filter by category, and move between pages when the list becomes longer.</p>
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Let <span class="math inline">\(\Omega\subset\mathbb R^n\)</span> be open and let <span class="math inline">\(x_0\in\Omega\)</span>.</p>
+<p>Define the Dirac delta at <span class="math inline">\(x_0\)</span> by</p>
+<p><span class="math display">\[
+\delta_{x_0}(\varphi)
+=
+\varphi(x_0),
+\qquad
+\varphi\in C_c^\infty(\Omega).
+\]</span></p>
+<p>Prove that <span class="math inline">\(\delta_{x_0}\)</span> is a distribution on <span class="math inline">\(\Omega\)</span>.</p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>Recall that a distribution on <span class="math inline">\(\Omega\)</span> is a continuous linear functional on the space of test functions</p>
+<p><span class="math display">\[
+\mathcal D(\Omega)
+=
+C_c^\infty(\Omega).
+\]</span></p>
+<p>Thus we need to prove that</p>
+<p><span class="math display">\[
+\delta_{x_0}:\mathcal D(\Omega)\to\mathbb R
+\]</span></p>
+<p>is linear and continuous.</p>
+<section id="linearity" class="level3">
+<h3 class="anchored" data-anchor-id="linearity">Linearity</h3>
+<p>Let <span class="math inline">\(\varphi,\psi\in C_c^\infty(\Omega)\)</span> and let <span class="math inline">\(a,b\in\mathbb R\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\delta_{x_0}(a\varphi+b\psi)
+&amp;=
+(a\varphi+b\psi)(x_0)\\
+&amp;=
+a\varphi(x_0)+b\psi(x_0)\\
+&amp;=
+a\delta_{x_0}(\varphi)
++
+b\delta_{x_0}(\psi).
+\end{aligned}
+\]</span></p>
+<p>Hence <span class="math inline">\(\delta_{x_0}\)</span> is linear.</p>
+</section>
+<section id="continuity" class="level3">
+<h3 class="anchored" data-anchor-id="continuity">Continuity</h3>
+<p>Let <span class="math inline">\(K\subset\Omega\)</span> be compact. For every</p>
+<p><span class="math display">\[
+\varphi\in C_c^\infty(\Omega)
+\]</span></p>
+<p>with</p>
+<p><span class="math display">\[
+\operatorname{supp}\varphi\subset K,
+\]</span></p>
+<p>we have</p>
+<p><span class="math display">\[
+|\delta_{x_0}(\varphi)|
+=
+|\varphi(x_0)|.
+\]</span></p>
+<p>If <span class="math inline">\(x_0\notin K\)</span>, then</p>
+<p><span class="math display">\[
+\varphi(x_0)=0,
+\]</span></p>
+<p>and hence</p>
+<p><span class="math display">\[
+\delta_{x_0}(\varphi)=0.
+\]</span></p>
+<p>If <span class="math inline">\(x_0\in K\)</span>, then</p>
+<p><span class="math display">\[
+|\delta_{x_0}(\varphi)|
+=
+|\varphi(x_0)|
+\leq
+\sup_{x\in K}|\varphi(x)|.
+\]</span></p>
+<p>Therefore, in either case,</p>
+<p><span class="math display">\[
+|\delta_{x_0}(\varphi)|
+\leq
+\sup_{x\in K}|\varphi(x)|.
+\]</span></p>
+<p>The right-hand side is one of the standard seminorms defining the topology of</p>
+<p><span class="math display">\[
+C_c^\infty(\Omega).
+\]</span></p>
+<p>Hence <span class="math inline">\(\delta_{x_0}\)</span> is continuous.</p>
+<p>Equivalently, suppose that</p>
+<p><span class="math display">\[
+\varphi_j\to0
+\quad\text{in }\mathcal D(\Omega).
+\]</span></p>
+<p>Then there exists a compact set</p>
+<p><span class="math display">\[
+K\subset\Omega
+\]</span></p>
+<p>such that</p>
+<p><span class="math display">\[
+\operatorname{supp}\varphi_j\subset K
+\]</span></p>
+<p>for all sufficiently large <span class="math inline">\(j\)</span>, and</p>
+<p><span class="math display">\[
+\sup_{x\in K}
+|D^\alpha\varphi_j(x)|
+\to0
+\]</span></p>
+<p>for every multi-index <span class="math inline">\(\alpha\)</span>.</p>
+<p>Taking <span class="math inline">\(\alpha=0\)</span>, we obtain</p>
+<p><span class="math display">\[
+\sup_{x\in K}|\varphi_j(x)|
+\to0.
+\]</span></p>
+<p>Hence</p>
+<p><span class="math display">\[
+|\delta_{x_0}(\varphi_j)|
+=
+|\varphi_j(x_0)|
+\leq
+\sup_{x\in K}|\varphi_j(x)|
+\to0.
+\]</span></p>
+<p>Therefore <span class="math inline">\(\delta_{x_0}\)</span> is continuous on <span class="math inline">\(\mathcal D(\Omega)\)</span>.</p>
+<p>We conclude that</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{x_0}\in\mathcal D'(\Omega).
+}
+\]</span></p>
+<p>Thus the Dirac delta is a distribution.</p>
+</section>
+</section>
+<section id="remark" class="level2">
+<h2 class="anchored" data-anchor-id="remark">Remark</h2>
+<p>The Dirac delta is a distribution of order zero, since</p>
+<p><span class="math display">\[
+|\delta_{x_0}(\varphi)|
+\leq
+\|\varphi\|_{L^\infty}.
+\]</span></p>
+<p>It is not induced by any locally integrable function.</p>
+<p>Indeed, if there were some</p>
+<p><span class="math display">\[
+f\in L_{\mathrm{loc}}^1(\Omega)
+\]</span></p>
+<p>such that</p>
+<p><span class="math display">\[
+\varphi(x_0)
+=
+\int_\Omega f(x)\varphi(x)\,dx
+\]</span></p>
+<p>for every <span class="math inline">\(\varphi\in C_c^\infty(\Omega)\)</span>, then testing against functions supported away from <span class="math inline">\(x_0\)</span> would imply</p>
+<p><span class="math display">\[
+f=0
+\]</span></p>
+<p>almost everywhere on</p>
+<p><span class="math display">\[
+\Omega\setminus\{x_0\}.
+\]</span></p>
+<p>Since the singleton <span class="math inline">\(\{x_0\}\)</span> has Lebesgue measure zero, this would imply</p>
+<p><span class="math display">\[
+f=0
+\]</span></p>
+<p>almost everywhere in <span class="math inline">\(\Omega\)</span>, contradicting</p>
+<p><span class="math display">\[
+\delta_{x_0}\neq0.
+\]</span></p>
+<p>Thus the Dirac delta is a genuine distribution rather than an ordinary function.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDM=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-03-problem-02.html" class="no-external">Sobolev Spaces — Week 3, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDM='); return false;">Week 3</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-03-problem-02.html" class="no-external">
-<p>A counterexample showing that the embedding from C^1 into C^{0,1} is not compact.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-03-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDM=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-03-problem-01.html" class="no-external">Sobolev Spaces — Week 3, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDM='); return false;">Week 3</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-03-problem-01.html" class="no-external">
-<p>The Lagrange mean value theorem in several dimensions on a convex domain.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-03-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDI=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="465">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-02-problem-01.html" class="no-external">Sobolev Spaces — Week 2, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDI='); return false;">Week 2</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-02-problem-01.html" class="no-external">
-<p>Weak convergence together with convergence of norms and its relation to strong convergence in Banach and L^p spaces.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-02-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDI=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-02-problem-02.html" class="no-external">Sobolev Spaces — Week 2, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDI='); return false;">Week 2</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-02-problem-02.html" class="no-external">
-<p>Reflexivity of a Banach space and its dual, and separability of a Banach space with separable dual.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-02-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDM=" data-listing-date-sort="1790294400000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-03-problem-03.html" class="no-external">Sobolev Spaces — Week 3, Problem 3</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDM='); return false;">Week 3</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-03-problem-03.html" class="no-external">
-<p>The Dirac delta as a distribution.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-03-problem-03.html" class="no-external">
-<div class="listing-date">
-2026-09-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">Sobolev Spaces — Week 1, Problem 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<p>Integrability of the singular function |x|^{-s} on the unit ball.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-01.html" class="no-external">
-<div class="listing-date">
-2026-09-19
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="U29ib2xldiUyMFNwYWNlcyUyQ0hvbWV3b3JrJTJDV2VlayUyMDE=" data-listing-date-sort="1789776000000" data-listing-file-modified-sort="1790326617501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="133">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">Sobolev Spaces — Week 1, Problem 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29ib2xldiUyMFNwYWNlcw=='); return false;">Sobolev Spaces</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SG9tZXdvcms='); return false;">Homework</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDE='); return false;">Week 1</div>
-
-</div>
-<div class="delink listing-description"><a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<p>An example of a nonseparable Hilbert space.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./writing/sobolev/week-01-problem-02.html" class="no-external">
-<div class="listing-date">
-2026-09-19
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
