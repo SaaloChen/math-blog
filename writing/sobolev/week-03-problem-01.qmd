@@ -1,0 +1,155 @@
+---
+title: "Sobolev Spaces — Week 3, Problem 1"
+date: 2026-09-25
+description: "The Lagrange mean value theorem in several dimensions on a convex domain."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 3
+---
+
+## Problem
+
+Let $\Omega\subset\mathbb R^n$ be a convex open set and let
+
+$$
+f\in C^1(\Omega).
+$$
+
+Prove that for any $x,y\in\Omega$, there exists a point
+
+$$
+\xi\in [x,y]
+$$
+
+such that
+
+$$
+f(y)-f(x)
+=
+\nabla f(\xi)\cdot (y-x).
+$$
+
+Here
+
+$$
+[x,y]
+=
+\{x+t(y-x):0\leq t\leq1\}
+$$
+
+denotes the line segment joining $x$ and $y$.
+
+## Solution
+
+If $x=y$, the conclusion is immediate. Thus assume that $x\neq y$.
+
+Since $\Omega$ is convex,
+
+$$
+x+t(y-x)\in\Omega
+$$
+
+for every $t\in[0,1]$.
+
+Define the one-dimensional function
+
+$$
+g:[0,1]\to\mathbb R
+$$
+
+by
+
+$$
+g(t)
+=
+f\bigl(x+t(y-x)\bigr).
+$$
+
+Since $f\in C^1(\Omega)$, we have
+
+$$
+g\in C^1([0,1]).
+$$
+
+By the ordinary one-dimensional Lagrange mean value theorem, there exists some
+
+$$
+t_0\in(0,1)
+$$
+
+such that
+
+$$
+g(1)-g(0)=g'(t_0).
+$$
+
+Now
+
+$$
+g(1)=f(y),
+\qquad
+g(0)=f(x).
+$$
+
+By the chain rule,
+
+$$
+g'(t)
+=
+\nabla f\bigl(x+t(y-x)\bigr)\cdot(y-x).
+$$
+
+Therefore,
+
+$$
+f(y)-f(x)
+=
+\nabla f\bigl(x+t_0(y-x)\bigr)\cdot(y-x).
+$$
+
+Set
+
+$$
+\xi=x+t_0(y-x).
+$$
+
+Then $\xi\in[x,y]$, and hence
+
+$$
+\boxed{
+f(y)-f(x)
+=
+\nabla f(\xi)\cdot(y-x).
+}
+$$
+
+This proves the multivariable Lagrange mean value theorem.
+
+## Remark
+
+The convexity assumption guarantees that the entire line segment joining $x$ and $y$ remains inside $\Omega$. This allows the multidimensional problem to be reduced directly to the one-dimensional mean value theorem.
+
+As an immediate consequence,
+
+$$
+|f(y)-f(x)|
+\leq
+\sup_{z\in[x,y]}|\nabla f(z)|\,|x-y|.
+$$
+
+In particular, if $\Omega$ is convex and
+
+$$
+\|\nabla f\|_{L^\infty(\Omega)}<\infty,
+$$
+
+then
+
+$$
+|f(y)-f(x)|
+\leq
+\|\nabla f\|_{L^\infty(\Omega)}|x-y|,
+$$
+
+so $f$ is Lipschitz continuous on $\Omega$.

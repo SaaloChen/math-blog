@@ -1,0 +1,221 @@
+---
+title: "Sobolev Spaces — Week 3, Problem 2"
+date: 2026-09-25
+description: "A counterexample showing that the embedding from C^1 into C^{0,1} is not compact."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 3
+---
+
+## Problem
+
+Construct a counterexample showing that the continuous embedding
+
+$$
+C^1(\overline{\Omega})
+\hookrightarrow
+C^{0,1}(\overline{\Omega})
+$$
+
+is not compact, even when $\Omega$ is a bounded convex domain.
+
+## Solution
+
+It is enough to consider the one-dimensional convex domain
+
+$$
+\Omega=(0,1).
+$$
+
+For $k\geq1$, define
+
+$$
+u_k(x)
+=
+\frac{1}{\pi 2^k}
+\sin(\pi 2^k x),
+\qquad
+x\in[0,1].
+$$
+
+Then
+
+$$
+u_k'(x)
+=
+\cos(\pi 2^k x).
+$$
+
+Hence
+
+$$
+\|u_k\|_{L^\infty(0,1)}
+\leq
+\frac{1}{\pi2^k}
+\leq
+\frac1\pi,
+$$
+
+and
+
+$$
+\|u_k'\|_{L^\infty(0,1)}
+=
+1.
+$$
+
+Therefore,
+
+$$
+\|u_k\|_{C^1([0,1])}
+=
+\|u_k\|_{L^\infty}
++
+\|u_k'\|_{L^\infty}
+\leq
+1+\frac1\pi.
+$$
+
+Thus $\{u_k\}$ is bounded in $C^1([0,1])$.
+
+We now show that it has no convergent subsequence in $C^{0,1}([0,1])$.
+
+Recall that for a continuously differentiable function $v$ on $[0,1]$,
+
+$$
+[v]_{C^{0,1}}
+=
+\sup_{x\neq y}
+\frac{|v(x)-v(y)|}{|x-y|}
+=
+\|v'\|_{L^\infty(0,1)}.
+$$
+
+Let $l>k$. Consider the point
+
+$$
+x_k=2^{-k}.
+$$
+
+Then
+
+$$
+u_k'(x_k)
+=
+\cos(\pi)
+=
+-1.
+$$
+
+On the other hand,
+
+$$
+u_l'(x_k)
+=
+\cos\left(\pi2^l2^{-k}\right)
+=
+\cos\left(\pi2^{l-k}\right).
+$$
+
+Since $l-k\geq1$, the integer $2^{l-k}$ is even, and hence
+
+$$
+u_l'(x_k)=1.
+$$
+
+Therefore,
+
+$$
+|u_l'(x_k)-u_k'(x_k)|
+=
+2.
+$$
+
+It follows that
+
+$$
+\|u_l'-u_k'\|_{L^\infty(0,1)}
+\geq2.
+$$
+
+Consequently,
+
+$$
+[u_l-u_k]_{C^{0,1}}
+=
+\|u_l'-u_k'\|_{L^\infty}
+\geq2.
+$$
+
+Thus
+
+$$
+\|u_l-u_k\|_{C^{0,1}([0,1])}
+\geq2
+$$
+
+whenever $l>k$.
+
+Hence $\{u_k\}$ has no Cauchy subsequence in $C^{0,1}([0,1])$, and therefore it has no convergent subsequence in $C^{0,1}([0,1])$.
+
+We conclude that
+
+$$
+\boxed{
+C^1([0,1])
+\hookrightarrow
+C^{0,1}([0,1])
+\text{ is not compact}.
+}
+$$
+
+Thus, even for a bounded convex domain,
+
+$$
+\boxed{
+C^1(\overline{\Omega})
+\hookrightarrow
+C^{0,1}(\overline{\Omega})
+}
+$$
+
+is in general not a compact embedding.
+
+## Remark
+
+Notice that in this example,
+
+$$
+\|u_k\|_{L^\infty}\to0,
+$$
+
+so
+
+$$
+u_k\to0
+$$
+
+uniformly.
+
+The obstruction to compactness comes entirely from the first derivatives:
+
+$$
+u_k'(x)
+=
+\cos(\pi2^k x),
+$$
+
+which oscillate more and more rapidly while retaining the same $L^\infty$ norm.
+
+This illustrates the distinction between the compact embedding
+
+$$
+C^1(\overline{\Omega})
+\hookrightarrow
+C^{0,\alpha}(\overline{\Omega}),
+\qquad
+0\leq\alpha<1,
+$$
+
+and the borderline embedding into $C^{0,1}$, which is not compact.

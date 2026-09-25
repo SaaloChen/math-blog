@@ -342,7 +342,7 @@ but in general
 
 $$
 X\text{ separable}
-\centernot\Longrightarrow
+\nRightarrow
 X'\text{ separable}.
 $$
 

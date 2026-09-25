@@ -1,0 +1,234 @@
+---
+title: "Sobolev Spaces — Week 3, Problem 3"
+date: 2026-09-25
+description: "The Dirac delta as a distribution."
+categories:
+  - Sobolev Spaces
+  - Homework
+  - Week 3
+---
+
+## Problem
+
+Let $\Omega\subset\mathbb R^n$ be open and let $x_0\in\Omega$.
+
+Define the Dirac delta at $x_0$ by
+
+$$
+\delta_{x_0}(\varphi)
+=
+\varphi(x_0),
+\qquad
+\varphi\in C_c^\infty(\Omega).
+$$
+
+Prove that $\delta_{x_0}$ is a distribution on $\Omega$.
+
+## Solution
+
+Recall that a distribution on $\Omega$ is a continuous linear functional on the space of test functions
+
+$$
+\mathcal D(\Omega)
+=
+C_c^\infty(\Omega).
+$$
+
+Thus we need to prove that
+
+$$
+\delta_{x_0}:\mathcal D(\Omega)\to\mathbb R
+$$
+
+is linear and continuous.
+
+### Linearity
+
+Let $\varphi,\psi\in C_c^\infty(\Omega)$ and let $a,b\in\mathbb R$. Then
+
+$$
+\begin{aligned}
+\delta_{x_0}(a\varphi+b\psi)
+&=
+(a\varphi+b\psi)(x_0)\\
+&=
+a\varphi(x_0)+b\psi(x_0)\\
+&=
+a\delta_{x_0}(\varphi)
++
+b\delta_{x_0}(\psi).
+\end{aligned}
+$$
+
+Hence $\delta_{x_0}$ is linear.
+
+### Continuity
+
+Let $K\subset\Omega$ be compact. For every
+
+$$
+\varphi\in C_c^\infty(\Omega)
+$$
+
+with
+
+$$
+\operatorname{supp}\varphi\subset K,
+$$
+
+we have
+
+$$
+|\delta_{x_0}(\varphi)|
+=
+|\varphi(x_0)|.
+$$
+
+If $x_0\notin K$, then
+
+$$
+\varphi(x_0)=0,
+$$
+
+and hence
+
+$$
+\delta_{x_0}(\varphi)=0.
+$$
+
+If $x_0\in K$, then
+
+$$
+|\delta_{x_0}(\varphi)|
+=
+|\varphi(x_0)|
+\leq
+\sup_{x\in K}|\varphi(x)|.
+$$
+
+Therefore, in either case,
+
+$$
+|\delta_{x_0}(\varphi)|
+\leq
+\sup_{x\in K}|\varphi(x)|.
+$$
+
+The right-hand side is one of the standard seminorms defining the topology of
+
+$$
+C_c^\infty(\Omega).
+$$
+
+Hence $\delta_{x_0}$ is continuous.
+
+Equivalently, suppose that
+
+$$
+\varphi_j\to0
+\quad\text{in }\mathcal D(\Omega).
+$$
+
+Then there exists a compact set
+
+$$
+K\subset\Omega
+$$
+
+such that
+
+$$
+\operatorname{supp}\varphi_j\subset K
+$$
+
+for all sufficiently large $j$, and
+
+$$
+\sup_{x\in K}
+|D^\alpha\varphi_j(x)|
+\to0
+$$
+
+for every multi-index $\alpha$.
+
+Taking $\alpha=0$, we obtain
+
+$$
+\sup_{x\in K}|\varphi_j(x)|
+\to0.
+$$
+
+Hence
+
+$$
+|\delta_{x_0}(\varphi_j)|
+=
+|\varphi_j(x_0)|
+\leq
+\sup_{x\in K}|\varphi_j(x)|
+\to0.
+$$
+
+Therefore $\delta_{x_0}$ is continuous on $\mathcal D(\Omega)$.
+
+We conclude that
+
+$$
+\boxed{
+\delta_{x_0}\in\mathcal D'(\Omega).
+}
+$$
+
+Thus the Dirac delta is a distribution.
+
+## Remark
+
+The Dirac delta is a distribution of order zero, since
+
+$$
+|\delta_{x_0}(\varphi)|
+\leq
+\|\varphi\|_{L^\infty}.
+$$
+
+It is not induced by any locally integrable function.
+
+Indeed, if there were some
+
+$$
+f\in L_{\mathrm{loc}}^1(\Omega)
+$$
+
+such that
+
+$$
+\varphi(x_0)
+=
+\int_\Omega f(x)\varphi(x)\,dx
+$$
+
+for every $\varphi\in C_c^\infty(\Omega)$, then testing against functions supported away from $x_0$ would imply
+
+$$
+f=0
+$$
+
+almost everywhere on
+
+$$
+\Omega\setminus\{x_0\}.
+$$
+
+Since the singleton $\{x_0\}$ has Lebesgue measure zero, this would imply
+
+$$
+f=0
+$$
+
+almost everywhere in $\Omega$, contradicting
+
+$$
+\delta_{x_0}\neq0.
+$$
+
+Thus the Dirac delta is a genuine distribution rather than an ordinary function.
