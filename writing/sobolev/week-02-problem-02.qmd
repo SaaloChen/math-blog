@@ -1,0 +1,352 @@
+---
+
+title: "Sobolev Spaces — Week 2, Problem 2"
+date: 2026-09-25
+description: "Reflexivity of a Banach space and its dual, and separability of a Banach space with separable dual."
+categories:
+
+* Sobolev Spaces
+* Homework
+* Week 2
+
+---
+
+## Problem
+
+Let $X$ be a Banach space and let $X'$ denote its dual space.
+
+1. Prove that $X$ is reflexive if and only if $X'$ is reflexive.
+2. Prove that if $X'$ is separable, then $X$ is separable.
+
+## Solution
+
+### 1. Reflexivity of $X$ and $X'$
+
+Recall the canonical embedding
+
+$$
+J_X:X\longrightarrow X'',
+\qquad
+J_X(x)(f)=f(x),
+$$
+
+for $x\in X$ and $f\in X'$.
+
+The space $X$ is reflexive precisely when $J_X$ is surjective.
+
+We prove the two implications separately.
+
+#### $X$ reflexive implies $X'$ reflexive
+
+Suppose that $X$ is reflexive. Then
+
+$$
+J_X(X)=X''.
+$$
+
+We want to show that the canonical embedding
+
+$$
+J_{X'}:X'\longrightarrow X'''
+$$
+
+is surjective.
+
+Let
+
+$$
+F\in X'''.
+$$
+
+Define $f:X\to\mathbb{K}$ by
+
+$$
+f(x)=F(J_Xx),
+$$
+
+where $\mathbb{K}=\mathbb{R}$ or $\mathbb{C}$.
+
+Since $F$ and $J_X$ are bounded linear maps, $f\in X'$.
+
+We claim that
+
+$$
+F=J_{X'}f.
+$$
+
+Indeed, let $x''\in X''$. Since $X$ is reflexive, there exists $x\in X$ such that
+
+$$
+x''=J_Xx.
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+(J_{X'}f)(x'')
+&=x''(f)\\
+&=(J_Xx)(f)\\
+&=f(x)\\
+&=F(J_Xx)\\
+&=F(x'').
+\end{aligned}
+$$
+
+Thus
+
+$$
+F=J_{X'}f.
+$$
+
+Hence $J_{X'}$ is surjective, and therefore $X'$ is reflexive.
+
+#### $X'$ reflexive implies $X$ reflexive
+
+Now suppose that $X'$ is reflexive.
+
+Assume, toward a contradiction, that $X$ is not reflexive. Then
+
+$$
+J_X(X)\subsetneq X''.
+$$
+
+Since $J_X$ is an isometry and $X$ is Banach, $J_X(X)$ is a closed subspace of $X''$.
+
+By the Hahn--Banach theorem, there exists a nonzero functional
+
+$$
+F\in X'''
+$$
+
+such that
+
+$$
+F|_{J_X(X)}=0.
+$$
+
+Since $X'$ is reflexive, the canonical map
+
+$$
+J_{X'}:X'\to X'''
+$$
+
+is surjective. Hence there exists some $f\in X'$ such that
+
+$$
+F=J_{X'}f.
+$$
+
+For every $x\in X$,
+
+$$
+0
+=
+F(J_Xx)
+=
+(J_{X'}f)(J_Xx).
+$$
+
+But
+
+$$
+(J_{X'}f)(J_Xx)
+=
+(J_Xx)(f)
+=
+f(x).
+$$
+
+Therefore,
+
+$$
+f(x)=0
+$$
+
+for every $x\in X$, so $f=0$. Consequently,
+
+$$
+F=J_{X'}f=0,
+$$
+
+contradicting the choice of $F$.
+
+Thus $J_X(X)=X''$, and hence $X$ is reflexive.
+
+We have proved
+
+$$
+\boxed{
+X\text{ is reflexive}
+\quad\Longleftrightarrow\quad
+X'\text{ is reflexive}.
+}
+$$
+
+### 2. Separability of $X'$ implies separability of $X$
+
+Suppose that $X'$ is separable.
+
+If $X={0}$, the conclusion is trivial, so assume $X\neq{0}$.
+
+Since $X'$ is separable, its unit sphere
+
+$$
+S_{X'}
+=
+\{f\in X':\|f\|=1\}
+$$
+
+contains a countable dense subset. Let
+
+$$
+\{f_n\}_{n=1}^\infty
+$$
+
+be dense in $S_{X'}$.
+
+For every $n$, since
+
+$$
+\|f_n\|=1,
+$$
+
+by the definition of the operator norm we can choose $x_n\in X$ such that
+
+$$
+\|x_n\|=1
+$$
+
+and
+
+$$
+|f_n(x_n)|>\frac12.
+$$
+
+Let
+
+$$
+M
+=
+\overline{\operatorname{span}\{x_n:n\in\mathbb N\}}.
+$$
+
+We claim that
+
+$$
+M=X.
+$$
+
+Suppose otherwise. Then $M$ is a proper closed subspace of $X$. By the Hahn--Banach theorem, there exists
+
+$$
+f\in X'
+$$
+
+such that
+
+$$
+\|f\|=1,
+\qquad
+f|_M=0.
+$$
+
+Since ${f_n}$ is dense in $S_{X'}$, there exists $n$ such that
+
+$$
+\|f-f_n\|<\frac14.
+$$
+
+Since $x_n\in M$, we have
+
+$$
+f(x_n)=0.
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+|f_n(x_n)|
+&=
+|(f_n-f)(x_n)|\\
+&\leq
+\|f_n-f\|\|x_n\|\\
+&<
+\frac14.
+\end{aligned}
+$$
+
+This contradicts our choice of $x_n$, for which
+
+$$
+|f_n(x_n)|>\frac12.
+$$
+
+Hence
+
+$$
+M=X.
+$$
+
+Therefore,
+
+$$
+X
+=
+\overline{\operatorname{span}\{x_n:n\in\mathbb N\}}.
+$$
+
+The linear span of a countable set is separable: indeed, the finite linear combinations of the $x_n$ with rational coefficients are countable and dense in the real case; in the complex case one may use coefficients in
+
+$$
+\mathbb Q+i\mathbb Q.
+$$
+
+Consequently, $X$ is separable.
+
+Thus
+
+$$
+\boxed{
+X'\text{ separable}
+\quad\Longrightarrow\quad
+X\text{ separable}.
+}
+$$
+
+## Remark
+
+The converse of the second statement is false in general.
+
+A Banach space may be separable while its dual is nonseparable. The standard example is
+
+$$
+X=\ell^1.
+$$
+
+The space $\ell^1$ is separable, whereas
+
+$$
+(\ell^1)'=\ell^\infty
+$$
+
+is not separable.
+
+Thus
+
+$$
+X'\text{ separable}
+\Longrightarrow
+X\text{ separable},
+$$
+
+but in general
+
+$$
+X\text{ separable}
+\centernot\Longrightarrow
+X'\text{ separable}.
+$$
+
+However, if $X$ is both separable and reflexive, then $X'$ is also separable.
